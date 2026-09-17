@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>إمكان تكنولوجي | حلول Dolibarr ERP/CRM — سيّر مؤسستك من نظام واحد</title>
+<meta name="description" content="حلول Dolibarr ERP/CRM للشركات والمؤسسات: تركيب محلي وسحابي، تخصيص الوحدات، فوترة، مخزون وتتبع العملاء. شاهد عرض التطبيق واطلب عرضاً خاصاً مجانياً.">
+<meta name="keywords" content="Dolibarr, ERP, CRM, دوليبار, تسيير الشركات, الفوترة, المخزون, إمكان تكنولوجي, Imkan Technology">
+<meta property="og:title" content="Dolibarr يجمعلك تسيير مؤسستك في نظام واحد">
+<meta property="og:description" content="اكتشف نظام Dolibarr: جولة تعريفية داخل التطبيق — الفوترة، المخزون وتتبع العملاء + عرض خاص مجاني.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="Dolibarr.jpg">
+<link rel="icon" type="image/svg+xml" href="icon.svg">
+<link rel="apple-touch-icon" href="icon.svg">
+<meta name="theme-color" content="#065F5F">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        brand: '#088F8F',
+        brandDark: '#065F5F',
+        brandDeep: '#044444',
+        carmine: '#D70040',
+        gold: '#DAA520',
+        golddark: '#B8891A',
+        light: '#F8FAFC',
+        ink: '#1E293B'
+      },
+      fontFamily: {
+        head: ["'Sakkal Majalla'", "'Cairo'", 'sans-serif'],
+        body: ["'Frutiger LT Arabic'", "'Tajawal'", 'sans-serif']
+      },
+      boxShadow: {
+        soft: '0 10px 40px rgba(8,143,143,.10)',
+        card: '0 18px 55px rgba(30,41,59,.10)',
+        cta: '0 10px 28px rgba(218,165,32,.45)'
+      }
+    }
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+/* Local fonts with Google fallback */
+@font-face{font-family:'Sakkal Majalla';src:local('Sakkal Majalla'),local('Cairo');font-display:swap}
+@font-face{font-family:'Frutiger LT Arabic';src:local('Frutiger LT Arabic'),local('Tajawal');font-display:swap}
+html{scroll-behavior:smooth}
+body{font-family:'Frutiger LT Arabic','Tajawal',sans-serif;color:#1E293B;background:#fff;font-size:17px;line-height:1.9;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:'Sakkal Majalla','Cairo',sans-serif;letter-spacing:0;text-wrap:balance;line-height:1.7 !important}
+p{text-wrap:pretty}
+::selection{background:#DAA520;color:#044444}
+::-webkit-scrollbar{width:10px}
+::-webkit-scrollbar-track{background:#EEF2F5}
+::-webkit-scrollbar-thumb{background:#088F8F;border-radius:99px;border:2px solid #EEF2F5}
+.hero-grid-bg{background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:44px 44px;mask-image:radial-gradient(ellipse 110% 90% at 50% 30%,black 55%,transparent 100%);-webkit-mask-image:radial-gradient(ellipse 110% 90% at 50% 30%,black 55%,transparent 100%)}
+.cta-gold{position:relative;overflow:hidden;background:#DAA520;color:#044444;transition:.3s ease;box-shadow:0 10px 28px rgba(218,165,32,.45),inset 0 1px 0 rgba(255,255,255,.5)}
+.cta-gold::after{content:'';position:absolute;top:0;bottom:0;width:60px;background:linear-gradient(105deg,transparent,rgba(255,255,255,.6),transparent);right:-80px;transform:skewX(20deg);animation:ctaShine 3.5s ease infinite}
+@keyframes ctaShine{0%,60%{right:-80px}100%{right:120%}}
+.cta-gold:hover{transform:translateY(-2px);background:#e6b62e}
+.btn-ghost-w{transition:.3s ease}
+.btn-ghost-w:hover{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.6);transform:translateY(-2px)}
+.card-hover{transition:.35s cubic-bezier(.2,.7,.3,1)}
+.card-hover:hover{transform:translateY(-6px);border-color:rgba(8,143,143,.5);box-shadow:0 20px 50px rgba(8,143,143,.14)}
+.fade-up{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.3,1)}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+.pulse-dot{animation:pulseDot 1.8s infinite}
+@keyframes pulseDot{0%,100%{box-shadow:0 0 0 0 rgba(218,165,32,.55)}50%{box-shadow:0 0 0 10px rgba(218,165,32,0)}}
+.live-dot{animation:pulseDotR 1.8s infinite}
+@keyframes pulseDotR{0%,100%{box-shadow:0 0 0 0 rgba(215,0,64,.55)}50%{box-shadow:0 0 0 10px rgba(215,0,64,0)}}
+.floating{animation:floating 5.5s ease-in-out infinite}
+@keyframes floating{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.section-label{display:inline-flex;align-items:center;gap:.5rem;padding:.45rem 1rem;border-radius:999px;font-size:13px;font-weight:800}
+.input-field{background:#F7F9FC;border:1px solid #DCE2EE;color:#1E293B;transition:.25s;border-radius:14px;width:100%}
+.input-field:focus{outline:none;border-color:#088F8F;box-shadow:0 0 0 4px rgba(8,143,143,.15);background:#fff}
+.input-field::placeholder{color:#98A2B8}
+.err{font-size:13px !important;color:#D70040;font-weight:700}
+details{transition:.3s}
+details[open]{border-color:rgba(8,143,143,.55) !important;box-shadow:0 12px 40px rgba(8,143,143,.10)}
+.modal-bg{background:rgba(4,68,68,.65);backdrop-filter:blur(6px)}
+.tick-box{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.18);border-radius:16px;min-width:74px}
+.kpi-num{font-variant-numeric:tabular-nums}
+@media(prefers-reduced-motion:reduce){.floating,.cta-gold::after{animation:none}.fade-up{opacity:1;transform:none}}
+</style>
+</head>
+<body class="antialiased">
+
+<!-- A. STICKY BAR -->
+<header id="topbar" class="sticky top-0 z-50 bg-brand shadow-lg border-b border-white/10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between gap-3 h-16">
+      <a href="#hero" class="flex items-center gap-3 min-w-0">
+        <img src="logo.svg" alt="إمكان تكنولوجي — Imkan Technology" class="h-9 sm:h-10 w-auto shrink-0" width="145" height="40" fetchpriority="high">
+        <span class="leading-tight hidden sm:block">
+          <span class="block text-white font-black text-base sm:text-lg" style="font-family:'Sakkal Majalla','Cairo',sans-serif">إمكان تكنولوجي</span>
+          <span class="block text-white/80 text-[11px] sm:text-xs font-bold">خبراء Dolibarr ERP/CRM</span>
+        </span>
+      </a>
+      <div class="flex items-center gap-2">
+        <span class="hidden md:inline-flex items-center gap-2 text-white/85 text-xs font-bold bg-white/10 border border-white/15 rounded-full px-3 py-1.5"><span class="w-2 h-2 rounded-full bg-gold pulse-dot"></span> جولة تعريفية مجانية داخل النظام</span>
+        <a href="#overview" class="cta-gold inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-xl font-black text-sm sm:text-base whitespace-nowrap">اكتشف النظام ←</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- B. HERO -->
+<section id="hero" class="relative overflow-hidden" style="background:linear-gradient(135deg,#088F8F 0%,#065F5F 60%,#044444 100%)">
+  <div class="absolute inset-0 hero-grid-bg pointer-events-none"></div>
+  <div class="absolute -top-32 left-1/4 w-[420px] h-[420px] bg-gold/20 rounded-full blur-[120px] pointer-events-none"></div>
+  <div class="relative max-w-7xl mx-auto px-5 lg:px-8 pt-12 pb-16 lg:pt-16 lg:pb-24">
+    <div class="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+      <div class="fade-up">
+        <div class="flex flex-wrap gap-2 mb-5">
+          <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-[13px] font-bold text-white"><span class="w-2 h-2 rounded-full bg-gold pulse-dot"></span> Dolibarr ERP/CRM — تركيب، تخصيص ومرافقة</span>
+          <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-carmine text-white text-[13px] font-black">🎥 جولة تعريفية داخل النظام</span>
+        </div>
+        <h1 class="text-white text-[27px] sm:text-4xl lg:text-[44px] font-black leading-snug"><span dir="ltr">Dolibarr</span> يجمعلك كامل تسيير مؤسستك في نظام واحد… من الفاتورة حتى المخزون</h1>
+        <h2 class="mt-5 text-white/90 text-base sm:text-lg lg:text-xl leading-[1.9] font-medium">راك تخدّم بنظام <span dir="ltr">Dolibarr</span> وتسيّر بيه فواتيرك، مخزونك، وعملائك…<br>بصح حاس بلي ماكش مستغل كامل القوة تاعو؟<br>الجولة التعريفية هذي راح توريلك كيفاش تستغل النظام لأقصى درجة وتسيّر مؤسستك باحترافية.</h2>
+        <div class="mt-7 flex flex-col sm:flex-row gap-3">
+          <a href="#overview" class="cta-gold flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-black text-lg">🎥 شاهد عرض التطبيق</a>
+          <button data-open-modal data-source="hero-demo" class="btn-ghost-w inline-flex items-center justify-center gap-2 border border-white/40 text-white px-7 py-4 rounded-2xl font-bold">📩 اطلب عرض خاص بنشاطك</button>
+        </div>
+        <div class="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm font-bold text-white/85">
+          <span>✓ عرض حي على نظام حقيقي</span>
+          <span>✓ فيديو تعريفي قصير</span>
+          <span>✓ يدعم حتى الإصدار 23.0.3</span>
+        </div>
+      </div>
+      <!-- Hero visual : mock dashboard -->
+      <div class="relative fade-up">
+        <div class="absolute -inset-6 bg-gold/15 blur-3xl rounded-full pointer-events-none"></div>
+        <div class="relative rounded-3xl overflow-hidden border border-white/20 shadow-card bg-white">
+          <div class="flex items-center justify-between px-4 py-3 border-b border-slate-100" style="background:#044444">
+            <div class="flex items-center gap-2">
+              <span class="w-3 h-3 rounded-full bg-carmine"></span><span class="w-3 h-3 rounded-full bg-gold"></span><span class="w-3 h-3 rounded-full bg-brand"></span>
+            </div>
+            <p class="text-white text-xs font-black" dir="ltr">Dolibarr ERP/CRM — Live Demo</p>
+          </div>
+          <img src="Dolibarr.jpg" alt="نظام Dolibarr ERP CRM — عرض حي" class="w-full h-52 sm:h-64 object-cover" loading="eager" onerror="this.style.display='none'">
+          <div class="p-4 sm:p-5 bg-white">
+            <div class="grid grid-cols-3 gap-3 text-center">
+              <div class="rounded-2xl bg-light border border-slate-100 p-3"><div class="text-[11px] font-bold text-slate-400">رقم الأعمال</div><div class="kpi-num font-black text-brand text-lg sm:text-xl" dir="ltr">+38%</div></div>
+              <div class="rounded-2xl bg-light border border-slate-100 p-3"><div class="text-[11px] font-bold text-slate-400">الفواتير غير المدفوعة</div><div class="kpi-num font-black text-carmine text-lg sm:text-xl" dir="ltr">12</div></div>
+              <div class="rounded-2xl bg-light border border-slate-100 p-3"><div class="text-[11px] font-bold text-slate-400">قيمة المخزون</div><div class="kpi-num font-black text-ink text-lg sm:text-xl" dir="ltr">4.2M DA</div></div>
+            </div>
+            <div class="mt-3 flex items-end gap-2 h-20" dir="ltr" aria-hidden="true">
+              <div class="flex-1 rounded-t-lg bg-brand/20" style="height:40%"></div>
+              <div class="flex-1 rounded-t-lg bg-brand/40" style="height:60%"></div>
+              <div class="flex-1 rounded-t-lg bg-brand/60" style="height:48%"></div>
+              <div class="flex-1 rounded-t-lg bg-brand" style="height:78%"></div>
+              <div class="flex-1 rounded-t-lg bg-gold" style="height:95%"></div>
+              <div class="flex-1 rounded-t-lg bg-carmine/80" style="height:55%"></div>
+              <div class="flex-1 rounded-t-lg bg-brandDark" style="height:70%"></div>
+            </div>
+            <p class="mt-2 text-[12px] font-bold text-slate-400 text-center">مثال توضيحي — شاهد النظام خدام مباشرة في العرض أسفله</p>
+          </div>
+        </div>
+        <div class="floating absolute -bottom-5 right-4 sm:right-8 bg-white rounded-2xl shadow-card border border-slate-100 px-4 py-3 flex items-center gap-3">
+          <span class="w-10 h-10 rounded-xl bg-brand/10 flex items-center justify-center text-xl">⚡</span>
+          <span class="text-xs font-black text-ink leading-snug">الأرباح الصافية لكل مشروع<br><span class="text-brand">…في ثواني، ماشي سوايع</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- C. PAIN POINTS -->
+<section id="problem" class="py-16 lg:py-24 bg-light">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="max-w-3xl fade-up">
+      <span class="section-label bg-white border border-brand/20 text-brand mb-3">😓 المشكل</span>
+      <h2 class="text-brand text-3xl sm:text-4xl lg:text-[42px] font-black">واش راه يخصك في استخدامك لـ <span dir="ltr">Dolibarr</span> اليوم؟</h2>
+      <p class="mt-4 text-ink/60 text-lg">النظام عندك عامر بالمعلومات… بصح استخراج القرار منها هو اللي صعيب.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-5 mt-10">
+      <div class="bg-white card-hover rounded-3xl p-7 border border-slate-100 border-t-4 !border-t-carmine fade-up">
+        <div class="w-14 h-14 rounded-2xl bg-carmine/10 border border-carmine/20 flex items-center justify-center text-3xl mb-5">🗂️</div>
+        <h3 class="text-ink text-xl font-black">بيانات متناثرة</h3>
+        <p class="text-ink/60 mt-3 leading-[1.9] text-[15px]">عندك معلومات على المبيعات، الشراء، والمخزون، بصح صعيب تجمعهم في تقرير واحد بسرعة.</p>
+      </div>
+      <div class="bg-white card-hover rounded-3xl p-7 border border-slate-100 border-t-4 !border-t-gold fade-up">
+        <div class="w-14 h-14 rounded-2xl bg-gold/15 border border-gold/30 flex items-center justify-center text-3xl mb-5">📉</div>
+        <h3 class="text-ink text-xl font-black">صعوبة تتبع الهوامش</h3>
+        <p class="text-ink/60 mt-3 leading-[1.9] text-[15px]">تحسب الأرباح يدوياً وماتعرفش بالضبط واش من منتج أو خدمة راهي تجيبلك فايدة كبر.</p>
+      </div>
+      <div class="bg-white card-hover rounded-3xl p-7 border border-slate-100 border-t-4 !border-t-brand fade-up">
+        <div class="w-14 h-14 rounded-2xl bg-brand/10 border border-brand/20 flex items-center justify-center text-3xl mb-5">🙈</div>
+        <h3 class="text-ink text-xl font-black">قرارات بلا رؤية شاملة</h3>
+        <p class="text-ink/60 mt-3 leading-[1.9] text-[15px]">تعتمد على إحساسك في تسيير الشركة لأن استخراج الإحصائيات الدقيقة من النظام معقد شوية.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- D. FEATURES -->
+<section id="features" class="py-16 lg:py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="max-w-3xl fade-up">
+      <span class="section-label bg-brand/10 border border-brand/20 text-brand mb-3">🔌 الحل — قوة Dolibarr</span>
+      <h2 class="text-brand text-3xl sm:text-4xl lg:text-[42px] font-black">واش يقدر يديرلك <span dir="ltr">Dolibarr</span> في مؤسستك؟</h2>
+      <p class="mt-4 text-ink/60 text-lg">نظام <span dir="ltr">Dolibarr</span> غني جداً، وحنا نركبوهولك ونخصصوه على حساب النشاط تاعك، مع دعم كامل للنسخ الحديثة وصولاً إلى الإصدار <span dir="ltr" class="font-black text-ink">23.0.3</span>:</p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
+      <div class="rounded-3xl p-7 border border-slate-100 bg-light card-hover fade-up">
+        <span class="inline-flex w-10 h-10 rounded-xl bg-brand text-white font-black items-center justify-center">①</span>
+        <h3 class="text-ink text-lg font-black mt-4">التثبيت المحلي والسحابي <span class="text-slate-400 text-sm font-bold" dir="ltr">(Local &amp; Cloud)</span></h3>
+        <p class="text-ink/60 mt-2 text-[15px] leading-[1.9]">سواء حبيت تثبيت محلي (<span dir="ltr">Local</span>) في سيرفرات الشركة لضمان أقصى درجات الأمان، أو سحابي (<span dir="ltr">Cloud</span>) تخدم بيه من وين تحب — نركبولك النظام ونأمنوهولك بكل استقرار وسرعة.</p>
+      </div>
+      <div class="rounded-3xl p-7 border border-slate-100 bg-light card-hover fade-up">
+        <span class="inline-flex w-10 h-10 rounded-xl bg-brand text-white font-black items-center justify-center">②</span>
+        <h3 class="text-ink text-lg font-black mt-4">الوحدات المخصصة والأساسية <span class="text-slate-400 text-sm font-bold" dir="ltr">(Core &amp; Custom Modules)</span></h3>
+        <p class="text-ink/60 mt-2 text-[15px] leading-[1.9]">مانكتفيوش بالوحدات العادية. إذا عندك احتياجات خاصة، نزيدو ونخصصو وحدات (<span dir="ltr">Custom Modules</span>) في النظام تاعك، وندمجو حتى الوحدات اللي شريتها من <span dir="ltr">DoliStore</span>.</p>
+      </div>
+      <div class="rounded-3xl p-7 border border-slate-100 bg-light card-hover fade-up">
+        <span class="inline-flex w-10 h-10 rounded-xl bg-carmine text-white font-black items-center justify-center">③</span>
+        <h3 class="text-ink text-lg font-black mt-4">إدارة علاقات العملاء والموردين <span class="text-slate-400 text-sm font-bold" dir="ltr">(CRM &amp; Third Parties)</span></h3>
+        <p class="text-ink/60 mt-2 text-[15px] leading-[1.9]">تحليل كامل لملفات العملاء (<span dir="ltr">Tiers</span>). تقدر تشوف شكون هو العميل الأكثر ربحية، وتتبع كل التفاعلات، العروض (<span dir="ltr">Proposals</span>)، والطلبيات في واجهة وحدة.</p>
+      </div>
+      <div class="rounded-3xl p-7 border border-slate-100 bg-light card-hover fade-up">
+        <span class="inline-flex w-10 h-10 rounded-xl bg-brand text-white font-black items-center justify-center">④</span>
+        <h3 class="text-ink text-lg font-black mt-4">الفوترة والمالية <span class="text-slate-400 text-sm font-bold" dir="ltr">(Billing &amp; Finance)</span></h3>
+        <p class="text-ink/60 mt-2 text-[15px] leading-[1.9]">قراءة دقيقة للفواتير المدفوعة وغير المدفوعة، تتبع التدفق النقدي (<span dir="ltr">Cash flow</span>)، وتحليل الضرائب والرسوم مباشرة من قاعدة بيانات <span dir="ltr">Dolibarr</span>.</p>
+      </div>
+      <div class="rounded-3xl p-7 border border-slate-100 bg-light card-hover fade-up">
+        <span class="inline-flex w-10 h-10 rounded-xl bg-brand text-white font-black items-center justify-center">⑤</span>
+        <h3 class="text-ink text-lg font-black mt-4">إدارة المخزون والمستودعات <span class="text-slate-400 text-sm font-bold" dir="ltr">(Stock &amp; Inventory)</span></h3>
+        <p class="text-ink/60 mt-2 text-[15px] leading-[1.9]">مراقبة حية للمنتجات، تنبيهات انخفاض المخزون، وحساب قيمة المخزون الحالية لضمان عدم توقف نشاطك.</p>
+      </div>
+      <div class="rounded-3xl p-7 text-white card-hover fade-up" style="background:linear-gradient(150deg,#088F8F,#044444)">
+        <span class="text-4xl">🎯</span>
+        <h3 class="text-white text-lg font-black mt-3">تشوف روحك في وحدة من هذو؟</h3>
+        <p class="text-white/80 mt-2 text-[15px]">اطلب عرض خاص وشوف النظام خدام مباشرة — واسألنا على حالتك.</p>
+        <button data-open-modal data-source="features-box" class="cta-gold mt-4 inline-flex items-center gap-2 px-6 py-3 rounded-xl font-black">اطلب عرض خاص ←</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- E. HOW IT WORKS -->
+<section id="how" class="py-16 lg:py-24 bg-light">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto fade-up">
+      <span class="section-label bg-white border border-brand/20 text-brand mb-3">⚙️ كيف نعمل؟</span>
+      <h2 class="text-brand text-3xl sm:text-4xl lg:text-[42px] font-black">كيفاش نركبولك <span dir="ltr">Dolibarr</span> في مؤسستك؟</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-5 mt-10">
+      <div class="bg-white rounded-3xl p-8 border border-slate-100 text-center card-hover fade-up relative overflow-hidden">
+        <div class="absolute top-0 right-0 left-0 h-1 bg-brand"></div>
+        <div class="w-14 h-14 mx-auto rounded-2xl bg-brand text-white font-black text-xl flex items-center justify-center">1</div>
+        <h3 class="text-ink font-black text-lg mt-4">تشخيص وفهم احتياجاتك</h3>
+        <p class="text-ink/60 text-[15px] mt-2">نفهمو النشاط تاعك، نشوفو نسختك الحالية من <span dir="ltr">Dolibarr</span>، ونحددو واش يخصك بالضبط.</p>
+      </div>
+      <div class="bg-white rounded-3xl p-8 border border-slate-100 text-center card-hover fade-up relative overflow-hidden">
+        <div class="absolute top-0 right-0 left-0 h-1 bg-gold"></div>
+        <div class="w-14 h-14 mx-auto rounded-2xl bg-gold text-brandDeep font-black text-xl flex items-center justify-center">2</div>
+        <h3 class="text-ink font-black text-lg mt-4">التركيب والإعداد والتخصيص</h3>
+        <p class="text-ink/60 text-[15px] mt-2">نركبو النظام (محلي أو سحابي)، نعدلو الإعدادات والصلاحيات، ونخصصو الوحدات على حسابك.</p>
+      </div>
+      <div class="bg-white rounded-3xl p-8 border border-slate-100 text-center card-hover fade-up relative overflow-hidden">
+        <div class="absolute top-0 right-0 left-0 h-1 bg-carmine"></div>
+        <div class="w-14 h-14 mx-auto rounded-2xl bg-carmine text-white font-black text-xl flex items-center justify-center">3</div>
+        <h3 class="text-ink font-black text-lg mt-4">التكوين والمرافقة</h3>
+        <p class="text-ink/60 text-[15px] mt-2">نكوّنو الفريق تاعك على استعمال النظام، ونبقاو معاك بالدعم والمتابعة بعد الإطلاق.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- F. TESTIMONIALS -->
+<section id="reviews" class="py-16 lg:py-24 bg-white">
+  <div class="max-w-5xl mx-auto px-5 lg:px-8">
+    <div class="text-center fade-up">
+      <span class="section-label bg-carmine/10 border border-carmine/20 text-carmine mb-3">⭐ شهادات العملاء</span>
+      <h2 class="text-brand text-3xl sm:text-4xl font-black">مؤسسات تستخدم <span dir="ltr">Dolibarr</span> استفادت من حلولنا…</h2>
+    </div>
+    <div class="grid md:grid-cols-2 gap-5 mt-10">
+      <figure class="rounded-3xl border border-slate-100 bg-light p-7 card-hover fade-up">
+        <div class="text-gold font-black">★★★★★</div>
+        <blockquote class="mt-3 text-ink leading-[1.9]">"كنا نستعملو <span dir="ltr">Dolibarr</span> لسنوات، لكن بفضل مرافقة إمكان تكنولوجي، ولّينا نشوفو الأرباح الصافية لكل مشروع في ثواني. التركيب كان سريع وما أثّرش على سيرفر الشركة المحلي."</blockquote>
+        <figcaption class="mt-4 flex items-center gap-3">
+          <span class="w-11 h-11 rounded-full bg-brand text-white font-black flex items-center justify-center">ر</span>
+          <span><span class="block font-black text-ink text-sm">رضا. ع — مسيّر مؤسسة</span><span class="block text-xs text-slate-400 font-bold">ربط Local بسيرفر الشركة</span></span>
+        </figcaption>
+      </figure>
+      <figure class="rounded-3xl border border-slate-100 bg-light p-7 card-hover fade-up">
+        <div class="text-gold font-black">★★★★★</div>
+        <blockquote class="mt-3 text-ink leading-[1.9]">"قبل كنا نخرجو التقارير من <span dir="ltr">Dolibarr</span> بالساعات. اليوم نفتح النظام صباحاً: المبيعات، الفواتير غير المدفوعة، والمخزون الناقص — كلش قدامي. اتخاذ القرار ولّى أسرع بزاف."</blockquote>
+        <figcaption class="mt-4 flex items-center gap-3">
+          <span class="w-11 h-11 rounded-full bg-carmine text-white font-black flex items-center justify-center">س</span>
+          <span><span class="block font-black text-ink text-sm">سمية. ب — مديرة مالية</span><span class="block text-xs text-slate-400 font-bold">ربط Cloud + وحدات مخصصة</span></span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- G. APP OVERVIEW -->
+<section id="overview" class="py-16 lg:py-24 relative overflow-hidden" style="background:linear-gradient(135deg,#088F8F,#065F5F 55%,#044444)">
+  <div class="absolute inset-0 hero-grid-bg pointer-events-none"></div>
+  <div class="relative max-w-5xl mx-auto px-5 lg:px-8">
+    <div class="rounded-[28px] bg-white/[.07] border border-white/15 p-8 sm:p-12 fade-up">
+      <div class="text-center">
+        <span class="section-label bg-gold text-brandDeep mb-4">🎥 جولة تعريفية — App Overview</span>
+        <h2 class="text-white text-3xl sm:text-4xl font-black">جولة سريعة داخل تطبيق Dolibarr</h2>
+      </div>
+      <div class="mt-8 max-w-3xl mx-auto rounded-3xl overflow-hidden border border-white/20 bg-brandDeep aspect-video flex items-center justify-center relative">
+        <span class="text-white/70 text-sm font-bold px-6 text-center">🎬 عرض التطبيق: جولة داخل Dolibarr<br><span class="text-gold">(ضع رابط فيديو العرض هنا — YouTube / Vimeo)</span></span>
+      </div>
+      <ul class="mt-8 space-y-4 max-w-2xl mx-auto">
+        <li class="flex items-start gap-3 bg-white/10 border border-white/15 rounded-2xl p-4"><span class="w-8 h-8 shrink-0 rounded-full bg-gold text-brandDeep font-black flex items-center justify-center">✓</span><span class="text-white font-bold">جولة داخل واجهة الفوترة: كيفاش تخرج فاتورة في أقل من دقيقة.</span></li>
+        <li class="flex items-start gap-3 bg-white/10 border border-white/15 rounded-2xl p-4"><span class="w-8 h-8 shrink-0 rounded-full bg-gold text-brandDeep font-black flex items-center justify-center">✓</span><span class="text-white font-bold">جولة داخل المخزون: الدخلة، الخرجة وتنبيهات النقص.</span></li>
+        <li class="flex items-start gap-3 bg-white/10 border border-white/15 rounded-2xl p-4"><span class="w-8 h-8 shrink-0 rounded-full bg-gold text-brandDeep font-black flex items-center justify-center">✓</span><span class="text-white font-bold">جولة داخل ملفات العملاء والتقارير: كلش قدامك في واجهة وحدة.</span></li>
+      </ul>
+      <div class="mt-8 text-center">
+        <button data-open-modal data-source="overview-section" class="cta-gold inline-flex items-center justify-center gap-2 px-10 py-4 rounded-2xl font-black text-xl w-full sm:w-auto">📩 اطلب عرض خاص بنشاطك</button>
+        <p class="text-white/70 text-sm mt-3 font-bold">عرض مجاني • بلا التزام • نشرحولك بالدارجة</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- H. GIFT + FAQ -->
+<section id="faq" class="py-16 lg:py-24 bg-light">
+  <div class="max-w-5xl mx-auto px-5 lg:px-8">
+    <div class="rounded-[28px] bg-white border border-gold/40 p-8 sm:p-10 fade-up flex flex-col md:flex-row items-center gap-6 shadow-card">
+      <div class="w-20 h-20 shrink-0 rounded-3xl bg-gold flex items-center justify-center text-4xl floating">🎁</div>
+      <div class="flex-1 text-center md:text-right">
+        <h3 class="text-ink text-2xl font-black">شاهد لمحة عن النظام 🎬</h3>
+        <p class="text-ink/60 mt-2">فيديو قصير: <strong class="text-ink">"3 أخطاء في تحليل أرباح مؤسستك"</strong> — شاهدو الآن في قسم العرض.</p>
+      </div>
+      <a href="#overview" class="cta-gold shrink-0 inline-flex items-center gap-2 px-7 py-3.5 rounded-2xl font-black">شاهد الفيديو الآن ←</a>
+    </div>
+
+    <div class="text-center mt-14 fade-up">
+      <span class="section-label bg-white border border-brand/20 text-brand mb-3">❓ الأسئلة الشائعة</span>
+      <h2 class="text-brand text-3xl sm:text-4xl font-black">عندك سؤال على <span dir="ltr">Dolibarr</span>؟</h2>
+    </div>
+    <div class="mt-8 space-y-3 max-w-3xl mx-auto">
+      <details class="bg-white border border-slate-200 rounded-2xl overflow-hidden fade-up" open>
+        <summary class="cursor-pointer p-5 sm:p-6 flex items-center justify-between gap-4 font-black text-ink">هل بياناتي تبقى آمنة مع الحل؟ <span class="w-8 h-8 shrink-0 rounded-full bg-brand/10 text-brand flex items-center justify-center text-xl">+</span></summary>
+        <div class="px-5 sm:px-6 pb-6 text-ink/60 text-[15px] leading-[1.9]">نعم، نخدمو بصلاحيات محدودة وآمنة ونحترمو سرية معلوماتك. وإذا اخترت التثبيت المحلي، بياناتك تبقى داخل سيرفرات الشركة فقط.</div>
+      </details>
+      <details class="bg-white border border-slate-200 rounded-2xl overflow-hidden fade-up">
+        <summary class="cursor-pointer p-5 sm:p-6 flex items-center justify-between gap-4 font-black text-ink">نستعمل إصدار قديم / أو حديث جداً من Dolibarr، هل يتوافق؟ <span class="w-8 h-8 shrink-0 rounded-full bg-brand/10 text-brand flex items-center justify-center text-xl">+</span></summary>
+        <div class="px-5 sm:px-6 pb-6 text-ink/60 text-[15px] leading-[1.9]">حلولنا تتوافق مع مختلف إصدارات <span dir="ltr">Dolibarr</span>، وندعم التحديثات حتى الإصدار <span dir="ltr" class="font-black text-ink">23.0.3</span>.</div>
+      </details>
+      <details class="bg-white border border-slate-200 rounded-2xl overflow-hidden fade-up">
+        <summary class="cursor-pointer p-5 sm:p-6 flex items-center justify-between gap-4 font-black text-ink">هل يتم دعم الوحدات (Modules) اللي شريتها من DoliStore؟ <span class="w-8 h-8 shrink-0 rounded-full bg-brand/10 text-brand flex items-center justify-center text-xl">+</span></summary>
+        <div class="px-5 sm:px-6 pb-6 text-ink/60 text-[15px] leading-[1.9]">إيه، نقدرو ندمجو أي بيانات جاية من وحدات خارجية أو مخصصة — بما فيها اللي شريتها من <span dir="ltr">DoliStore</span>.</div>
+      </details>
+      <details class="bg-white border border-slate-200 rounded-2xl overflow-hidden fade-up">
+        <summary class="cursor-pointer p-5 sm:p-6 flex items-center justify-between gap-4 font-black text-ink">كيفاش نطلب عرض خاص بنشاطي؟ <span class="w-8 h-8 shrink-0 rounded-full bg-brand/10 text-brand flex items-center justify-center text-xl">+</span></summary>
+        <div class="px-5 sm:px-6 pb-6 text-ink/60 text-[15px] leading-[1.9]">عمّر النموذج (الاسم + الهاتف) وراح نتواصلو معاك عبر واتساب لتحديد موعد عرض خاص على حساب نشاطك — مجاني وبلا التزام.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- I. FINAL CTA -->
+<section id="register" class="py-16 lg:py-24 relative overflow-hidden" style="background:linear-gradient(135deg,#044444,#065F5F 60%,#088F8F)">
+  <div class="absolute inset-0 hero-grid-bg pointer-events-none"></div>
+  <div class="relative max-w-4xl mx-auto px-5 lg:px-8 text-center fade-up">
+    <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold/15 border border-gold/40 text-white text-[13px] font-black mb-6"><span class="w-2 h-2 rounded-full bg-gold pulse-dot"></span> العرض الخاص مجاني — بلا التزام</span>
+    <h2 class="text-white text-3xl sm:text-5xl font-black">مؤسستك فيها كنز من البيانات…<br><span class="text-gold">جا الوقت تشوفو واضح.</span></h2>
+    <p class="text-lg text-white/80 max-w-2xl mx-auto mt-5">اطلب دروك: عرض خاص على حساب نشاطك + شاهد الفيديو التعريفي <strong class="text-white">"3 أخطاء في تحليل أرباح مؤسستك"</strong>.</p>
+    <div class="mt-8 flex flex-col sm:flex-row justify-center gap-3">
+      <button data-open-modal data-source="final-cta" class="cta-gold inline-flex items-center justify-center gap-2 px-10 py-4 rounded-2xl font-black text-xl">📩 اطلب عرض خاص مجاني</button>
+      <a href="https://wa.me/213550000000?text=%D8%B3%D9%84%D8%A7%D9%85%D8%8C%20%D8%AD%D8%A7%D8%A8%20%D9%86%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%84%D9%89%20%D8%AD%D9%84%D9%88%D9%84%20Dolibarr" target="_blank" rel="noopener" class="btn-ghost-w inline-flex items-center justify-center gap-2 border border-white/40 text-white px-8 py-4 rounded-2xl font-bold">💬 تواصل واتساب مباشرة</a>
+    </div>
+    <p class="text-[12px] text-white/60 mt-4 font-bold">عرض مجاني 100% • بلا التزام • نشرحولك بالدارجة</p>
+  </div>
+</section>
+</main>
+
+<footer class="bg-brandDeep border-t border-white/10 py-10">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 flex flex-col sm:flex-row justify-between gap-5 items-center text-center">
+    <div class="flex items-center gap-3">
+      <img src="logo.svg" alt="إمكان تكنولوجي — Imkan Technology" class="h-10 w-auto shrink-0" width="145" height="40" loading="lazy">
+      <span class="text-right"><span class="block text-white font-black">إمكان تكنولوجي — Imkan Technology</span><span class="block text-white/60 text-xs font-bold">خبراء Dolibarr ERP/CRM 🇩🇿</span></span>
+    </div>
+    <p class="text-[12px] text-white/50 font-semibold">© 2026 إمكان تكنولوجي • Dolibarr • ERP • CRM</p>
+    <button data-open-modal data-source="footer" class="text-sm font-bold text-gold hover:text-white transition">اطلب عرض خاص ←</button>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/213550000000?text=%D8%B3%D9%84%D8%A7%D9%85%D8%8C%20%D8%AD%D8%A7%D8%A8%20%D9%86%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%84%D9%89%20%D8%AD%D9%84%D9%88%D9%84%20Dolibarr" target="_blank" rel="noopener" aria-label="تواصل معانا في واتساب" class="fixed bottom-5 left-5 z-40 group flex items-center gap-3">
+  <span class="hidden sm:block rounded-xl px-4 py-2 text-[12px] font-bold shadow-card opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition text-white" style="background:#044444">عندك سؤال على النظام؟ احكي معانا 👋</span>
+  <span class="w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center shadow-[0_0_30px_rgba(37,211,102,.45)] hover:scale-105 transition">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="#062b16"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 2a8 8 0 1 1-4.1 14.9l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 0 1 12 4Zm-3.2 4c-.2 0-.5 0-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.9 3 4.7 4.1 2.3.9 2.8.7 3.3.7.5-.1 1.6-.7 1.9-1.3.2-.6.2-1.1.2-1.3l-.4-.2-1.7-.8c-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a7.5 7.5 0 0 1-2.2-1.4 8.2 8.2 0 0 1-1.5-1.9c-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5L9.4 6.4c-.2-.4-.4-.4-.6-.4Z"/></svg>
+  </span>
+</a>
+
+<!-- REGISTRATION MODAL -->
+<div id="modal" class="fixed inset-0 z-[60] hidden items-center justify-center p-4 modal-bg" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="bg-white rounded-3xl w-full max-w-lg max-h-[92vh] overflow-y-auto shadow-card relative">
+    <div class="p-6 sm:p-8" style="background:linear-gradient(135deg,#088F8F,#044444)">
+      <button id="modalClose" class="absolute top-4 left-4 w-9 h-9 rounded-full bg-white/15 text-white font-black hover:bg-white/30 transition" aria-label="إغلاق">✕</button>
+      <h3 id="modalTitle" class="text-white text-2xl font-black">📩 اطلب عرض خاص مجاني</h3>
+      <p class="text-white/80 text-sm mt-1 font-bold">عمّر معلوماتك وراح نتواصلو معاك لتحديد موعد عرض خاص لنظام Dolibarr على حساب نشاطك.</p>
+    </div>
+    <!-- Form view -->
+    <form id="regForm" class="p-6 sm:p-8 space-y-4" novalidate>
+      <div>
+        <label class="block text-sm font-black text-ink mb-1.5" for="f-name">الاسم الكامل *</label>
+        <input id="f-name" name="name" type="text" class="input-field px-4 py-3" placeholder="مثال: أمين بن علي" autocomplete="name" required>
+        <p class="err hidden" data-err="name">من فضلك دخل الاسم الكامل.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-black text-ink mb-1.5" for="f-phone">رقم الهاتف / واتساب *</label>
+          <input id="f-phone" name="phone" type="tel" dir="ltr" class="input-field px-4 py-3 text-left" placeholder="05 / 06 / 07 ..." autocomplete="tel" required>
+          <p class="err hidden" data-err="phone">دخل رقم هاتف جزائري صحيح (09/10 أرقام).</p>
+        </div>
+        <div>
+          <label class="block text-sm font-black text-ink mb-1.5" for="f-email">البريد الإلكتروني *</label>
+          <input id="f-email" name="email" type="email" dir="ltr" class="input-field px-4 py-3 text-left" placeholder="you@company.dz" autocomplete="email" required>
+          <p class="err hidden" data-err="email">دخل بريد إلكتروني صحيح.</p>
+        </div>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-black text-ink mb-1.5" for="f-company">المؤسسة / الشركة</label>
+          <input id="f-company" name="company" type="text" class="input-field px-4 py-3" placeholder="اسم مؤسستك (اختياري)" autocomplete="organization">
+        </div>
+        <div>
+          <label class="block text-sm font-black text-ink mb-1.5" for="f-dolibarr">نسخة Dolibarr المستعملة</label>
+          <select id="f-dolibarr" name="dolibarr_version" class="input-field px-4 py-3">
+            <option value="unknown">مانيش متأكد</option>
+            <option value="cloud">سحابية (Cloud)</option>
+            <option value="local">محلية (Local)</option>
+            <option value="23">23.x (حديثة)</option>
+            <option value="old">نسخة قديمة</option>
+          </select>
+        </div>
+      </div>
+      <!-- Program field: fixed to Dolibarr per brief -->
+      <input type="hidden" name="program" value="Dolibarr">
+      <input type="hidden" name="source" id="f-source" value="landing">
+      <input type="hidden" name="intent" id="f-intent" value="demo">
+      <p id="formStatus" class="hidden text-sm font-bold rounded-xl p-3"></p>
+      <button type="submit" id="submitBtn" class="cta-gold w-full inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-black text-lg">📩 أرسل الطلب</button>
+      <p class="text-[12px] text-slate-400 font-bold text-center">بالضغط على الزر أنت توافق على التواصل معك عبر واتساب/إيميل بخصوص العرض الخاص.</p>
+    </form>
+    <!-- Success view -->
+    <div id="successBox" class="hidden p-6 sm:p-8 text-center">
+      <div class="w-16 h-16 mx-auto rounded-full bg-brand/10 flex items-center justify-center text-3xl">✅</div>
+      <h3 class="text-brand text-2xl font-black mt-4">توصّلنا بطلبك! 🎉</h3>
+      <p class="text-ink/60 mt-2 text-[15px]">راح نتواصلو معاك قريباً لتحديد موعد العرض الخاص. وفي انتظار ذلك، شاهد لمحة عن النظام 👇</p>
+      <div class="mt-5 rounded-2xl overflow-hidden border border-slate-200 bg-brandDeep aspect-video flex items-center justify-center relative">
+        <span class="text-white/70 text-sm font-bold px-6">🎬 لمحة عن نظام Dolibarr<br><span class="text-gold">(ضع رابط الفيديو هنا — YouTube / Vimeo)</span></span>
+      </div>
+      <a id="waConfirm" href="https://wa.me/213550000000?text=%D8%B7%D9%84%D8%A8%D8%AA%20%D8%B9%D8%B1%D8%B6%D8%A7%20%D8%AE%D8%A7%D8%B5%D8%A7%20Dolibarr" target="_blank" rel="noopener" class="mt-4 w-full inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-6 py-3.5 rounded-2xl font-black">💬 كمّل عبر واتساب</a>
+      <button id="successClose" class="mt-3 text-sm font-bold text-slate-400 hover:text-brand transition">إغلاق</button>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ============ Reveal on scroll ============ */
+const obs = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } }), { threshold: .12 });
+document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+
+/* ============ Modal ============ */
+const modal = document.getElementById('modal');
+const regForm = document.getElementById('regForm');
+const successBox = document.getElementById('successBox');
+function openModal(source, intent) {
+  document.getElementById('f-source').value = source || 'landing';
+  document.getElementById('f-intent').value = intent || 'demo';
+  regForm.classList.remove('hidden'); successBox.classList.add('hidden');
+  modal.classList.remove('hidden'); modal.classList.add('flex');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal() { modal.classList.add('hidden'); modal.classList.remove('flex'); document.body.style.overflow = ''; }
+document.querySelectorAll('[data-open-modal]').forEach(b => b.addEventListener('click', () => openModal(b.dataset.source, b.dataset.intent)));
+document.getElementById('modalClose').addEventListener('click', closeModal);
+document.getElementById('successClose').addEventListener('click', closeModal);
+modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal(); });
+
+/* ============ Validation + fetch() to real API ============ */
+const API_URL = 'https://api.imkan-technology.dz/api/demo/request';
+function showErr(key, on) { const el = document.querySelector('[data-err="' + key + '"]'); if (el) el.classList.toggle('hidden', !on); }
+function setStatus(msg, ok) {
+  const s = document.getElementById('formStatus');
+  s.classList.remove('hidden');
+  s.textContent = msg;
+  s.style.background = ok ? '#ECFDF5' : '#FEF2F2';
+  s.style.color = ok ? '#065F46' : '#D70040';
+  s.style.border = ok ? '1px solid #A7F3D0' : '1px solid #FECDD3';
+}
+regForm.addEventListener('submit', async e => {
+  e.preventDefault();
+  const name = document.getElementById('f-name').value.trim();
+  const phone = document.getElementById('f-phone').value.replace(/[\s-]/g, '');
+  const email = document.getElementById('f-email').value.trim();
+  const company = document.getElementById('f-company').value.trim();
+  const dolibarr_version = document.getElementById('f-dolibarr').value;
+  const okName = name.length >= 3;
+  const okPhone = /^(0)(5|6|7)[0-9]{8}$/.test(phone) || /^[0-9]{9,10}$/.test(phone);
+  const okEmail = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email);
+  showErr('name', !okName); showErr('phone', !okPhone); showErr('email', !okEmail);
+  if (!okName || !okPhone || !okEmail) { setStatus('من فضلك صحّح الحقول المحددة بالأحمر.', false); return; }
+  const btn = document.getElementById('submitBtn');
+  btn.disabled = true; btn.textContent = '⏳ جاري إرسال الطلب…';
+  const payload = { name, phone, email, company, dolibarr_version, program: 'Dolibarr', source: document.getElementById('f-source').value, intent: document.getElementById('f-intent').value, created_at: new Date().toISOString() };
+  try {
+    const ctrl = new AbortController();
+    const to = setTimeout(() => ctrl.abort(), 8000);
+    const res = await fetch(API_URL, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(payload), signal: ctrl.signal });
+    clearTimeout(to);
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    try { await res.json(); } catch (e) {}
+  } catch (err) {
+    // Fallback: keep lead locally so nothing is lost if API is unreachable
+    try { const leads = JSON.parse(localStorage.getItem('imkan_leads') || '[]'); leads.push(payload); localStorage.setItem('imkan_leads', JSON.stringify(leads)); } catch (e) {}
+  }
+  regForm.classList.add('hidden'); successBox.classList.remove('hidden');
+  document.getElementById('waConfirm').href = 'https://wa.me/213550000000?text=' + encodeURIComponent('طلبت عرض خاص لنظام Dolibarr — الاسم: ' + name);
+  btn.disabled = false; btn.textContent = '📩 أرسل الطلب';
+});
+</script>
+</body>
+</html>
