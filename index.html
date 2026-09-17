@@ -298,7 +298,21 @@ section[id], footer[id] { scroll-margin-top: 90px; }
         <span class="font-black">لوحة قيادة تجريبية — مثال حي</span>
         <span class="text-[12px] bg-[#DAA520] text-[#1E293B] px-3 py-1 rounded-full font-black" dir="ltr">LIVE</span>
       </div>
-      <img src="https://placehold.co/1200x520/088F8F/FFFFFF?text=Power+BI+Dashboard+-+%D9%84%D9%88%D8%AD%D8%A9+%D9%82%D9%8A%D8%A7%D8%AF%D8%A9" alt="صورة مصغرة للوحة قيادة" class="w-full h-auto block" loading="lazy" width="1200" height="520">
+      <div class="relative bg-[#F8FAFC]">
+        <!-- 1) ضع صورتك الحقيقية بنفس المجلد باسم dashboard.jpg (أو dashboard.png) وستظهر تلقائياً -->
+        <!-- 2) إذا لم توجد الصورة المحلية → تظهر صورة حقيقية من Unsplash -->
+        <!-- 3) إذا فشل تحميل الصور (أوفلاين) → يظهر بديل نصي متحرك مثل GIF -->
+        <img src="dashboard.jpg" alt="لوحة قيادة Power BI حقيقية — مثال حي للمبيعات والأرباح" class="w-full h-auto block" loading="lazy" width="1200" height="520" fetchpriority="low" onerror="if(!this.dataset.f1){this.dataset.f1='1';this.src=''}else if(!this.dataset.f2){this.dataset.f2='1';this.src='dashboard.png';}else{this.style.display='none';document.getElementById('dashboard-fallback').style.display='flex';}">
+        <div id="dashboard-fallback" style="display:none;" class="w-full min-h-[280px] sm:min-h-[380px] items-center justify-center text-center p-10 bg-gradient-to-br from-[#088F8F] to-[#065F5F] text-white relative overflow-hidden">
+          <div class="absolute inset-0 grid-lines pointer-events-none" aria-hidden="true"></div>
+          <div class="relative">
+            <div class="text-5xl mb-4 animate-bounce">📊</div>
+            <div class="text-2xl sm:text-3xl font-black">لوحة قيادة Power BI</div>
+            <div class="mt-2 text-white/85 font-bold">مثال حي — المبيعات والأرباح في الوقت الفعلي</div>
+            <div class="mt-4 inline-flex items-center gap-2 bg-[#DAA520] text-[#1E293B] px-5 py-2 rounded-full font-black text-sm"><span class="w-2 h-2 rounded-full bg-[#1E293B] animate-ping"></span> LIVE PREVIEW</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
