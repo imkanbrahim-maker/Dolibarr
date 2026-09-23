@@ -3,16 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>إمكان تكنولوجي | حلول Dolibarr ERP/CRM — سيّر مؤسستك من نظام واحد</title>
-<meta name="description" content="حلول Dolibarr ERP/CRM للشركات والمؤسسات: تركيب محلي وسحابي، تخصيص الوحدات، فوترة، مخزون وتتبع العملاء. شاهد عرض التطبيق واطلب عرضاً خاصاً مجانياً.">
-<meta name="keywords" content="Dolibarr, ERP, CRM, دوليبار, تسيير الشركات, الفوترة, المخزون, إمكان تكنولوجي, Imkan Technology">
-<meta property="og:title" content="Dolibarr يجمعلك تسيير مؤسستك في نظام واحد">
-<meta property="og:description" content="اكتشف نظام Dolibarr: جولة تعريفية داخل التطبيق — الفوترة، المخزون وتتبع العملاء + عرض خاص مجاني.">
+<title>Dolibarr ERP & CRM للتجار والشركات في الجزائر | إمكان تكنولوجي</title>
+<meta name="description" content="برنامج تسيير Dolibarr مفتوح المصدر مكيّف للسوق الجزائري: فوترة، عملاء، مخزون، مشاريع، RH. تنصيب + تكوين + دعم من إمكان تكنولوجي. احجز لقاءك التوضيحي المجاني.">
+<meta property="og:title" content="Dolibarr ERP & CRM للتجار والشركات في الجزائر | إمكان تكنولوجي">
+<meta property="og:description" content="برنامج تسيير Dolibarr مفتوح المصدر مكيّف للسوق الجزائري: فوترة، عملاء، مخزون، مشاريع، RH. تنصيب + تكوين + دعم من إمكان تكنولوجي. احجز لقاءك التوضيحي المجاني.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="Dolibarr.jpg">
+<meta property="og:locale" content="ar_DZ">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Dolibarr ERP & CRM للتجار والشركات في الجزائر | إمكان تكنولوجي">
+<meta name="twitter:description" content="برنامج تسيير Dolibarr مفتوح المصدر مكيّف للسوق الجزائري: فوترة، عملاء، مخزون، مشاريع، RH. تنصيب + تكوين + دعم من إمكان تكنولوجي. احجز لقاءك التوضيحي المجاني.">
 <link rel="icon" type="image/svg+xml" href="icon.svg">
 <link rel="apple-touch-icon" href="icon.svg">
-<meta name="theme-color" content="#065F5F">
+<meta property="og:image" content="logo.svg">
+<meta name="theme-color" content="#088F8F">
+<!-- [تكوين] Tailwind Production: استبدل سكريبت CDN أدناه بنسخة Tailwind Production قبل النشر -->
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
@@ -20,22 +24,15 @@ tailwind.config = {
     extend: {
       colors: {
         brand: '#088F8F',
-        brandDark: '#065F5F',
-        brandDeep: '#044444',
+        branddark: '#065F5F',
         carmine: '#D70040',
         gold: '#DAA520',
-        golddark: '#B8891A',
-        light: '#F8FAFC',
+        lightbg: '#F8FAFC',
         ink: '#1E293B'
       },
       fontFamily: {
         head: ["'Sakkal Majalla'", "'Cairo'", 'sans-serif'],
         body: ["'Frutiger LT Arabic'", "'Tajawal'", 'sans-serif']
-      },
-      boxShadow: {
-        soft: '0 10px 40px rgba(8,143,143,.10)',
-        card: '0 18px 55px rgba(30,41,59,.10)',
-        cta: '0 10px 28px rgba(218,165,32,.45)'
       }
     }
   }
@@ -45,485 +42,843 @@ tailwind.config = {
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
 <style>
-/* Local fonts with Google fallback */
-@font-face{font-family:'Sakkal Majalla';src:local('Sakkal Majalla'),local('Cairo');font-display:swap}
-@font-face{font-family:'Frutiger LT Arabic';src:local('Frutiger LT Arabic'),local('Tajawal');font-display:swap}
-html{scroll-behavior:smooth}
-body{font-family:'Frutiger LT Arabic','Tajawal',sans-serif;color:#1E293B;background:#fff;font-size:17px;line-height:1.9;overflow-x:hidden;-webkit-font-smoothing:antialiased}
-h1,h2,h3,h4{font-family:'Sakkal Majalla','Cairo',sans-serif;letter-spacing:0;text-wrap:balance;line-height:1.7 !important}
-p{text-wrap:pretty}
-::selection{background:#DAA520;color:#044444}
-::-webkit-scrollbar{width:10px}
-::-webkit-scrollbar-track{background:#EEF2F5}
-::-webkit-scrollbar-thumb{background:#088F8F;border-radius:99px;border:2px solid #EEF2F5}
-.hero-grid-bg{background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:44px 44px;mask-image:radial-gradient(ellipse 110% 90% at 50% 30%,black 55%,transparent 100%);-webkit-mask-image:radial-gradient(ellipse 110% 90% at 50% 30%,black 55%,transparent 100%)}
-.cta-gold{position:relative;overflow:hidden;background:#DAA520;color:#044444;transition:.3s ease;box-shadow:0 10px 28px rgba(218,165,32,.45),inset 0 1px 0 rgba(255,255,255,.5)}
-.cta-gold::after{content:'';position:absolute;top:0;bottom:0;width:60px;background:linear-gradient(105deg,transparent,rgba(255,255,255,.6),transparent);right:-80px;transform:skewX(20deg);animation:ctaShine 3.5s ease infinite}
-@keyframes ctaShine{0%,60%{right:-80px}100%{right:120%}}
-.cta-gold:hover{transform:translateY(-2px);background:#e6b62e}
-.btn-ghost-w{transition:.3s ease}
-.btn-ghost-w:hover{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.6);transform:translateY(-2px)}
-.card-hover{transition:.35s cubic-bezier(.2,.7,.3,1)}
-.card-hover:hover{transform:translateY(-6px);border-color:rgba(8,143,143,.5);box-shadow:0 20px 50px rgba(8,143,143,.14)}
-.fade-up{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.3,1)}
-.fade-up.visible{opacity:1;transform:translateY(0)}
-.pulse-dot{animation:pulseDot 1.8s infinite}
-@keyframes pulseDot{0%,100%{box-shadow:0 0 0 0 rgba(218,165,32,.55)}50%{box-shadow:0 0 0 10px rgba(218,165,32,0)}}
-.live-dot{animation:pulseDotR 1.8s infinite}
-@keyframes pulseDotR{0%,100%{box-shadow:0 0 0 0 rgba(215,0,64,.55)}50%{box-shadow:0 0 0 10px rgba(215,0,64,0)}}
-.floating{animation:floating 5.5s ease-in-out infinite}
-@keyframes floating{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-.section-label{display:inline-flex;align-items:center;gap:.5rem;padding:.45rem 1rem;border-radius:999px;font-size:13px;font-weight:800}
-.input-field{background:#F7F9FC;border:1px solid #DCE2EE;color:#1E293B;transition:.25s;border-radius:14px;width:100%}
-.input-field:focus{outline:none;border-color:#088F8F;box-shadow:0 0 0 4px rgba(8,143,143,.15);background:#fff}
-.input-field::placeholder{color:#98A2B8}
-.err{font-size:13px !important;color:#D70040;font-weight:700}
-details{transition:.3s}
-details[open]{border-color:rgba(8,143,143,.55) !important;box-shadow:0 12px 40px rgba(8,143,143,.10)}
-.modal-bg{background:rgba(4,68,68,.65);backdrop-filter:blur(6px)}
-.tick-box{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.18);border-radius:16px;min-width:74px}
-.kpi-num{font-variant-numeric:tabular-nums}
-@media(prefers-reduced-motion:reduce){.floating,.cta-gold::after{animation:none}.fade-up{opacity:1;transform:none}}
+/* [تكوين] روابط ملفات الخطوط: ضع روابط ملفات Sakkal Majalla و Frutiger LT Arabic المحلية مكان URL_FONT */
+@font-face {
+  font-family: 'Sakkal Majalla';
+  src: url('URL_FONT/sakkal-majalla.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Frutiger LT Arabic';
+  src: url('URL_FONT/frutiger-lt-arabic.woff2') format('woff2');
+  font-display: swap;
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'Frutiger LT Arabic', 'Tajawal', sans-serif; background: #FFFFFF; color: #1E293B; overflow-x: hidden; }
+h1, h2, h3 { font-family: 'Sakkal Majalla', 'Cairo', sans-serif; line-height: 1.8; }
+::selection { background: #DAA520; color: #1E293B; }
+.hero-grid { background-image: linear-gradient(rgba(255,255,255,.07) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.07) 1px, transparent 1px); background-size: 42px 42px; mask-image: radial-gradient(ellipse 110% 90% at 50% 20%, black 55%, transparent 100%); -webkit-mask-image: radial-gradient(ellipse 110% 90% at 50% 20%, black 55%, transparent 100%); }
+.btn-gold { position: relative; overflow: hidden; isolation: isolate; background: linear-gradient(135deg,#E8B92E,#DAA520); color: #1E293B; transition: transform .25s ease, box-shadow .25s ease, filter .25s ease; box-shadow: 0 10px 28px rgba(218,165,32,.45), inset 0 1px 0 rgba(255,255,255,.55); animation: goldGlow 2.6s ease-in-out infinite; }
+.btn-gold:hover { transform: translateY(-2px) scale(1.02); filter: brightness(1.05); }
+.btn-gold::after { content: ''; position: absolute; top: 0; bottom: 0; width: 55px; background: linear-gradient(105deg,transparent,rgba(255,255,255,.7),transparent); left: -70px; transform: skewX(-20deg); animation: btnShine 3.2s ease infinite; pointer-events: none; }
+@keyframes btnShine { 0%,55% { left: -70px; } 100% { left: 130%; } }
+@keyframes goldGlow { 0%,100% { box-shadow: 0 10px 28px rgba(218,165,32,.45), inset 0 1px 0 rgba(255,255,255,.55); } 50% { box-shadow: 0 10px 38px rgba(218,165,32,.7), inset 0 1px 0 rgba(255,255,255,.55); } }
+.btn-ghost-w { border: 1px solid rgba(255,255,255,.7); color: #FFFFFF; transition: .25s ease; }
+.btn-ghost-w:hover { background: rgba(255,255,255,.14); transform: translateY(-2px); }
+.btn-wa { position: relative; overflow: hidden; isolation: isolate; background: linear-gradient(135deg,#2BE07A,#1DA851); color: #FFFFFF; border: 1px solid rgba(255,255,255,.3); box-shadow: 0 10px 28px rgba(37,211,102,.45), inset 0 1px 0 rgba(255,255,255,.35); transition: transform .25s ease, box-shadow .25s ease, filter .25s ease; animation: waGlow 2.6s ease-in-out infinite; }
+.btn-wa:hover { transform: translateY(-2px) scale(1.02); filter: brightness(1.06); }
+.btn-wa::after { content: ''; position: absolute; top: 0; bottom: 0; width: 55px; background: linear-gradient(105deg,transparent,rgba(255,255,255,.55),transparent); left: -70px; transform: skewX(-20deg); animation: btnShine 3.8s ease infinite; pointer-events: none; }
+@keyframes waGlow { 0%,100% { box-shadow: 0 10px 28px rgba(37,211,102,.45), inset 0 1px 0 rgba(255,255,255,.35); } 50% { box-shadow: 0 10px 38px rgba(37,211,102,.7), inset 0 1px 0 rgba(255,255,255,.35); } }
+.btn-wa .wa-ic { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; border-radius: 9999px; background: rgba(255,255,255,.22); flex-shrink: 0; }
+.card-hover { transition: transform .3s ease, box-shadow .3s ease; }
+.card-hover:hover { transform: translateY(-5px); box-shadow: 0 18px 45px rgba(8,143,143,.14); }
+/* Modules: tech terms as pills + card accents */
+#modules article { background: #FFFFFF !important; position: relative; overflow: hidden; }
+#modules article::before { content: ''; position: absolute; top: 0; right: 0; left: 0; height: 5px; background: linear-gradient(90deg,#088F8F,rgba(8,143,143,.08)); }
+#modules article:hover { border-color: rgba(8,143,143,.5) !important; box-shadow: 0 20px 50px rgba(8,143,143,.16); }
+#modules article > div:first-child { background: linear-gradient(135deg,#088F8F,#065F5F) !important; box-shadow: 0 8px 20px rgba(8,143,143,.3); }
+#modules article p span[dir="ltr"] { background: rgba(8,143,143,.1); color: #065F5F; padding: .1rem .45rem; border-radius: .5rem; font-size: .85em; font-weight: 700; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+#modules article:last-child { background: linear-gradient(135deg,rgba(218,165,32,.16),rgba(218,165,32,.04)) !important; box-shadow: 0 16px 45px rgba(218,165,32,.2); }
+#modules article:last-child::before { background: linear-gradient(90deg,#DAA520,rgba(218,165,32,.1)); }
+#modules article:last-child:hover { border-color: #DAA520 !important; }
+#modules article:last-child > div:first-child { background: linear-gradient(135deg,#DAA520,#a87c14) !important; box-shadow: 0 8px 20px rgba(218,165,32,.4); }
+#modules article:last-child p span[dir="ltr"] { background: rgba(218,165,32,.18); color: #7a5c10; }
+/* Compare table */
+#compare thead tr { background: linear-gradient(135deg,#088F8F,#065F5F) !important; }
+#compare tbody tr { transition: background .2s ease; }
+#compare tbody tr:hover { background: rgba(8,143,143,.06); }
+#compare tbody td:last-child { background: rgba(8,143,143,.07); }
+#compare tbody tr:hover td:last-child { background: rgba(8,143,143,.12); }
+#compare tbody td:nth-child(2)::before { content: '✘ '; color: #D70040; font-weight: 900; }
+#compare tbody td:last-child::before { content: '✔ '; color: #088F8F; font-weight: 900; }
+/* Pricing */
+#pricing table tbody tr { transition: background .2s ease; }
+#pricing table tbody tr:hover { background: rgba(218,165,32,.08) !important; }
+#pricing table td:last-child { font-weight: 900; }
+#pricing table tbody td:first-child::before { content: '✔ '; color: #088F8F; font-weight: 900; }
+#pricing table tbody td:last-child { background: rgba(218,165,32,.12); }
+.fade-in { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+.fade-in.visible { opacity: 1; transform: none; }
+.float-soft { animation: floatSoft 5s ease-in-out infinite; }
+@keyframes floatSoft { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+.wa-pulse::before { content: ''; position: absolute; inset: 0; border-radius: 9999px; background: #25D366; opacity: .45; animation: waPulse 2s ease-out infinite; z-index: -1; }
+@keyframes waPulse { 0% { transform: scale(1); opacity: .45; } 100% { transform: scale(1.55); opacity: 0; } }
+details.faq { transition: .25s ease; }
+details.faq[open] { border-color: #088F8F !important; box-shadow: 0 10px 30px rgba(8,143,143,.12); }
+details.faq summary::-webkit-details-marker { display: none; }
+details.faq summary { transition: background .2s ease; border-radius: 1rem; display: block; overflow: hidden; }
+details.faq summary .faq-icon { float: left; margin-inline-start: 1rem; margin-top: .1rem; }
+details.faq summary:hover { background: rgba(8,143,143,.05); }
+details.faq[open] summary { color: #088F8F; }
+.faq-icon { transition: transform .3s ease, background .3s ease; }
+details.faq[open] .faq-icon { transform: rotate(45deg); background: linear-gradient(135deg,#DAA520,#a87c14) !important; }
+.input-field { width: 100%; border: 1.5px solid #E2E8F0; border-radius: 12px; background: #F8FAFC; padding: .8rem 1rem; color: #1E293B; transition: .2s ease; }
+.input-field:focus { outline: none; border-color: #088F8F; background: #FFFFFF; box-shadow: 0 0 0 4px rgba(8,143,143,.14); }
+.modal-bg { background: rgba(30,41,59,.6); backdrop-filter: blur(5px); }
+.required-star { color: #D70040; }
+.soc { background: #F8FAFC; color: #088F8F; border: 1px solid rgba(8,143,143,.2); }
+.soc:hover { background: rgba(8,143,143,.12); transform: translateY(-2px); }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .fade-in { opacity: 1; transform: none; transition: none; }
+  .float-soft, .wa-pulse::before, .btn-gold, .btn-wa, .btn-gold::after, .btn-wa::after { animation: none; }
+}
 </style>
 </head>
 <body class="antialiased">
 
-<!-- A. STICKY BAR -->
-<header id="topbar" class="sticky top-0 z-50 bg-white/95 backdrop-blur shadow-md border-b border-slate-200">
+<!-- ================= A. الشريط العلوي (Sticky Header) ================= -->
+<header class="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-sm" role="banner">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between gap-3 h-16">
-      <a href="#hero" class="flex items-center gap-3 min-w-0">
-        <img src="logo.svg" alt="إمكان تكنولوجي — Imkan Technology" class="h-9 sm:h-10 w-auto shrink-0" width="145" height="40" fetchpriority="high">
-        <span class="leading-tight hidden sm:block">
-          <span class="block text-brandDeep font-black text-base sm:text-lg" style="font-family:'Sakkal Majalla','Cairo',sans-serif">إمكان تكنولوجي</span>
-          <img src="dolibarr_logo.png" alt="Dolibarr ERP/CRM" class="h-4 sm:h-5 w-auto mt-0.5" width="120" height="20" loading="lazy">
+    <div class="flex items-center justify-between gap-3 py-3">
+      <a href="#hero" class="flex items-center gap-3 min-w-0" aria-label="Dolibarr by إمكان تكنولوجي - الرئيسية">
+        <!-- شعار إمكان تكنولوجي (logo.svg) -->
+        <img src="logo.svg" alt="شعار إمكان تكنولوجي" width="150" height="42" class="h-10 sm:h-11 w-auto object-contain shrink-0">
+        <span class="leading-tight min-w-0">
+          <img src="dolibarr_logo.png" alt="Dolibarr ERP/CRM" width="130" height="30" class="h-7 sm:h-8 w-auto object-contain">
+          <span class="hidden sm:block text-[12px] font-medium" style="color:#1E293B;opacity:.7">برنامج <span dir="ltr">ERP & CRM</span> مفتوح المصدر، مكيّف للسوق الجزائري</span>
         </span>
       </a>
-      <div class="flex items-center gap-2">
-        <span class="hidden md:inline-flex items-center gap-2 text-brandDark text-xs font-bold bg-brand/10 border border-brand/15 rounded-full px-3 py-1.5"><span class="w-2 h-2 rounded-full bg-gold pulse-dot"></span> جولة تعريفية مجانية داخل النظام</span>
-        <a href="#overview" class="cta-gold inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-xl font-black text-sm sm:text-base whitespace-nowrap">اكتشف النظام ←</a>
-      </div>
+      <button data-open-booking class="btn-gold shrink-0 inline-flex items-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl font-bold text-sm sm:text-base" aria-label="احجز لقاء توضيحي - يفتح استمارة الحجز">📅 احجز لقاء توضيحي</button>
     </div>
   </div>
 </header>
 
 <main>
-<!-- B. HERO -->
-<section id="hero" class="relative overflow-hidden" style="background:linear-gradient(135deg,#088F8F 0%,#065F5F 60%,#044444 100%)">
-  <div class="absolute inset-0 hero-grid-bg pointer-events-none"></div>
-  <div class="absolute -top-32 left-1/4 w-[420px] h-[420px] bg-gold/20 rounded-full blur-[120px] pointer-events-none"></div>
-  <div class="relative max-w-7xl mx-auto px-5 lg:px-8 pt-12 pb-16 lg:pt-16 lg:pb-24">
-    <div class="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
-      <div class="fade-up">
-        <div class="flex flex-wrap gap-2 mb-5">
-          <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-[13px] font-bold text-white"><span class="w-2 h-2 rounded-full bg-gold pulse-dot"></span> Dolibarr ERP/CRM — تركيب، تخصيص ومرافقة</span>
-          <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-carmine text-white text-[13px] font-black">🎥 جولة تعريفية داخل النظام</span>
+<!-- ================= B. قسم Hero ================= -->
+<section id="hero" class="relative overflow-hidden" style="background:linear-gradient(135deg,#088F8F 0%,#065F5F 100%)" aria-label="مقدمة Dolibarr">
+  <div class="absolute inset-0 hero-grid pointer-events-none" aria-hidden="true"></div>
+  <div class="relative max-w-7xl mx-auto px-5 lg:px-8 pt-12 pb-14 lg:pt-20 lg:pb-24">
+    <div class="grid lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+      <div class="fade-in lg:col-span-7">
+        <h1 class="text-white text-[28px] sm:text-4xl lg:text-[44px] font-bold leading-[1.8]"><span dir="ltr">Dolibarr</span>… برنامج تسيير مفتوح المصدر، جرّبناه 5 سنين في خدمتنا، ودوكا جهّزناه ليك.</h1>
+        <h2 class="mt-5 text-white text-base sm:text-lg leading-[2]" style="opacity:.92">إذا كنت تاجر ولاّ تدير شركة خدمات ولاّ صناعة… وتحوس على نظام <span dir="ltr">ERP & CRM</span> احترافي يجمعلك:<br>✔ الفوترة (<span dir="ltr">Devis, Facture, Avoir</span>)<br>✔ العملاء والموردين (<span dir="ltr">Tiers</span>)<br>✔ المخزون والمستودعات (<span dir="ltr">Stock & Entrepôts</span>)<br>✔ المشاريع والمهام (<span dir="ltr">Projets & Tâches</span>)<br>✔ الموارد البشرية (<span dir="ltr">RH, Congés</span>)<br>✔ الاشتراكات والعقود (<span dir="ltr">Abonnements & Contrats</span>)<br><span dir="ltr">Dolibarr</span> اللي عدّلناه وطوّرناه في إمكان تكنولوجي هو الحل.<br>ماشي برنامج علبة سوداء — برنامج حيّ، مفتوح المصدر، نقدرو نزيدو فيه اللي تحب على قد نشاطك.</h2>
+        <div class="mt-7 flex flex-col sm:flex-row flex-wrap gap-3">
+          <button data-open-booking class="btn-gold flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl font-bold text-sm sm:text-base">📅 احجز لقاء توضيحي مجاني (أونلاين ولاّ حضوري)</button>
+          <!-- [تكوين] رقم الواتساب: استبدل 213XXXXXXXXX برقم الواتساب الحقيقي -->
+          <a href="https://wa.me/213XXXXXXXXX" target="_blank" rel="noopener" class="btn-wa inline-flex items-center justify-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl font-bold text-sm sm:text-base whitespace-nowrap shrink-0" aria-label="حكي معانا على واتساب"><span class="wa-ic" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 2a8 8 0 1 1-4.1 14.9l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 0 1 12 4Zm-3.2 4c-.2 0-.5 0-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.9 3 4.7 4.1 2.3.9 2.8.7 3.3.7.5-.1 1.6-.7 1.9-1.3.2-.6.2-1.1.2-1.3l-.4-.2-1.7-.8c-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a7.5 7.5 0 0 1-2.2-1.4 8.2 8.2 0 0 1-1.5-1.9c-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5L9.4 6.4c-.2-.4-.4-.4-.6-.4Z"/></svg></span>حكي معانا على واتساب</a>
         </div>
-        <h1 class="text-white text-[27px] sm:text-4xl lg:text-[44px] font-black leading-snug"><span dir="ltr">Dolibarr</span> يجمعلك كامل تسيير مؤسستك في نظام واحد… من الفاتورة حتى المخزون</h1>
-        <h2 class="mt-5 text-white/90 text-base sm:text-lg lg:text-xl leading-[1.9] font-medium">راك تخدّم بنظام <span dir="ltr">Dolibarr</span> وتسيّر بيه فواتيرك، مخزونك، وعملائك…<br>بصح حاس بلي ماكش مستغل كامل القوة تاعو؟<br>الجولة التعريفية هذي راح توريلك كيفاش تستغل النظام لأقصى درجة وتسيّر مؤسستك باحترافية.</h2>
-        <div class="mt-7 flex flex-col sm:flex-row gap-3">
-          <a href="#overview" class="cta-gold flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-black text-lg">🎥 شاهد عرض التطبيق</a>
-          <button data-open-modal data-source="hero-demo" class="btn-ghost-w inline-flex items-center justify-center gap-2 border border-white/40 text-white px-7 py-4 rounded-2xl font-bold">📩 اطلب عرض خاص بنشاطك</button>
-        </div>
-        <div class="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm font-bold text-white/85">
-          <span>✓ عرض حي على نظام حقيقي</span>
-          <span>✓ فيديو تعريفي قصير</span>
-          <span>✓ يدعم حتى الإصدار 23.0.3</span>
+        <div class="mt-6 flex flex-wrap sm:flex-nowrap gap-2">
+          <span class="inline-flex items-center gap-1.5 text-[12px] sm:text-[13px] font-bold text-white bg-white/10 border border-white/25 rounded-full px-3 sm:px-3.5 py-1.5 sm:whitespace-nowrap sm:shrink-0">🏅 5 سنوات خبرة بالبرنامج</span>
+          <span class="inline-flex items-center gap-1.5 text-[12px] sm:text-[13px] font-bold text-white bg-white/10 border border-white/25 rounded-full px-3 sm:px-3.5 py-1.5 sm:whitespace-nowrap sm:shrink-0">🔓 <span dir="ltr">Open Source</span> – بلا رسوم تراخيص خفية</span>
+          <span class="inline-flex items-center gap-1.5 text-[12px] sm:text-[13px] font-bold text-white bg-white/10 border border-white/25 rounded-full px-3 sm:px-3.5 py-1.5 sm:whitespace-nowrap sm:shrink-0">🇩🇿 مكيّف للسوق الجزائري</span>
         </div>
       </div>
-      <!-- Hero visual : mock dashboard -->
-      <div class="relative fade-up">
-        <div class="absolute -inset-6 bg-gold/15 blur-3xl rounded-full pointer-events-none"></div>
-        <div class="relative rounded-3xl overflow-hidden border border-white/20 shadow-card bg-white">
-          <div class="flex items-center px-4 py-3 border-b border-slate-100" style="background:#044444">
-            <div class="flex items-center gap-2">
-              <span class="w-3 h-3 rounded-full bg-carmine"></span><span class="w-3 h-3 rounded-full bg-gold"></span><span class="w-3 h-3 rounded-full bg-brand"></span>
+      <!-- Dashboard وهمي -->
+      <div class="relative fade-in lg:col-span-5" aria-label="لوحة تحكم توضيحية">
+        <div class="float-soft relative rounded-3xl overflow-hidden border border-white/25 bg-white shadow-2xl">
+          <div class="flex items-center justify-between px-5 py-3" style="background:#088F8F">
+            <span class="flex gap-1.5" aria-hidden="true"><span class="w-2.5 h-2.5 rounded-full bg-white/40"></span><span class="w-2.5 h-2.5 rounded-full bg-white/40"></span><span class="w-2.5 h-2.5 rounded-full" style="background:#DAA520"></span></span>
+            <span class="text-white font-bold text-sm"><span dir="ltr">Dolibarr</span> — لوحة القيادة</span>
+          </div>
+          <div class="p-5 grid grid-cols-2 gap-3 bg-white">
+            <div class="rounded-2xl p-4 border border-slate-100" style="background:#F8FAFC">
+              <p class="text-[12px] font-bold text-slate-500"><span dir="ltr">CA du mois</span></p>
+              <p class="font-bold text-xl mt-1" style="color:#088F8F"><span dir="ltr">1.850.000 DA</span></p>
+              <p class="text-[11px] font-bold text-emerald-600 mt-1">▲ <span dir="ltr">+12%</span></p>
+            </div>
+            <div class="rounded-2xl p-4 border border-slate-100" style="background:#F8FAFC">
+              <p class="text-[12px] font-bold text-slate-500"><span dir="ltr">Factures impayées</span></p>
+              <p class="font-bold text-xl mt-1" style="color:#D70040"><span dir="ltr">7</span> فواتير</p>
+              <p class="text-[11px] font-bold mt-1" style="color:#D70040">تتطلب المتابعة</p>
+            </div>
+            <div class="rounded-2xl p-4 border border-slate-100" style="background:#F8FAFC">
+              <p class="text-[12px] font-bold text-slate-500"><span dir="ltr">Alerte stock</span></p>
+              <p class="font-bold text-base mt-1" style="color:#D70040"><span dir="ltr">3</span> منتجات تحت الحد</p>
+              <div class="mt-2 h-2 rounded-full bg-slate-200 overflow-hidden" aria-hidden="true"><div class="h-full w-1/4 rounded-full" style="background:#D70040"></div></div>
+            </div>
+            <div class="rounded-2xl p-4 border border-slate-100" style="background:#F8FAFC">
+              <p class="text-[12px] font-bold text-slate-500"><span dir="ltr">Tâches en cours</span></p>
+              <p class="font-bold text-xl mt-1" style="color:#088F8F"><span dir="ltr">14 / 22</span></p>
+              <div class="mt-2 h-2 rounded-full bg-slate-200 overflow-hidden" aria-hidden="true"><div class="h-full w-2/3 rounded-full" style="background:#088F8F"></div></div>
             </div>
           </div>
-          <img src="Dolibarr.jpg" alt="نظام Dolibarr ERP CRM — عرض حي" class="w-full h-52 sm:h-64 object-cover" loading="eager" onerror="this.style.display='none'">
-          <div class="p-4 sm:p-5 bg-white">
-            <div class="grid grid-cols-3 gap-3 text-center">
-              <div class="rounded-2xl bg-light border border-slate-100 p-3"><div class="text-[11px] font-bold text-slate-400">رقم الأعمال</div><div class="kpi-num font-black text-brand text-lg sm:text-xl" dir="ltr">+38%</div></div>
-              <div class="rounded-2xl bg-light border border-slate-100 p-3"><div class="text-[11px] font-bold text-slate-400">الفواتير غير المدفوعة</div><div class="kpi-num font-black text-carmine text-lg sm:text-xl" dir="ltr">12</div></div>
-              <div class="rounded-2xl bg-light border border-slate-100 p-3"><div class="text-[11px] font-bold text-slate-400">قيمة المخزون</div><div class="kpi-num font-black text-ink text-lg sm:text-xl" dir="ltr">4.2M DA</div></div>
-            </div>
-            <div class="mt-3 flex items-end gap-2 h-20" dir="ltr" aria-hidden="true">
-              <div class="flex-1 rounded-t-lg bg-brand/20" style="height:40%"></div>
-              <div class="flex-1 rounded-t-lg bg-brand/40" style="height:60%"></div>
-              <div class="flex-1 rounded-t-lg bg-brand/60" style="height:48%"></div>
-              <div class="flex-1 rounded-t-lg bg-brand" style="height:78%"></div>
-              <div class="flex-1 rounded-t-lg bg-gold" style="height:95%"></div>
-              <div class="flex-1 rounded-t-lg bg-carmine/80" style="height:55%"></div>
-              <div class="flex-1 rounded-t-lg bg-brandDark" style="height:70%"></div>
-            </div>
-            <p class="mt-2 text-[12px] font-bold text-slate-400 text-center">مثال توضيحي — شاهد النظام خدام مباشرة في العرض أسفله</p>
-          </div>
         </div>
-        <div class="floating absolute -bottom-5 right-4 sm:right-8 bg-white rounded-2xl shadow-card border border-slate-100 px-4 py-3 flex items-center gap-3">
-          <span class="w-10 h-10 rounded-xl bg-brand/10 flex items-center justify-center text-xl">⚡</span>
-          <span class="text-xs font-black text-ink leading-snug">الأرباح الصافية لكل مشروع<br><span class="text-brand">…في ثواني، ماشي سوايع</span></span>
+        <div class="float-soft absolute -bottom-5 left-4 sm:left-8 bg-white rounded-2xl border border-slate-100 px-4 py-3 flex items-center gap-3" style="box-shadow:0 18px 55px rgba(30,41,59,.12)">
+          <span class="w-10 h-10 rounded-xl flex items-center justify-center text-xl" style="background:rgba(8,143,143,.1)" aria-hidden="true">⚡</span>
+          <span class="text-xs font-bold leading-snug" style="color:#1E293B">الأرباح الصافية لكل مشروع<br><span style="color:#088F8F">…في ثواني، ماشي سوايع</span></span>
         </div>
-      </div>
     </div>
   </div>
 </section>
 
-<!-- C. PAIN POINTS -->
-<section id="problem" class="py-16 lg:py-24 bg-light">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-3xl fade-up">
-      <span class="section-label bg-white border border-brand/20 text-brand mb-3">😓 المشكل</span>
-      <h2 class="text-brand text-3xl sm:text-4xl lg:text-[42px] font-black">واش راه يخصك في استخدامك لـ <span dir="ltr">Dolibarr</span> اليوم؟</h2>
-      <p class="mt-4 text-ink/60 text-lg">النظام عندك عامر بالمعلومات… بصح استخراج القرار منها هو اللي صعيب.</p>
-    </div>
-    <div class="grid md:grid-cols-3 gap-5 mt-10">
-      <div class="bg-white card-hover rounded-3xl p-7 border border-slate-100 border-t-4 !border-t-carmine fade-up">
-        <div class="w-14 h-14 rounded-2xl bg-carmine/10 border border-carmine/20 flex items-center justify-center text-3xl mb-5">🗂️</div>
-        <h3 class="text-ink text-xl font-black">بيانات متناثرة</h3>
-        <p class="text-ink/60 mt-3 leading-[1.9] text-[15px]">عندك معلومات على المبيعات، الشراء، والمخزون، بصح صعيب تجمعهم في تقرير واحد بسرعة.</p>
-      </div>
-      <div class="bg-white card-hover rounded-3xl p-7 border border-slate-100 border-t-4 !border-t-gold fade-up">
-        <div class="w-14 h-14 rounded-2xl bg-gold/15 border border-gold/30 flex items-center justify-center text-3xl mb-5">📉</div>
-        <h3 class="text-ink text-xl font-black">صعوبة تتبع الهوامش</h3>
-        <p class="text-ink/60 mt-3 leading-[1.9] text-[15px]">تحسب الأرباح يدوياً وماتعرفش بالضبط واش من منتج أو خدمة راهي تجيبلك فايدة كبر.</p>
-      </div>
-      <div class="bg-white card-hover rounded-3xl p-7 border border-slate-100 border-t-4 !border-t-brand fade-up">
-        <div class="w-14 h-14 rounded-2xl bg-brand/10 border border-brand/20 flex items-center justify-center text-3xl mb-5">🙈</div>
-        <h3 class="text-ink text-xl font-black">قرارات بلا رؤية شاملة</h3>
-        <p class="text-ink/60 mt-3 leading-[1.9] text-[15px]">تعتمد على إحساسك في تسيير الشركة لأن استخراج الإحصائيات الدقيقة من النظام معقد شوية.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- D. FEATURES -->
-<section id="features" class="py-16 lg:py-24 bg-white">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="max-w-3xl fade-up">
-      <span class="section-label bg-brand/10 border border-brand/20 text-brand mb-3">🔌 الحل — قوة Dolibarr</span>
-      <h2 class="text-brand text-3xl sm:text-4xl lg:text-[42px] font-black">واش يقدر يديرلك <span dir="ltr">Dolibarr</span> في مؤسستك؟</h2>
-      <p class="mt-4 text-ink/60 text-lg">نظام <span dir="ltr">Dolibarr</span> غني جداً، وحنا نركبوهولك ونخصصوه على حساب النشاط تاعك، مع دعم كامل للنسخ الحديثة وصولاً إلى الإصدار <span dir="ltr" class="font-black text-ink">23.0.3</span>:</p>
-    </div>
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
-      <div class="rounded-3xl p-7 border border-slate-100 bg-light card-hover fade-up">
-        <span class="inline-flex w-10 h-10 rounded-xl bg-brand text-white font-black items-center justify-center">①</span>
-        <h3 class="text-ink text-lg font-black mt-4">التثبيت المحلي والسحابي <span class="text-slate-400 text-sm font-bold" dir="ltr">(Local &amp; Cloud)</span></h3>
-        <p class="text-ink/60 mt-2 text-[15px] leading-[1.9]">سواء حبيت تثبيت محلي (<span dir="ltr">Local</span>) في سيرفرات الشركة لضمان أقصى درجات الأمان، أو سحابي (<span dir="ltr">Cloud</span>) تخدم بيه من وين تحب — نركبولك النظام ونأمنوهولك بكل استقرار وسرعة.</p>
-      </div>
-      <div class="rounded-3xl p-7 border border-slate-100 bg-light card-hover fade-up">
-        <span class="inline-flex w-10 h-10 rounded-xl bg-brand text-white font-black items-center justify-center">②</span>
-        <h3 class="text-ink text-lg font-black mt-4">الوحدات المخصصة والأساسية <span class="text-slate-400 text-sm font-bold" dir="ltr">(Core &amp; Custom Modules)</span></h3>
-        <p class="text-ink/60 mt-2 text-[15px] leading-[1.9]">مانكتفيوش بالوحدات العادية. إذا عندك احتياجات خاصة، نزيدو ونخصصو وحدات (<span dir="ltr">Custom Modules</span>) في النظام تاعك، وندمجو حتى الوحدات اللي شريتها من <span dir="ltr">DoliStore</span>.</p>
-      </div>
-      <div class="rounded-3xl p-7 border border-slate-100 bg-light card-hover fade-up">
-        <span class="inline-flex w-10 h-10 rounded-xl bg-carmine text-white font-black items-center justify-center">③</span>
-        <h3 class="text-ink text-lg font-black mt-4">إدارة علاقات العملاء والموردين <span class="text-slate-400 text-sm font-bold" dir="ltr">(CRM &amp; Third Parties)</span></h3>
-        <p class="text-ink/60 mt-2 text-[15px] leading-[1.9]">تحليل كامل لملفات العملاء (<span dir="ltr">Tiers</span>). تقدر تشوف شكون هو العميل الأكثر ربحية، وتتبع كل التفاعلات، العروض (<span dir="ltr">Proposals</span>)، والطلبيات في واجهة وحدة.</p>
-      </div>
-      <div class="rounded-3xl p-7 border border-slate-100 bg-light card-hover fade-up">
-        <span class="inline-flex w-10 h-10 rounded-xl bg-brand text-white font-black items-center justify-center">④</span>
-        <h3 class="text-ink text-lg font-black mt-4">الفوترة والمالية <span class="text-slate-400 text-sm font-bold" dir="ltr">(Billing &amp; Finance)</span></h3>
-        <p class="text-ink/60 mt-2 text-[15px] leading-[1.9]">قراءة دقيقة للفواتير المدفوعة وغير المدفوعة، تتبع التدفق النقدي (<span dir="ltr">Cash flow</span>)، وتحليل الضرائب والرسوم مباشرة من قاعدة بيانات <span dir="ltr">Dolibarr</span>.</p>
-      </div>
-      <div class="rounded-3xl p-7 border border-slate-100 bg-light card-hover fade-up">
-        <span class="inline-flex w-10 h-10 rounded-xl bg-brand text-white font-black items-center justify-center">⑤</span>
-        <h3 class="text-ink text-lg font-black mt-4">إدارة المخزون والمستودعات <span class="text-slate-400 text-sm font-bold" dir="ltr">(Stock &amp; Inventory)</span></h3>
-        <p class="text-ink/60 mt-2 text-[15px] leading-[1.9]">مراقبة حية للمنتجات، تنبيهات انخفاض المخزون، وحساب قيمة المخزون الحالية لضمان عدم توقف نشاطك.</p>
-      </div>
-      <div class="rounded-3xl p-7 text-white card-hover fade-up" style="background:linear-gradient(150deg,#088F8F,#044444)">
-        <span class="text-4xl">🎯</span>
-        <h3 class="text-white text-lg font-black mt-3">تشوف روحك في وحدة من هذو؟</h3>
-        <p class="text-white/80 mt-2 text-[15px]">اطلب عرض خاص وشوف النظام خدام مباشرة — واسألنا على حالتك.</p>
-        <button data-open-modal data-source="features-box" class="cta-gold mt-4 inline-flex items-center gap-2 px-6 py-3 rounded-xl font-black">اطلب عرض خاص ←</button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- E. HOW IT WORKS -->
-<section id="how" class="py-16 lg:py-24 bg-light">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="text-center max-w-3xl mx-auto fade-up">
-      <span class="section-label bg-white border border-brand/20 text-brand mb-3">⚙️ كيف نعمل؟</span>
-      <h2 class="text-brand text-3xl sm:text-4xl lg:text-[42px] font-black">كيفاش نركبولك <span dir="ltr">Dolibarr</span> في مؤسستك؟</h2>
-    </div>
-    <div class="grid md:grid-cols-3 gap-5 mt-10">
-      <div class="bg-white rounded-3xl p-8 border border-slate-100 text-center card-hover fade-up relative overflow-hidden">
-        <div class="absolute top-0 right-0 left-0 h-1 bg-brand"></div>
-        <div class="w-14 h-14 mx-auto rounded-2xl bg-brand text-white font-black text-xl flex items-center justify-center">1</div>
-        <h3 class="text-ink font-black text-lg mt-4">تشخيص وفهم احتياجاتك</h3>
-        <p class="text-ink/60 text-[15px] mt-2">نفهمو النشاط تاعك، نشوفو نسختك الحالية من <span dir="ltr">Dolibarr</span>، ونحددو واش يخصك بالضبط.</p>
-      </div>
-      <div class="bg-white rounded-3xl p-8 border border-slate-100 text-center card-hover fade-up relative overflow-hidden">
-        <div class="absolute top-0 right-0 left-0 h-1 bg-gold"></div>
-        <div class="w-14 h-14 mx-auto rounded-2xl bg-gold text-brandDeep font-black text-xl flex items-center justify-center">2</div>
-        <h3 class="text-ink font-black text-lg mt-4">التركيب والإعداد والتخصيص</h3>
-        <p class="text-ink/60 text-[15px] mt-2">نركبو النظام (محلي أو سحابي)، نعدلو الإعدادات والصلاحيات، ونخصصو الوحدات على حسابك.</p>
-      </div>
-      <div class="bg-white rounded-3xl p-8 border border-slate-100 text-center card-hover fade-up relative overflow-hidden">
-        <div class="absolute top-0 right-0 left-0 h-1 bg-carmine"></div>
-        <div class="w-14 h-14 mx-auto rounded-2xl bg-carmine text-white font-black text-xl flex items-center justify-center">3</div>
-        <h3 class="text-ink font-black text-lg mt-4">التكوين والمرافقة</h3>
-        <p class="text-ink/60 text-[15px] mt-2">نكوّنو الفريق تاعك على استعمال النظام، ونبقاو معاك بالدعم والمتابعة بعد الإطلاق.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- F. TESTIMONIALS -->
-<section id="reviews" class="py-16 lg:py-24 bg-white">
-  <div class="max-w-5xl mx-auto px-5 lg:px-8">
-    <div class="text-center fade-up">
-      <span class="section-label bg-carmine/10 border border-carmine/20 text-carmine mb-3">⭐ شهادات العملاء</span>
-      <h2 class="text-brand text-3xl sm:text-4xl font-black">مؤسسات تستخدم <span dir="ltr">Dolibarr</span> استفادت من حلولنا…</h2>
-    </div>
-    <div class="grid md:grid-cols-2 gap-5 mt-10">
-      <figure class="rounded-3xl border border-slate-100 bg-light p-7 card-hover fade-up">
-        <div class="text-gold font-black">★★★★★</div>
-        <blockquote class="mt-3 text-ink leading-[1.9]">"كنا نستعملو <span dir="ltr">Dolibarr</span> لسنوات، لكن بفضل مرافقة إمكان تكنولوجي، ولّينا نشوفو الأرباح الصافية لكل مشروع في ثواني. التركيب كان سريع وما أثّرش على سيرفر الشركة المحلي."</blockquote>
-        <figcaption class="mt-4 flex items-center gap-3">
-          <span class="w-11 h-11 rounded-full bg-brand text-white font-black flex items-center justify-center">ر</span>
-          <span><span class="block font-black text-ink text-sm">رضا. ع — مسيّر مؤسسة</span><span class="block text-xs text-slate-400 font-bold">ربط Local بسيرفر الشركة</span></span>
-        </figcaption>
-      </figure>
-      <figure class="rounded-3xl border border-slate-100 bg-light p-7 card-hover fade-up">
-        <div class="text-gold font-black">★★★★★</div>
-        <blockquote class="mt-3 text-ink leading-[1.9]">"قبل كنا نخرجو التقارير من <span dir="ltr">Dolibarr</span> بالساعات. اليوم نفتح النظام صباحاً: المبيعات، الفواتير غير المدفوعة، والمخزون الناقص — كلش قدامي. اتخاذ القرار ولّى أسرع بزاف."</blockquote>
-        <figcaption class="mt-4 flex items-center gap-3">
-          <span class="w-11 h-11 rounded-full bg-carmine text-white font-black flex items-center justify-center">س</span>
-          <span><span class="block font-black text-ink text-sm">سمية. ب — مديرة مالية</span><span class="block text-xs text-slate-400 font-bold">ربط Cloud + وحدات مخصصة</span></span>
-        </figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
-
-<!-- G. APP OVERVIEW -->
-<section id="overview" class="py-16 lg:py-24 relative overflow-hidden" style="background:linear-gradient(135deg,#088F8F,#065F5F 55%,#044444)">
-  <div class="absolute inset-0 hero-grid-bg pointer-events-none"></div>
+<!-- ================= C. قصة المنتج ================= -->
+<section id="story" class="py-16 lg:py-24 bg-white relative overflow-hidden" aria-label="علاش Dolibarr بالضبط">
+  <div class="absolute -top-24 -left-24 w-96 h-96 rounded-full pointer-events-none" style="background:rgba(8,143,143,.07)" aria-hidden="true"></div>
+  <div class="absolute -bottom-24 -right-24 w-96 h-96 rounded-full pointer-events-none" style="background:rgba(218,165,32,.08)" aria-hidden="true"></div>
   <div class="relative max-w-5xl mx-auto px-5 lg:px-8">
-    <div class="rounded-[28px] bg-white/[.07] border border-white/15 p-8 sm:p-12 fade-up">
-      <div class="text-center">
-        <span class="section-label bg-gold text-brandDeep mb-4">🎥 جولة تعريفية — App Overview</span>
-        <h2 class="text-white text-3xl sm:text-4xl font-black">جولة سريعة داخل تطبيق Dolibarr</h2>
+    <div class="fade-in text-center max-w-3xl mx-auto">
+      <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-[13px] font-bold border" style="color:#088F8F;border-color:rgba(8,143,143,.25);background:rgba(8,143,143,.08)">🤝 قصتنا مع البرنامج</span>
+      <h2 class="mt-4 text-3xl sm:text-4xl lg:text-[44px] font-bold leading-[1.7]" style="color:#1E293B">علاش <span dir="ltr">Dolibarr</span> بالضبط؟<br>… لأننا <span style="background:linear-gradient(transparent 62%,rgba(218,165,32,.55) 62%)">خدمنا بيه قبل ما نبيعوه</span></h2>
+    </div>
+    <div class="fade-in mt-8 rounded-3xl border border-slate-100 p-7 sm:p-10 leading-[2.1] text-base sm:text-lg" style="background:#F8FAFC;color:#1E293B">
+      <p><span dir="ltr">Dolibarr</span> هو برنامج <span dir="ltr">ERP & CRM</span> مفتوح المصدر (<span dir="ltr">Open Source</span>)، معروف عالمياً وتخدم بيه <span class="font-bold rounded-lg px-1.5 py-0.5" style="background:rgba(218,165,32,.2)">أكثر من 100 ألف مؤسسة في العالم</span>.</p>
+      <p class="mt-4">احنا في إمكان تكنولوجي خدمناه في تسيير مشاريعنا الداخلية وعملائنا <span class="font-bold rounded-lg px-1.5 py-0.5" style="background:rgba(218,165,32,.2)">مدة 5 سنوات كاملة</span>.</p>
+      <p class="mt-4">طوّرنا فيه وعدّلنا عليه باش يتماشى مع خصوصيات السوق الجزائري: <span class="font-bold rounded-lg px-1.5 py-0.5" style="background:rgba(8,143,143,.12);color:#088F8F"><span dir="ltr">TVA 19%</span></span>، الفوترة الرسمية، وطرق العمل المحلية.</p>
+      <p class="mt-4">واليوم، قررنا نطرحوه رسمياً للتجار وشركات الخدمات الصغيرة والمتوسطة اللي تحتاج نظام قوي، مفتوح، وقابل للتطوير.</p>
+    </div>
+    <div class="grid grid-cols-3 gap-3 sm:gap-5 mt-6">
+      <div class="fade-in rounded-2xl border border-slate-100 bg-white p-4 sm:p-6 text-center card-hover" style="box-shadow:0 10px 30px rgba(8,143,143,.08)">
+        <p class="text-2xl sm:text-3xl" aria-hidden="true">🏅</p>
+        <p class="mt-2 font-bold text-xl sm:text-3xl" style="color:#088F8F"><span dir="ltr">5</span> سنوات</p>
+        <p class="mt-1 text-[12px] sm:text-sm font-bold" style="color:#1E293B;opacity:.6">خبرة عملية بالبرنامج</p>
       </div>
-      <div class="mt-8 max-w-3xl mx-auto rounded-3xl overflow-hidden border border-white/20 bg-brandDeep aspect-video flex items-center justify-center relative">
-        <span class="text-white/70 text-sm font-bold px-6 text-center">🎬 عرض التطبيق: جولة داخل Dolibarr<br><span class="text-gold">(ضع رابط فيديو العرض هنا — YouTube / Vimeo)</span></span>
+      <div class="fade-in rounded-2xl border border-slate-100 bg-white p-4 sm:p-6 text-center card-hover" style="box-shadow:0 10px 30px rgba(8,143,143,.08)">
+        <p class="text-2xl sm:text-3xl" aria-hidden="true">🌍</p>
+        <p class="mt-2 font-bold text-xl sm:text-3xl" style="color:#088F8F"><span dir="ltr">+100</span> ألف</p>
+        <p class="mt-1 text-[12px] sm:text-sm font-bold" style="color:#1E293B;opacity:.6">مؤسسة تخدم بيه في العالم</p>
       </div>
-      <ul class="mt-8 space-y-4 max-w-2xl mx-auto">
-        <li class="flex items-start gap-3 bg-white/10 border border-white/15 rounded-2xl p-4"><span class="w-8 h-8 shrink-0 rounded-full bg-gold text-brandDeep font-black flex items-center justify-center">✓</span><span class="text-white font-bold">جولة داخل واجهة الفوترة: كيفاش تخرج فاتورة في أقل من دقيقة.</span></li>
-        <li class="flex items-start gap-3 bg-white/10 border border-white/15 rounded-2xl p-4"><span class="w-8 h-8 shrink-0 rounded-full bg-gold text-brandDeep font-black flex items-center justify-center">✓</span><span class="text-white font-bold">جولة داخل المخزون: الدخلة، الخرجة وتنبيهات النقص.</span></li>
-        <li class="flex items-start gap-3 bg-white/10 border border-white/15 rounded-2xl p-4"><span class="w-8 h-8 shrink-0 rounded-full bg-gold text-brandDeep font-black flex items-center justify-center">✓</span><span class="text-white font-bold">جولة داخل ملفات العملاء والتقارير: كلش قدامك في واجهة وحدة.</span></li>
-      </ul>
-      <div class="mt-8 text-center">
-        <button data-open-modal data-source="overview-section" class="cta-gold inline-flex items-center justify-center gap-2 px-10 py-4 rounded-2xl font-black text-xl w-full sm:w-auto">📩 اطلب عرض خاص بنشاطك</button>
-        <p class="text-white/70 text-sm mt-3 font-bold">عرض مجاني • بلا التزام • نشرحولك بالدارجة</p>
+      <div class="fade-in rounded-2xl border border-slate-100 bg-white p-4 sm:p-6 text-center card-hover" style="box-shadow:0 10px 30px rgba(8,143,143,.08)">
+        <p class="text-2xl sm:text-3xl" aria-hidden="true">🇩🇿</p>
+        <p class="mt-2 font-bold text-xl sm:text-3xl" style="color:#088F8F"><span dir="ltr">TVA 19%</span></p>
+        <p class="mt-1 text-[12px] sm:text-sm font-bold" style="color:#1E293B;opacity:.6">مكيّف للسوق الجزائري</p>
       </div>
+    </div>
+    <div class="fade-in mt-6 rounded-3xl border-2 p-7 sm:p-9 relative overflow-hidden" style="border-color:#DAA520;background:linear-gradient(135deg,rgba(218,165,32,.12),rgba(218,165,32,.03));box-shadow:0 16px 45px rgba(218,165,32,.15)">
+      <span class="absolute top-5 left-6 text-5xl font-bold select-none" style="color:rgba(218,165,32,.3)" aria-hidden="true">”</span>
+      <p class="text-base sm:text-lg leading-[2] font-bold" style="color:#1E293B"><span class="font-bold" style="color:#088F8F">شنو الفرق بين <span dir="ltr">Dolibarr</span> تاع إمكان و<span dir="ltr">Dolibarr</span> اللي تحمّلو وحدك من الأنترنت؟</span><br>احنا نوفرولك: التنصيب (<span dir="ltr">Installation</span>)، الإعداد (<span dir="ltr">Paramétrage</span>)، التكوين (<span dir="ltr">Formation</span>)، الدعم (<span dir="ltr">Support</span>)، وتطوير وحدات إضافية على قد نشاطك (<span dir="ltr">Modules sur mesure</span>). تريح راسك وتركز في خدمتك.</p>
     </div>
   </div>
 </section>
 
-<!-- H. GIFT + FAQ -->
-<section id="faq" class="py-16 lg:py-24 bg-light">
+<!-- ================= D. المشكل ================= -->
+<section id="problems" class="py-16 lg:py-24 relative overflow-hidden" style="background:#F8FAFC" aria-label="مشاكل التسيير اليومي">
+  <div class="absolute top-0 right-0 left-0 h-1" style="background:linear-gradient(90deg,#088F8F,#DAA520,#D70040)" aria-hidden="true"></div>
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto fade-in">
+      <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-[13px] font-bold border bg-white" style="color:#D70040;border-color:rgba(215,0,64,.25)">😓 المشكل</span>
+      <h2 class="mt-4 text-3xl sm:text-4xl lg:text-[42px] font-bold leading-[1.7]" style="color:#1E293B">واش راه يشغل بال كل صاحب نشاط في التسيير اليومي؟</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
+      <article class="fade-in card-hover bg-white rounded-3xl p-7 border border-slate-100 relative overflow-hidden">
+        <span class="absolute top-3 left-5 text-6xl font-bold select-none" style="color:rgba(215,0,64,.08)" dir="ltr" aria-hidden="true">01</span>
+        <div class="absolute top-0 right-0 left-0 h-1.5" style="background:linear-gradient(90deg,#D70040,rgba(215,0,64,.15))" aria-hidden="true"></div>
+        <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-3xl mb-4 text-white" style="background:linear-gradient(135deg,#D70040,#a30030);box-shadow:0 8px 20px rgba(215,0,64,.3)" aria-hidden="true">📉</div>
+        <h3 class="text-xl font-bold" style="color:#1E293B">الفوترة متعبة وتضيّع الوقت</h3>
+        <p class="mt-3 leading-[1.9]" style="color:#1E293B;opacity:.7"><span dir="ltr">Devis, Bon de commande, Bon de livraison, Facture, Avoir</span>… كل وحدة في بلاصة، الأرقام متناقضة، والأرباح ماعمرها واضحة.</p>
+      </article>
+      <article class="fade-in card-hover bg-white rounded-3xl p-7 border border-slate-100 relative overflow-hidden">
+        <span class="absolute top-3 left-5 text-6xl font-bold select-none" style="color:rgba(215,0,64,.08)" dir="ltr" aria-hidden="true">02</span>
+        <div class="absolute top-0 right-0 left-0 h-1.5" style="background:linear-gradient(90deg,#D70040,rgba(215,0,64,.15))" aria-hidden="true"></div>
+        <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-3xl mb-4 text-white" style="background:linear-gradient(135deg,#D70040,#a30030);box-shadow:0 8px 20px rgba(215,0,64,.3)" aria-hidden="true">🧩</div>
+        <h3 class="text-xl font-bold" style="color:#1E293B">العملاء والموردين (<span dir="ltr">Tiers</span>) كابوس</h3>
+        <p class="mt-3 leading-[1.9]" style="color:#1E293B;opacity:.7">مئات العملاء والموردين، أرصدتهم، <span dir="ltr">Créances</span> و<span dir="ltr">Dettes</span>، مستحقات قديمة… ماتعرفش شكون خلص وشكون لا.</p>
+      </article>
+      <article class="fade-in card-hover bg-white rounded-3xl p-7 border border-slate-100 relative overflow-hidden">
+        <span class="absolute top-3 left-5 text-6xl font-bold select-none" style="color:rgba(215,0,64,.08)" dir="ltr" aria-hidden="true">03</span>
+        <div class="absolute top-0 right-0 left-0 h-1.5" style="background:linear-gradient(90deg,#D70040,rgba(215,0,64,.15))" aria-hidden="true"></div>
+        <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-3xl mb-4 text-white" style="background:linear-gradient(135deg,#D70040,#a30030);box-shadow:0 8px 20px rgba(215,0,64,.3)" aria-hidden="true">📦</div>
+        <h3 class="text-xl font-bold" style="color:#1E293B">المخزون ديما غامض</h3>
+        <p class="mt-3 leading-[1.9]" style="color:#1E293B;opacity:.7"><span dir="ltr">Entrée / Sortie / Transfert</span>… كي تسقسي على سلعة في الـ <span dir="ltr">Dépôt</span> يقولولك: نشوفو ونرجعولك.</p>
+      </article>
+      <article class="fade-in card-hover bg-white rounded-3xl p-7 border border-slate-100 relative overflow-hidden">
+        <span class="absolute top-3 left-5 text-6xl font-bold select-none" style="color:rgba(215,0,64,.08)" dir="ltr" aria-hidden="true">04</span>
+        <div class="absolute top-0 right-0 left-0 h-1.5" style="background:linear-gradient(90deg,#D70040,rgba(215,0,64,.15))" aria-hidden="true"></div>
+        <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-3xl mb-4 text-white" style="background:linear-gradient(135deg,#D70040,#a30030);box-shadow:0 8px 20px rgba(215,0,64,.3)" aria-hidden="true">⏳</div>
+        <h3 class="text-xl font-bold" style="color:#1E293B">المشاريع والمهام بلا تنسيق</h3>
+        <p class="mt-3 leading-[1.9]" style="color:#1E293B;opacity:.7">شكون يدير واش؟ واش اللي متأخر؟ وين وصل المشروع؟ الفريق ضايع بين الواتساب والإيميلات.</p>
+      </article>
+      <article class="fade-in card-hover bg-white rounded-3xl p-7 border border-slate-100 relative overflow-hidden">
+        <span class="absolute top-3 left-5 text-6xl font-bold select-none" style="color:rgba(215,0,64,.08)" dir="ltr" aria-hidden="true">05</span>
+        <div class="absolute top-0 right-0 left-0 h-1.5" style="background:linear-gradient(90deg,#D70040,rgba(215,0,64,.15))" aria-hidden="true"></div>
+        <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-3xl mb-4 text-white" style="background:linear-gradient(135deg,#D70040,#a30030);box-shadow:0 8px 20px rgba(215,0,64,.3)" aria-hidden="true">👥</div>
+        <h3 class="text-xl font-bold" style="color:#1E293B">الموارد البشرية عشوائية</h3>
+        <p class="mt-3 leading-[1.9]" style="color:#1E293B;opacity:.7"><span dir="ltr">Congés, Absences</span>، وثائق الموظفين… كلش شفوي وما كاين حتى أثر مكتوب.</p>
+      </article>
+      <article class="fade-in card-hover bg-white rounded-3xl p-7 border border-slate-100 relative overflow-hidden">
+        <span class="absolute top-3 left-5 text-6xl font-bold select-none" style="color:rgba(215,0,64,.08)" dir="ltr" aria-hidden="true">06</span>
+        <div class="absolute top-0 right-0 left-0 h-1.5" style="background:linear-gradient(90deg,#D70040,rgba(215,0,64,.15))" aria-hidden="true"></div>
+        <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-3xl mb-4 text-white" style="background:linear-gradient(135deg,#D70040,#a30030);box-shadow:0 8px 20px rgba(215,0,64,.3)" aria-hidden="true">🔒</div>
+        <h3 class="text-xl font-bold" style="color:#1E293B">البرامج التجارية مغلقة</h3>
+        <p class="mt-3 leading-[1.9]" style="color:#1E293B;opacity:.7">تشري برنامج وتكتشف من بعد بلي ماتقدرش تزيد فيه <span dir="ltr">Module</span> خاص بيك. مع <span dir="ltr">Dolibarr</span> المفتوح المصدر، كل شيء ممكن.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= E. الحل – الوحدات ================= -->
+<section id="modules" class="py-16 lg:py-24 bg-white" aria-label="وحدات Dolibarr">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto fade-in">
+      <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-[13px] font-bold border" style="color:#088F8F;border-color:rgba(8,143,143,.25);background:rgba(8,143,143,.08)">🧩 الحل — الوحدات</span>
+      <h2 class="mt-4 text-3xl sm:text-4xl lg:text-[42px] font-bold leading-[1.7]" style="color:#1E293B"><span dir="ltr">Dolibarr</span> + إمكان تكنولوجي = نظام تسيير كامل، حيّ وقابل للتوسيع</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
+      <article class="fade-in card-hover rounded-3xl p-7 border border-slate-100" style="background:#F8FAFC">
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl text-white mb-4" style="background:#088F8F" aria-hidden="true">🧾</div>
+        <h3 class="text-lg font-bold">الفوترة والمالية</h3>
+        <p class="mt-2 text-[15px] leading-[1.9]" style="color:#1E293B;opacity:.7"><span dir="ltr">Devis ← Commande ← Livraison ← Facture ← Règlement</span>. كلش مرقّم ومسلسل، مع <span dir="ltr">TVA 19%</span> واحتساب الأرباح تلقائياً. <span dir="ltr">Suivi des impayés</span> و<span dir="ltr">Balance âgée</span>.</p>
+      </article>
+      <article class="fade-in card-hover rounded-3xl p-7 border border-slate-100" style="background:#F8FAFC">
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl text-white mb-4" style="background:#088F8F" aria-hidden="true">🤝</div>
+        <h3 class="text-lg font-bold">العملاء والموردين (<span dir="ltr">Tiers</span>)</h3>
+        <p class="mt-2 text-[15px] leading-[1.9]" style="color:#1E293B;opacity:.7"><span dir="ltr">Fiche complète</span> لكل عميل ومورّد: <span dir="ltr">historique achats/ventes, encours, relances, catégories, tags</span>.</p>
+      </article>
+      <article class="fade-in card-hover rounded-3xl p-7 border border-slate-100" style="background:#F8FAFC">
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl text-white mb-4" style="background:#088F8F" aria-hidden="true">📦</div>
+        <h3 class="text-lg font-bold">المخزون والمستودعات</h3>
+        <p class="mt-2 text-[15px] leading-[1.9]" style="color:#1E293B;opacity:.7"><span dir="ltr">Multi-entrepôts, Mouvements de stock, Alerte stock minimum, Valorisation, Inventaire</span>.</p>
+      </article>
+      <article class="fade-in card-hover rounded-3xl p-7 border border-slate-100" style="background:#F8FAFC">
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl text-white mb-4" style="background:#088F8F" aria-hidden="true">📋</div>
+        <h3 class="text-lg font-bold">المشاريع والمهام</h3>
+        <p class="mt-2 text-[15px] leading-[1.9]" style="color:#1E293B;opacity:.7"><span dir="ltr">Projet ← Tâches ← Budget ← Suivi de progression</span>. كل موظف يشوف مهامو، والمدير يشوف كلش.</p>
+      </article>
+      <article class="fade-in card-hover rounded-3xl p-7 border border-slate-100" style="background:#F8FAFC">
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl text-white mb-4" style="background:#088F8F" aria-hidden="true">👥</div>
+        <h3 class="text-lg font-bold">الموارد البشرية</h3>
+        <p class="mt-2 text-[15px] leading-[1.9]" style="color:#1E293B;opacity:.7"><span dir="ltr">Fiches employés, Contrats, Demandes de congé, Suivi absences, Documents</span>.</p>
+      </article>
+      <article class="fade-in card-hover rounded-3xl p-7 border border-slate-100" style="background:#F8FAFC">
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl text-white mb-4" style="background:#088F8F" aria-hidden="true">🔁</div>
+        <h3 class="text-lg font-bold">الاشتراكات والعقود</h3>
+        <p class="mt-2 text-[15px] leading-[1.9]" style="color:#1E293B;opacity:.7"><span dir="ltr">Abonnements, Contrats récurrents, Échéances, Alertes renouvellement</span>.</p>
+      </article>
+      <article class="fade-in card-hover rounded-3xl p-7 border-2 bg-white sm:col-span-2 lg:col-span-1" style="border-color:#DAA520">
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl text-white mb-4" style="background:#088F8F" aria-hidden="true">⚙️</div>
+        <h3 class="text-lg font-bold">وحدات على قد نشاطك (<span dir="ltr">Sur mesure</span>)</h3>
+        <p class="mt-2 text-[15px] leading-[1.9]" style="color:#1E293B;opacity:.7">تحتاج <span dir="ltr">Module</span> خاص: <span dir="ltr">Livraison, SAV, Point de vente, Application mobile</span>؟ فريق إمكان تكنولوجي يطوّرهولك. هذا هو جمال المصدر المفتوح.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= F. المقارنة ================= -->
+<section id="compare" class="py-16 lg:py-24" style="background:#F8FAFC" aria-label="مقارنة صريحة">
   <div class="max-w-5xl mx-auto px-5 lg:px-8">
-    <div class="rounded-[28px] bg-white border border-gold/40 p-8 sm:p-10 fade-up flex flex-col md:flex-row items-center gap-6 shadow-card">
-      <div class="w-20 h-20 shrink-0 rounded-3xl bg-gold flex items-center justify-center text-4xl floating">🎁</div>
-      <div class="flex-1 text-center md:text-right">
-        <h3 class="text-ink text-2xl font-black">شاهد لمحة عن النظام 🎬</h3>
-        <p class="text-ink/60 mt-2">فيديو قصير: <strong class="text-ink">"3 أخطاء في تحليل أرباح مؤسستك"</strong> — شاهدو الآن في قسم العرض.</p>
+    <div class="text-center max-w-3xl mx-auto fade-in">
+      <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-[13px] font-bold border bg-white" style="color:#088F8F;border-color:rgba(8,143,143,.25)">⚖️ لماذا نحن؟</span>
+      <h2 class="mt-4 text-3xl sm:text-4xl lg:text-[42px] font-bold leading-[1.7]" style="color:#1E293B">مقارنة صريحة: <span dir="ltr">Dolibarr</span> مع إمكان تكنولوجي ضد البرامج التجارية</h2>
+    </div>
+    <div class="fade-in mt-10 overflow-x-auto rounded-3xl border-2 bg-white" style="border-color:rgba(8,143,143,.2);box-shadow:0 20px 55px rgba(8,143,143,.12)">
+      <table class="w-full text-right min-w-[640px]">
+        <thead>
+          <tr style="background:#088F8F">
+            <th class="p-4 sm:p-5 text-white font-bold text-sm sm:text-base">المعيار</th>
+            <th class="p-4 sm:p-5 text-white font-bold text-sm sm:text-base">برامج <span dir="ltr">ERP</span> تجارية</th>
+            <th class="p-4 sm:p-5 text-white font-bold text-sm sm:text-base"><span dir="ltr">Dolibarr</span> مع إمكان تكنولوجي</th>
+          </tr>
+        </thead>
+        <tbody class="text-sm sm:text-[15px] leading-[1.9]">
+          <tr class="border-t border-slate-100">
+            <td class="p-4 sm:p-5 font-bold">السعر</td>
+            <td class="p-4 sm:p-5" style="color:#1E293B;opacity:.7">اشتراك شهري مرتفع + تكاليف خفية</td>
+            <td class="p-4 sm:p-5 font-bold" style="color:#088F8F">السنة الأولى: <span dir="ltr">64.000</span> دج شاملة كل شيء. من السنة الثانية: <span dir="ltr">30.000</span> دج/سنة أو <span dir="ltr">4.000</span> دج فقط</td>
+          </tr>
+          <tr class="border-t border-slate-100" style="background:#F8FAFC">
+            <td class="p-4 sm:p-5 font-bold">الانفتاح</td>
+            <td class="p-4 sm:p-5" style="color:#1E293B;opacity:.7">مغلق، ممنوع التعديل</td>
+            <td class="p-4 sm:p-5 font-bold"><span dir="ltr">Open Source</span> — نزيدو فيه اللي تحب</td>
+          </tr>
+          <tr class="border-t border-slate-100">
+            <td class="p-4 sm:p-5 font-bold">التخصيص</td>
+            <td class="p-4 sm:p-5" style="color:#1E293B;opacity:.7">محدود أو غالي بزاف</td>
+            <td class="p-4 sm:p-5 font-bold"><span dir="ltr">Sur mesure</span> على قد نشاطك</td>
+          </tr>
+          <tr class="border-t border-slate-100" style="background:#F8FAFC">
+            <td class="p-4 sm:p-5 font-bold">الدعم</td>
+            <td class="p-4 sm:p-5" style="color:#1E293B;opacity:.7"><span dir="ltr">Email</span> وتذاكر، بطيء</td>
+            <td class="p-4 sm:p-5 font-bold">دعم مباشر بالدارجة: واتساب، هاتف، وحتى حضوري</td>
+          </tr>
+          <tr class="border-t border-slate-100">
+            <td class="p-4 sm:p-5 font-bold">التجربة المحلية</td>
+            <td class="p-4 sm:p-5" style="color:#1E293B;opacity:.7">برنامج أجنبي مايفهمش السوق</td>
+            <td class="p-4 sm:p-5 font-bold">مكيّف للجزائر: <span dir="ltr">TVA 19%</span>، فوترة رسمية، طرق عمل محلية</td>
+          </tr>
+          <tr class="border-t border-slate-100" style="background:#F8FAFC">
+            <td class="p-4 sm:p-5 font-bold">التكوين</td>
+            <td class="p-4 sm:p-5" style="color:#1E293B;opacity:.7">ساعات محدودة ومكلفة</td>
+            <td class="p-4 sm:p-5 font-bold">حتى 6 ساعات تكوين مشمولة في عرض السنة الأولى</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ================= G. التسعير ================= -->
+<section id="pricing" class="py-16 lg:py-24 bg-white" aria-label="التسعير">
+  <div class="max-w-4xl mx-auto px-5 lg:px-8">
+    <div class="text-center fade-in max-w-2xl mx-auto">
+      <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-[13px] font-bold border" style="color:#088F8F;border-color:rgba(8,143,143,.25);background:rgba(8,143,143,.08)">💰 التسعير</span>
+      <h2 class="mt-4 text-3xl sm:text-4xl lg:text-[42px] font-bold" style="color:#1E293B">تسعير شفاف… بلا مفاجآت</h2>
+      <p class="mt-4 text-lg" style="color:#1E293B;opacity:.7">هذا هو نفس العرض اللي نقدموه لعملائنا الحقيقيين. بلا تكاليف خفية.</p>
+    </div>
+    <div class="fade-in relative mt-12 rounded-3xl border-2 bg-white" style="border-color:#DAA520;box-shadow:0 24px 70px rgba(218,165,32,.25)">
+      <span class="absolute -top-4 right-6 z-10 text-sm font-bold px-4 py-1.5 rounded-full" style="background:#DAA520;color:#1E293B;box-shadow:0 8px 20px rgba(218,165,32,.45)">عرض السنة الأولى</span>
+      <div class="relative px-7 pt-10 pb-8 sm:px-10 text-center overflow-hidden" style="background:linear-gradient(135deg,#088F8F,#065F5F);border-radius:1.35rem 1.35rem 0 0">
+        <div class="absolute inset-0 hero-grid pointer-events-none" aria-hidden="true"></div>
+        <h3 class="relative text-white text-2xl sm:text-3xl font-bold">الباقة <span dir="ltr">Standard</span> – السنة الأولى</h3>
+        <p class="relative mt-4 font-bold text-5xl sm:text-6xl text-white"><span dir="ltr">64.000</span> دج (<span dir="ltr">HT</span>)</p>
+        <p class="relative mt-4 inline-block text-sm font-bold rounded-full px-5 py-1.5" style="color:#1E293B;background:#DAA520">أي <span dir="ltr">76.160</span> دج <span dir="ltr">TTC</span> (<span dir="ltr">TVA 19%</span>)</p>
       </div>
-      <a href="#overview" class="cta-gold shrink-0 inline-flex items-center gap-2 px-7 py-3.5 rounded-2xl font-black">شاهد الفيديو الآن ←</a>
+      <div class="p-7 sm:p-10">
+      <div class="overflow-hidden rounded-2xl border border-slate-200">
+        <table class="w-full text-right text-sm sm:text-[15px]">
+          <tbody class="leading-[1.9]">
+            <tr class="border-b border-slate-100" style="background:#F8FAFC">
+              <td class="p-4 font-bold"><span dir="ltr">Installation & Hébergement</span> (السنة الأولى مشمولة)</td>
+              <td class="p-4 font-bold whitespace-nowrap" style="color:#088F8F"><span dir="ltr">8.000</span> دج</td>
+            </tr>
+            <tr class="border-b border-slate-100">
+              <td class="p-4 font-bold"><span dir="ltr">Paramétrage</span> وتخصيص الوحدات: <span dir="ltr">Tiers, Produits/Services, Stock, Commercial, Facturation, Trésorerie</span></td>
+              <td class="p-4 font-bold whitespace-nowrap" style="color:#088F8F"><span dir="ltr">20.000</span> دج</td>
+            </tr>
+            <tr class="border-b border-slate-100" style="background:#F8FAFC">
+              <td class="p-4 font-bold"><span dir="ltr">Formation</span>: حتى 6 ساعات على كل الوحدات، قابلة للتقسيم على حصص</td>
+              <td class="p-4 font-bold whitespace-nowrap" style="color:#088F8F"><span dir="ltr">10.000</span> دج</td>
+            </tr>
+            <tr>
+              <td class="p-4 font-bold"><span dir="ltr">Support technique</span> سنوي (<span dir="ltr">1-5</span> مستخدمين) + متابعة <span dir="ltr">Mises à jour</span></td>
+              <td class="p-4 font-bold whitespace-nowrap" style="color:#088F8F"><span dir="ltr">26.000</span> دج</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      </div>
+    </div>
+    <h3 class="fade-in text-center mt-10 text-xl font-bold">ابتداءً من السنة الثانية، عندك خياران:</h3>
+    <div class="grid sm:grid-cols-2 gap-5 mt-6">
+      <div class="fade-in card-hover rounded-3xl border-2 p-6 relative overflow-hidden" style="border-color:#088F8F;background:linear-gradient(135deg,rgba(8,143,143,.1),rgba(8,143,143,.02));box-shadow:0 16px 45px rgba(8,143,143,.16)">
+        <div class="absolute top-0 right-0 left-0 h-1.5" style="background:linear-gradient(90deg,#088F8F,rgba(8,143,143,.1))" aria-hidden="true"></div>
+        <p class="font-bold text-lg">🥇 مع <span dir="ltr">Support</span>: <span dir="ltr">30.000</span> دج/سنة</p>
+        <p class="mt-2 text-[15px] leading-[1.9]" style="color:#1E293B;opacity:.7"><span dir="ltr">Hébergement</span> + <span dir="ltr">Support technique</span> + <span dir="ltr">Mises à jour</span>. تتصل بينا وقتما تحتاج.</p>
+      </div>
+      <div class="fade-in card-hover rounded-3xl border border-slate-200 bg-white p-6">
+        <p class="font-bold text-lg">🥈 <span dir="ltr">Hébergement</span> فقط: <span dir="ltr">4.000</span> دج/سنة</p>
+        <p class="mt-2 text-[15px] leading-[1.9]" style="color:#1E293B;opacity:.7">بدون <span dir="ltr">Support</span>. إذا احتجت تدخّل، يُحسب حسب الوقت المستهلك في خدمتك.</p>
+      </div>
+    </div>
+    <p class="fade-in text-center mt-6 text-sm" style="color:#1E293B;opacity:.6">عندك أكثر من 5 مستخدمين ولاّ تحتاج <span dir="ltr">Modules</span> إضافية؟ نضبطولك عرضاً مخصصاً في اللقاء التوضيحي.</p>
+    <div class="fade-in text-center mt-6">
+      <button data-open-booking class="btn-gold inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-bold text-lg w-full sm:w-auto">📅 احجز لقاءك واحصل على عرض مخصص</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= H. كيفاش تبدأ؟ ================= -->
+<section id="steps" class="py-16 lg:py-24" style="background:#F8FAFC" aria-label="كيفاش تبدأ">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto fade-in">
+      <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-[13px] font-bold border bg-white" style="color:#088F8F;border-color:rgba(8,143,143,.25)">🗺️ كيفاش تبدأ؟</span>
+      <h2 class="mt-4 text-3xl sm:text-4xl lg:text-[42px] font-bold leading-[1.7]" style="color:#1E293B">من اللقاء الأول حتى تولي خدّام… في ظرف أسبوع</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-5 mt-12">
+      <article class="fade-in card-hover bg-white rounded-3xl p-8 border border-slate-100 text-center relative">
+        <div class="w-14 h-14 mx-auto rounded-full text-white font-bold text-xl flex items-center justify-center relative z-10" style="background:linear-gradient(135deg,#088F8F,#065F5F);box-shadow:0 10px 25px rgba(8,143,143,.4);outline:4px solid #F8FAFC" aria-hidden="true"><span dir="ltr">1</span></div>
+        <p class="mt-4 text-3xl" aria-hidden="true">📅</p>
+        <h3 class="font-bold text-lg mt-2">تحجز لقاء توضيحي مجاني</h3>
+        <p class="text-[15px] mt-2 leading-[1.9]" style="color:#1E293B;opacity:.7">أونلاين (<span dir="ltr">Google Meet</span>) ولاّ حضوري إذا كنت قريب من الجزائر العاصمة. مدة اللقاء: 45 دقيقة لساعة. نعرضولك البرنامج مباشرة، نجاوبو على كل أسئلتك، ونفهمو احتياجات نشاطك.</p>
+      </article>
+      <article class="fade-in card-hover bg-white rounded-3xl p-8 border border-slate-100 text-center relative">
+        <div class="w-14 h-14 mx-auto rounded-full font-bold text-xl flex items-center justify-center relative z-10" style="background:linear-gradient(135deg,#DAA520,#a87c14);color:#1E293B;box-shadow:0 10px 25px rgba(218,165,32,.45);outline:4px solid #F8FAFC" aria-hidden="true"><span dir="ltr">2</span></div>
+        <p class="mt-4 text-3xl" aria-hidden="true">📝</p>
+        <h3 class="font-bold text-lg mt-2">نتفقو على العرض المناسب</h3>
+        <p class="text-[15px] mt-2 leading-[1.9]" style="color:#1E293B;opacity:.7">على أساس احتياجاتك، نقترحولك عرض سعري شفاف ومكتوب (<span dir="ltr">Proposition commerciale</span> رسمية): عدد المستخدمين، الوحدات، والتخصيصات.</p>
+      </article>
+      <article class="fade-in card-hover bg-white rounded-3xl p-8 border border-slate-100 text-center relative">
+        <div class="w-14 h-14 mx-auto rounded-full text-white font-bold text-xl flex items-center justify-center relative z-10" style="background:linear-gradient(135deg,#D70040,#a30030);box-shadow:0 10px 25px rgba(215,0,64,.4);outline:4px solid #F8FAFC" aria-hidden="true"><span dir="ltr">3</span></div>
+        <p class="mt-4 text-3xl" aria-hidden="true">🚀</p>
+        <h3 class="font-bold text-lg mt-2">التنصيب والتكوين والانطلاق</h3>
+        <p class="text-[15px] mt-2 leading-[1.9]" style="color:#1E293B;opacity:.7">نركبولك البرنامج، نضبطوه على نشاطك، نكوّنوك انت وموظفيك (حتى 6 ساعات)، وتولي خدّام بـ <span dir="ltr">Dolibarr</span> بشكل طبيعي.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= I. الثقة والشفافية ================= -->
+<section id="trust" class="py-16 lg:py-24 bg-white" aria-label="الثقة والشفافية">
+  <div class="max-w-5xl mx-auto px-5 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto fade-in">
+      <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-[13px] font-bold border" style="color:#088F8F;border-color:rgba(8,143,143,.25);background:rgba(8,143,143,.08)">🛡️ الثقة والشفافية</span>
+      <h2 class="mt-4 text-3xl sm:text-4xl lg:text-[42px] font-bold leading-[1.7]" style="color:#088F8F">نحكيولك الصح… ماشي شهادات مزيّفة</h2>
     </div>
 
-    <div class="text-center mt-14 fade-up">
-      <span class="section-label bg-white border border-brand/20 text-brand mb-3">❓ الأسئلة الشائعة</span>
-      <h2 class="text-brand text-3xl sm:text-4xl font-black">عندك سؤال على <span dir="ltr">Dolibarr</span>؟</h2>
+    <!-- شهادة المسيّر -->
+    <!-- [تكوين] استبدال الشهادات بحقيقية: ضع صورة حقيقية للمسيّر مكان placeholder أدناه -->
+    <figure class="fade-in mt-10 rounded-3xl border border-slate-200 bg-white overflow-hidden" style="box-shadow:0 20px 60px rgba(8,143,143,.12)">
+      <div class="h-2.5" style="background:linear-gradient(90deg,#088F8F,#065F5F,#DAA520)" aria-hidden="true"></div>
+      <div class="p-7 sm:p-10 relative">
+        <span class="absolute top-6 left-7 text-6xl font-bold select-none" style="color:rgba(8,143,143,.12)" aria-hidden="true">❝</span>
+        <div class="flex items-center gap-4">
+          <!-- [تكوين] ضع صورة حقيقية للمسيّر مكان icon.svg -->
+          <img src="icon.svg" alt="صورة أمين الزرقة مسيّر شركة إمكان تكنولوجي" width="72" height="72" class="w-[72px] h-[72px] rounded-full object-contain bg-white p-1.5 shrink-0" style="border:3px solid #DAA520;box-shadow:0 10px 25px rgba(218,165,32,.35)" loading="lazy" onerror="this.outerHTML='<span class=&quot;w-[72px] h-[72px] rounded-full flex items-center justify-center text-2xl font-bold text-white shrink-0&quot; style=&quot;background:linear-gradient(135deg,#088F8F,#065F5F);border:3px solid #DAA520&quot; aria-hidden=&quot;true&quot;>أ</span>'">
+          <figcaption>
+            <p class="font-bold text-lg">أمين الزرقة</p>
+            <p class="mt-1 inline-block text-[13px] font-bold rounded-full px-3 py-1" style="color:#088F8F;background:rgba(8,143,143,.1)">مسيّر <span dir="ltr">SARL IMKAN SPACE</span></p>
+          </figcaption>
+        </div>
+        <blockquote class="mt-6 text-lg sm:text-xl leading-[2] font-medium" style="color:#1E293B">“أنا أمين الزرقة، مسيّر شركة إمكان تكنولوجي.<br>من 5 سنين ونحن نسيّرو شركتنا بـ <span dir="ltr">Dolibarr</span>: الفوترة، العروض (<span dir="ltr">Devis</span>)، العملاء، المشاريع، وحتى الخزينة (<span dir="ltr">Trésorerie</span>).<br>ماشي برنامج جربناه شهر وقلنا مليح — برنامج عشنا بيه يومياً، عدّلنا فيه، وطوّرناه على قد السوق الجزائري.<br>واليوم كي نقترحوه عليك، راني نقترح عليك حاجة نأمن بيها ونخدم بيها بيدي.”</blockquote>
+        <p class="mt-4 font-bold" style="color:#088F8F">— أمين الزرقة ، مسيّر <span dir="ltr">SARL IMKAN SPACE</span></p>
+      </div>
+    </figure>
+
+    <!-- أول عميل حقيقي -->
+    <aside class="fade-in mt-6 rounded-3xl border border-slate-200 p-7 sm:p-8 relative overflow-hidden" style="background:#F8FAFC;box-shadow:0 12px 35px rgba(30,41,59,.07)" aria-label="أول عميل حقيقي">
+      <div class="absolute top-0 bottom-0 right-0 w-1.5" style="background:linear-gradient(#088F8F,#065F5F)" aria-hidden="true"></div>
+      <div class="flex items-start gap-4">
+        <span class="w-12 h-12 shrink-0 rounded-2xl flex items-center justify-center text-2xl text-white" style="background:linear-gradient(135deg,#088F8F,#065F5F);box-shadow:0 8px 20px rgba(8,143,143,.3)" aria-hidden="true">🏭</span>
+        <p class="leading-[2]" style="color:#1E293B">من أوائل عملائنا : شركة في مجال صناعة الألمنيوم بقسنطينة —<br>ركبنالهم <span dir="ltr">Dolibarr</span> وضبطناه على نشاطهم: <span dir="ltr">Tiers, Stock, Commercial, Facturation, Trésorerie</span><br>مع 6 ساعات تكوين و<span dir="ltr">Support</span> سنوي.</p>
+      </div>
+    </aside>
+
+    <!-- عرض زبائن Pilot -->
+    <aside class="fade-in relative mt-8 rounded-3xl border-2 p-7 sm:p-10" style="border-color:#DAA520;background:linear-gradient(135deg,rgba(218,165,32,.1),rgba(218,165,32,.02));box-shadow:0 20px 60px rgba(218,165,32,.18)" aria-label="عرض زبائن Pilot">
+      <span class="absolute -top-4 right-6 text-sm font-bold px-4 py-1.5 rounded-full z-10" style="background:#DAA520;color:#1E293B;box-shadow:0 8px 20px rgba(218,165,32,.45)">🚀 عرض المعرض</span>
+      <h3 class="text-2xl font-bold">كون من أوائل الزبائن… وشهادتك هي اللي تنكتب هنا</h3>
+      <div class="mt-4 leading-[2]" style="color:#1E293B">
+        <p>رانا صادقين معاك: احنا في بداية تسويق <span dir="ltr">Dolibarr</span> للمجتمع تاعنا،<br>ومازال ماعندناش صفحة مليانة شهادات — وهذا شيء مؤقت 😉</p>
+        <p class="mt-4">بمناسبة المعرض، رانا نحوسو على زبائن <span dir="ltr">Pilot</span>:<br>✔ تستفاد من مرافقة خاصة ومتابعة لصيقة من فريقنا مباشرة<br>✔ تكون من أوائل اللي يأثرو في تطوير البرنامج حسب احتياجات السوق<br>✔ رأيك يوصل مباشرة للفريق التقني<br>✔ والبلاصة هذي في الصفحة… محجوزة لشهادتك انت من بعد ما تجرب البرنامج</p>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-6">
+        <div class="rounded-2xl border-2 border-dashed p-5 text-center card-hover bg-white/70" style="border-color:rgba(218,165,32,.5)" aria-hidden="true"><p class="text-3xl">👤</p><p class="text-[13px] font-bold mt-2 text-slate-400">☆☆☆☆☆</p><p class="text-[13px] font-bold mt-1 text-slate-500">شهادتك هنا قريباً ✍️</p><p class="text-[11px] font-bold text-slate-400">محجوزة لزبون <span dir="ltr">Pilot</span></p></div>
+        <div class="rounded-2xl border-2 border-dashed p-5 text-center card-hover bg-white/70" style="border-color:rgba(218,165,32,.5)" aria-hidden="true"><p class="text-3xl">👤</p><p class="text-[13px] font-bold mt-2 text-slate-400">☆☆☆☆☆</p><p class="text-[13px] font-bold mt-1 text-slate-500">شهادتك هنا قريباً ✍️</p><p class="text-[11px] font-bold text-slate-400">محجوزة لزبون <span dir="ltr">Pilot</span></p></div>
+        <div class="rounded-2xl border-2 border-dashed p-5 text-center card-hover bg-white/70" style="border-color:rgba(218,165,32,.5)" aria-hidden="true"><p class="text-3xl">👤</p><p class="text-[13px] font-bold mt-2 text-slate-400">☆☆☆☆☆</p><p class="text-[13px] font-bold mt-1 text-slate-500">شهادتك هنا قريباً ✍️</p><p class="text-[11px] font-bold text-slate-400">محجوزة لزبون <span dir="ltr">Pilot</span></p></div>
+        <div class="rounded-2xl border-2 border-dashed p-5 text-center card-hover bg-white/70" style="border-color:rgba(218,165,32,.5)" aria-hidden="true"><p class="text-3xl">👤</p><p class="text-[13px] font-bold mt-2 text-slate-400">☆☆☆☆☆</p><p class="text-[13px] font-bold mt-1 text-slate-500">شهادتك هنا قريباً ✍️</p><p class="text-[11px] font-bold text-slate-400">محجوزة لزبون <span dir="ltr">Pilot</span></p></div>
+      </div>
+      <div class="mt-6 text-center">
+        <button data-open-booking class="btn-gold inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-bold text-lg w-full sm:w-auto">🚀 نحب نكون زبون <span dir="ltr">Pilot</span> — احجزولي لقاء</button>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- ================= J. الأسئلة الشائعة ================= -->
+<section id="faq" class="py-16 lg:py-24" style="background:#F8FAFC" aria-label="الأسئلة الشائعة">
+  <div class="max-w-3xl mx-auto px-5 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto fade-in">
+      <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-[13px] font-bold border bg-white" style="color:#088F8F;border-color:rgba(8,143,143,.25)">❓ الأسئلة الشائعة</span>
+      <h2 class="mt-4 text-3xl sm:text-4xl lg:text-[42px] font-bold" style="color:#1E293B">أسئلة تخطر على بالك</h2>
     </div>
-    <div class="mt-8 space-y-3 max-w-3xl mx-auto">
-      <details class="bg-white border border-slate-200 rounded-2xl overflow-hidden fade-up" open>
-        <summary class="cursor-pointer p-5 sm:p-6 flex items-center justify-between gap-4 font-black text-ink">هل بياناتي تبقى آمنة مع الحل؟ <span class="w-8 h-8 shrink-0 rounded-full bg-brand/10 text-brand flex items-center justify-center text-xl">+</span></summary>
-        <div class="px-5 sm:px-6 pb-6 text-ink/60 text-[15px] leading-[1.9]">نعم، نخدمو بصلاحيات محدودة وآمنة ونحترمو سرية معلوماتك. وإذا اخترت التثبيت المحلي، بياناتك تبقى داخل سيرفرات الشركة فقط.</div>
+    <div class="mt-10 space-y-3">
+      <details class="faq fade-in bg-white border border-slate-200 rounded-2xl overflow-hidden">
+        <summary class="cursor-pointer p-5 font-bold">واش هو <span dir="ltr">Dolibarr</span> بالضبط؟ <span class="faq-icon w-8 h-8 shrink-0 rounded-full flex items-center justify-center text-white text-xl" style="background:linear-gradient(135deg,#088F8F,#065F5F)" aria-hidden="true">+</span></summary>
+        <div class="px-5 pb-5 leading-[1.9]" style="color:#1E293B;opacity:.75"><span dir="ltr">Dolibarr</span> هو برنامج <span dir="ltr">ERP & CRM</span> مفتوح المصدر <span dir="ltr">(Open Source)</span> معروف عالمياً. يستعمل في الفوترة، إدارة العملاء، المخزون، المشاريع، الموارد البشرية وغيرها. احنا في إمكان تكنولوجي عدّلناه وطوّرناه باش يتماشى مع السوق الجزائري، ونوفرولك التنصيب، الإعداد، التكوين والدعم.</div>
       </details>
-      <details class="bg-white border border-slate-200 rounded-2xl overflow-hidden fade-up">
-        <summary class="cursor-pointer p-5 sm:p-6 flex items-center justify-between gap-4 font-black text-ink">نستعمل إصدار قديم / أو حديث جداً من Dolibarr، هل يتوافق؟ <span class="w-8 h-8 shrink-0 rounded-full bg-brand/10 text-brand flex items-center justify-center text-xl">+</span></summary>
-        <div class="px-5 sm:px-6 pb-6 text-ink/60 text-[15px] leading-[1.9]">حلولنا تتوافق مع مختلف إصدارات <span dir="ltr">Dolibarr</span>، وندعم التحديثات حتى الإصدار <span dir="ltr" class="font-black text-ink">23.0.3</span>.</div>
+      <details class="faq fade-in bg-white border border-slate-200 rounded-2xl overflow-hidden">
+        <summary class="cursor-pointer p-5 font-bold">واش الفرق بين <span dir="ltr">Dolibarr</span> تاعكم و<span dir="ltr">Dolibarr</span> اللي نحمّلو وحدي من الأنترنت؟ <span class="faq-icon w-8 h-8 shrink-0 rounded-full flex items-center justify-center text-white text-xl" style="background:linear-gradient(135deg,#088F8F,#065F5F)" aria-hidden="true">+</span></summary>
+        <div class="px-5 pb-5 leading-[1.9]" style="color:#1E293B;opacity:.75"><span dir="ltr">Dolibarr</span> الأصلي خام ويحتاج <span dir="ltr">installation</span> و<span dir="ltr">paramétrage</span> معقدين. احنا نوفرولك: تنصيب محترف، إعداد على قد نشاطك، تكوين، دعم مستمر، وتطوير وحدات إضافية. تريح راسك وتركز في خدمتك.</div>
       </details>
-      <details class="bg-white border border-slate-200 rounded-2xl overflow-hidden fade-up">
-        <summary class="cursor-pointer p-5 sm:p-6 flex items-center justify-between gap-4 font-black text-ink">هل يتم دعم الوحدات (Modules) اللي شريتها من DoliStore؟ <span class="w-8 h-8 shrink-0 rounded-full bg-brand/10 text-brand flex items-center justify-center text-xl">+</span></summary>
-        <div class="px-5 sm:px-6 pb-6 text-ink/60 text-[15px] leading-[1.9]">إيه، نقدرو ندمجو أي بيانات جاية من وحدات خارجية أو مخصصة — بما فيها اللي شريتها من <span dir="ltr">DoliStore</span>.</div>
+      <details class="faq fade-in bg-white border border-slate-200 rounded-2xl overflow-hidden">
+        <summary class="cursor-pointer p-5 font-bold">البرنامج بأي لغة؟ <span class="faq-icon w-8 h-8 shrink-0 rounded-full flex items-center justify-center text-white text-xl" style="background:linear-gradient(135deg,#088F8F,#065F5F)" aria-hidden="true">+</span></summary>
+        <div class="px-5 pb-5 leading-[1.9]" style="color:#1E293B;opacity:.75">الواجهة بالفرنسية، مثل أغلب البرامج المهنية في السوق الجزائري. المصطلحات تقنية لكن مفهومة <span dir="ltr">(Facture, Devis, Stock, Client…)</span>. والتكوين والدعم بالدارجة، يعني راح تفهم كل شيء مليح.</div>
       </details>
-      <details class="bg-white border border-slate-200 rounded-2xl overflow-hidden fade-up">
-        <summary class="cursor-pointer p-5 sm:p-6 flex items-center justify-between gap-4 font-black text-ink">كيفاش نطلب عرض خاص بنشاطي؟ <span class="w-8 h-8 shrink-0 rounded-full bg-brand/10 text-brand flex items-center justify-center text-xl">+</span></summary>
-        <div class="px-5 sm:px-6 pb-6 text-ink/60 text-[15px] leading-[1.9]">عمّر النموذج (الاسم + الهاتف) وراح نتواصلو معاك عبر واتساب لتحديد موعد عرض خاص على حساب نشاطك — مجاني وبلا التزام.</div>
+      <details class="faq fade-in bg-white border border-slate-200 rounded-2xl overflow-hidden">
+        <summary class="cursor-pointer p-5 font-bold">هل نقدر نخصص البرنامج على قد نشاطي؟ <span class="faq-icon w-8 h-8 shrink-0 rounded-full flex items-center justify-center text-white text-xl" style="background:linear-gradient(135deg,#088F8F,#065F5F)" aria-hidden="true">+</span></summary>
+        <div class="px-5 pb-5 leading-[1.9]" style="color:#1E293B;opacity:.75">هذي أقوى ميزة. لأن <span dir="ltr">Dolibarr</span> مفتوح المصدر، نقدرو نضيفو فيه أي <span dir="ltr">Module</span> خاص بيك: <span dir="ltr">Gestion de parc, Point de vente, Application mobile, SAV</span>… فريق إمكان تكنولوجي يطوّرلك اللي تحتاجه.</div>
+      </details>
+      <details class="faq fade-in bg-white border border-slate-200 rounded-2xl overflow-hidden">
+        <summary class="cursor-pointer p-5 font-bold">قداش يكلف بالضبط؟ <span class="faq-icon w-8 h-8 shrink-0 rounded-full flex items-center justify-center text-white text-xl" style="background:linear-gradient(135deg,#088F8F,#065F5F)" aria-hidden="true">+</span></summary>
+        <div class="px-5 pb-5 leading-[1.9]" style="color:#1E293B;opacity:.75">السنة الأولى: <span dir="ltr">64.000</span> دج <span dir="ltr">(HT)</span> تشمل <span dir="ltr">Installation, Paramétrage, Formation</span> (حتى 6 ساعات) و<span dir="ltr">Support</span> سنوي. من السنة الثانية: <span dir="ltr">30.000</span> دج/سنة مع <span dir="ltr">Support</span>، ولاّ <span dir="ltr">4.000</span> دج فقط إذا تحب <span dir="ltr">Hébergement</span> وحدو (والتدخلات تُحسب حسب الوقت المستهلك).</div>
+      </details>
+      <details class="faq fade-in bg-white border border-slate-200 rounded-2xl overflow-hidden">
+        <summary class="cursor-pointer p-5 font-bold">كم من وقت يلزم باش نبدا نخدم بالبرنامج؟ <span class="faq-icon w-8 h-8 shrink-0 rounded-full flex items-center justify-center text-white text-xl" style="background:linear-gradient(135deg,#088F8F,#065F5F)" aria-hidden="true">+</span></summary>
+        <div class="px-5 pb-5 leading-[1.9]" style="color:#1E293B;opacity:.75">بعد اللقاء التوضيحي والاتفاق على العرض، التنصيب والإعداد ياخذو أيام قليلة. التكوين تقدر تقسمو على حصص. في ظرف أسبوع تكون خدّام بشكل طبيعي.</div>
+      </details>
+      <details class="faq fade-in bg-white border border-slate-200 rounded-2xl overflow-hidden">
+        <summary class="cursor-pointer p-5 font-bold">نقدر ننقل بياناتي من برنامجي القديم ولاّ من <span dir="ltr">Excel</span>؟ <span class="faq-icon w-8 h-8 shrink-0 rounded-full flex items-center justify-center text-white text-xl" style="background:linear-gradient(135deg,#088F8F,#065F5F)" aria-hidden="true">+</span></summary>
+        <div class="px-5 pb-5 leading-[1.9]" style="color:#1E293B;opacity:.75">إيه، نوفرو خدمة <span dir="ltr">Import</span> من <span dir="ltr">Excel</span> أو برامج أخرى. ندرسو ملفاتك ونخططو طريقة النقل.</div>
+      </details>
+      <details class="faq fade-in bg-white border border-slate-200 rounded-2xl overflow-hidden">
+        <summary class="cursor-pointer p-5 font-bold">واش يصرا إذا احتجت مساعدة بعد التكوين؟ <span class="faq-icon w-8 h-8 shrink-0 rounded-full flex items-center justify-center text-white text-xl" style="background:linear-gradient(135deg,#088F8F,#065F5F)" aria-hidden="true">+</span></summary>
+        <div class="px-5 pb-5 leading-[1.9]" style="color:#1E293B;opacity:.75">إذا عندك اشتراك <span dir="ltr">Support</span> (<span dir="ltr">30.000</span> دج/سنة)، تتصل بينا على واتساب ولاّ الهاتف ونجاوبوك في وقت قصير. إذا عندك <span dir="ltr">Hébergement</span> فقط، كل تدخل يُحسب حسب الوقت اللي نستهلكوه في خدمتك.</div>
+      </details>
+      <details class="faq fade-in bg-white border border-slate-200 rounded-2xl overflow-hidden">
+        <summary class="cursor-pointer p-5 font-bold">كيفاش نضمن سلامة بياناتي؟ <span class="faq-icon w-8 h-8 shrink-0 rounded-full flex items-center justify-center text-white text-xl" style="background:linear-gradient(135deg,#088F8F,#065F5F)" aria-hidden="true">+</span></summary>
+        <div class="px-5 pb-5 leading-[1.9]" style="color:#1E293B;opacity:.75">البيانات مخزنة على خوادم (<span dir="ltr">Serveurs</span>) آمنة مع نسخ احتياطية (<span dir="ltr">Sauvegardes</span>) دورية. وتقدر تطلب <span dir="ltr">Export</span> كامل لبياناتك في أي وقت — البيانات ملكك <span dir="ltr">100%</span>.</div>
+      </details>
+      <details class="faq fade-in bg-white border border-slate-200 rounded-2xl overflow-hidden">
+        <summary class="cursor-pointer p-5 font-bold">هل كاين حد أقصى لعدد المستخدمين؟ <span class="faq-icon w-8 h-8 shrink-0 rounded-full flex items-center justify-center text-white text-xl" style="background:linear-gradient(135deg,#088F8F,#065F5F)" aria-hidden="true">+</span></summary>
+        <div class="px-5 pb-5 leading-[1.9]" style="color:#1E293B;opacity:.75">عرض السنة الأولى يغطي حتى 5 مستخدمين. عندك أكثر؟ نضبطو العرض على حساب عددهم. البرنامج في حد ذاتو ما عندوش حد أقصى.</div>
+      </details>
+      <details class="faq fade-in bg-white border border-slate-200 rounded-2xl overflow-hidden">
+        <summary class="cursor-pointer p-5 font-bold">نقدر نزيد وحدات جديدة من بعد؟ <span class="faq-icon w-8 h-8 shrink-0 rounded-full flex items-center justify-center text-white text-xl" style="background:linear-gradient(135deg,#088F8F,#065F5F)" aria-hidden="true">+</span></summary>
+        <div class="px-5 pb-5 leading-[1.9]" style="color:#1E293B;opacity:.75">طبعاً، وفي أي وقت. هذا جمال المصدر المفتوح: اليوم تبدا بالفوترة والمخزون، وغدوة تزيد <span dir="ltr">SAV</span> ولاّ <span dir="ltr">Point de vente</span> كي تحتاجهم.</div>
       </details>
     </div>
   </div>
 </section>
 
-<!-- I. FINAL CTA -->
-<section id="register" class="py-16 lg:py-24 relative overflow-hidden" style="background:linear-gradient(135deg,#044444,#065F5F 60%,#088F8F)">
-  <div class="absolute inset-0 hero-grid-bg pointer-events-none"></div>
-  <div class="relative max-w-4xl mx-auto px-5 lg:px-8 text-center fade-up">
-    <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold/15 border border-gold/40 text-white text-[13px] font-black mb-6"><span class="w-2 h-2 rounded-full bg-gold pulse-dot"></span> العرض الخاص مجاني — بلا التزام</span>
-    <h2 class="text-white text-3xl sm:text-5xl font-black">مؤسستك فيها كنز من البيانات…<br><span class="text-gold">جا الوقت تشوفو واضح.</span></h2>
-    <p class="text-lg text-white/80 max-w-2xl mx-auto mt-5">اطلب دروك: عرض خاص على حساب نشاطك + شاهد الفيديو التعريفي <strong class="text-white">"3 أخطاء في تحليل أرباح مؤسستك"</strong>.</p>
-    <div class="mt-8 flex flex-col sm:flex-row justify-center gap-3">
-      <button data-open-modal data-source="final-cta" class="cta-gold inline-flex items-center justify-center gap-2 px-10 py-4 rounded-2xl font-black text-xl">📩 اطلب عرض خاص مجاني</button>
-      <a href="https://wa.me/213550000000?text=%D8%B3%D9%84%D8%A7%D9%85%D8%8C%20%D8%AD%D8%A7%D8%A8%20%D9%86%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%84%D9%89%20%D8%AD%D9%84%D9%88%D9%84%20Dolibarr" target="_blank" rel="noopener" class="btn-ghost-w inline-flex items-center justify-center gap-2 border border-white/40 text-white px-8 py-4 rounded-2xl font-bold">💬 تواصل واتساب مباشرة</a>
+<!-- ================= K. CTA نهائي ================= -->
+<section id="final-cta" class="py-16 lg:py-24 relative overflow-hidden" style="background:linear-gradient(135deg,#088F8F,#065F5F)" aria-label="احجز لقاءك التوضيحي">
+  <div class="absolute inset-0 hero-grid pointer-events-none" aria-hidden="true"></div>
+  <div class="absolute -top-24 right-1/4 w-96 h-96 rounded-full pointer-events-none" style="background:rgba(218,165,32,.18);filter:blur(100px)" aria-hidden="true"></div>
+  <div class="absolute -bottom-24 left-1/4 w-96 h-96 rounded-full pointer-events-none" style="background:rgba(255,255,255,.08);filter:blur(100px)" aria-hidden="true"></div>
+  <div class="relative max-w-4xl mx-auto px-5 lg:px-8 text-center fade-in">
+    <div class="rounded-[32px] border border-white/20 px-6 py-10 sm:p-12" style="background:rgba(255,255,255,.07);box-shadow:0 30px 80px rgba(0,0,0,.25)">
+      <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-[13px] font-bold text-white border border-white/25" style="background:rgba(255,255,255,.1)">📅 لقاء توضيحي مجاني — بلا التزام</span>
+      <h2 class="mt-5 text-white text-3xl sm:text-4xl lg:text-5xl font-bold leading-[1.8]">برنامج جرّبناه 5 سنين قبل ما نقترحوه عليك…<br><span style="color:#DAA520">دوكا جاء دورك</span></h2>
+      <p class="mt-5 text-lg text-white leading-[2] max-w-2xl mx-auto" style="opacity:.9">احجز لقاءك التوضيحي المجاني (أونلاين ولاّ حضوري)، نعرضولك البرنامج مباشرة على بيانات حقيقية، ونجاوبو على كل أسئلتك. بلا التزام.</p>
+      <div class="mt-8 flex flex-col sm:flex-row justify-center items-center flex-wrap gap-3">
+        <button data-open-booking class="btn-gold inline-flex items-center justify-center gap-2 px-10 py-4 rounded-2xl font-bold text-lg sm:text-xl w-full sm:w-auto">📅 احجز لقاءك التوضيحي المجاني الآن</button>
+        <!-- [تكوين] رقم الواتساب: استبدل 213XXXXXXXXX برقم الواتساب الحقيقي -->
+        <a href="https://wa.me/213XXXXXXXXX" target="_blank" rel="noopener" class="btn-wa inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-2xl font-bold w-full sm:w-auto" aria-label="حكي معانا مباشرة على واتساب"><span class="wa-ic" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 2a8 8 0 1 1-4.1 14.9l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 0 1 12 4Zm-3.2 4c-.2 0-.5 0-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.9 3 4.7 4.1 2.3.9 2.8.7 3.3.7.5-.1 1.6-.7 1.9-1.3.2-.6.2-1.1.2-1.3l-.4-.2-1.7-.8c-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a7.5 7.5 0 0 1-2.2-1.4 8.2 8.2 0 0 1-1.5-1.9c-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5L9.4 6.4c-.2-.4-.4-.4-.6-.4Z"/></svg></span>ولاّ حكي معانا مباشرة على واتساب</a>
+      </div>
     </div>
-    <p class="text-[12px] text-white/60 mt-4 font-bold">عرض مجاني 100% • بلا التزام • نشرحولك بالدارجة</p>
   </div>
 </section>
 </main>
 
-<footer class="bg-brandDeep border-t border-white/10 py-10">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 flex flex-col sm:flex-row justify-between gap-5 items-center text-center">
-    <div class="flex items-center gap-3">
-      <img src="logo.svg" alt="إمكان تكنولوجي — Imkan Technology" class="h-10 w-auto shrink-0" width="145" height="40" loading="lazy">
-      <span class="text-right"><span class="block text-white font-black">إمكان تكنولوجي — Imkan Technology</span><span class="block text-white/60 text-xs font-bold">خبراء Dolibarr ERP/CRM 🇩🇿</span></span>
+<!-- ================= O. Footer ================= -->
+<footer class="bg-white border-t border-slate-200" style="color:#1E293B" role="contentinfo">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-12">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div>
+        <img src="logo.svg" alt="شعار إمكان تكنولوجي" width="150" height="42" class="h-11 w-auto object-contain" loading="lazy">
+        <p class="font-bold text-xl mt-3"><span dir="ltr">Dolibarr</span> by إمكان تكنولوجي</p>
+        <p class="mt-2 text-sm leading-[1.9]" style="opacity:.85">برنامج <span dir="ltr">ERP & CRM</span> مفتوح المصدر، مكيّف للسوق الجزائري</p>
+        <p class="mt-3 text-sm font-bold" style="opacity:.9"><span dir="ltr">SARL IMKAN SPACE</span> – <span dir="ltr">Bureau de consulting informatique</span></p>
+        <p class="mt-1 text-sm" style="opacity:.85">شارع الشهيد رابح همداش، قسم 2 مجموعة 474، برج البحري، الجزائر</p>
+      </div>
+      <div>
+        <p class="font-bold">تواصل معانا</p>
+        <p class="mt-3 text-sm leading-[2]" style="opacity:.9"><span dir="ltr">📞 020 20 98 29</span> | <span dir="ltr">📧 contact@imkan.space</span> | <span dir="ltr">🌐 imkan.space</span></p>
+        <div class="mt-4 flex items-center gap-3" aria-label="تابعنا على شبكات التواصل">
+          <a href="#" class="soc w-10 h-10 rounded-full flex items-center justify-center font-bold transition" aria-label="فيسبوك">f</a>
+          <a href="#" class="soc w-10 h-10 rounded-full flex items-center justify-center font-bold transition" aria-label="لينكد إن"><span dir="ltr">in</span></a>
+          <a href="#" class="soc w-10 h-10 rounded-full flex items-center justify-center font-bold transition" aria-label="يوتيوب">▶</a>
+          <!-- [تكوين] رقم الواتساب: استبدل 213XXXXXXXXX برقم الواتساب الحقيقي -->
+          <a href="https://wa.me/213XXXXXXXXX" target="_blank" rel="noopener" class="soc w-10 h-10 rounded-full flex items-center justify-center font-bold transition" aria-label="واتساب">✆</a>
+        </div>
+      </div>
+      <div>
+        <p class="font-bold">روابط</p>
+        <nav class="mt-3 flex flex-col gap-2 text-sm font-bold" aria-label="روابط الفوتر">
+          <a href="#" class="hover:underline" style="opacity:.9">من نحن</a>
+          <a href="#" class="hover:underline" style="opacity:.9">سياسة الخصوصية</a>
+          <a href="#" class="hover:underline" style="opacity:.9">شروط الاستخدام</a>
+        </nav>
+      </div>
     </div>
-    <p class="text-[12px] text-white/50 font-semibold">© 2026 إمكان تكنولوجي • Dolibarr • ERP • CRM</p>
-    <button data-open-modal data-source="footer" class="text-sm font-bold text-gold hover:text-white transition">اطلب عرض خاص ←</button>
+    <div class="mt-10 pt-6 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-3 text-center">
+      <p class="text-[13px]" style="opacity:.85">© <span dir="ltr">2026</span> إمكان تكنولوجي. جميع الحقوق محفوظة.</p>
+      <p class="text-[13px] font-bold" style="opacity:.9"><span dir="ltr">Dolibarr</span> – <span dir="ltr">Open Source</span>، مفتوح، وقابل للتطوير على قد نشاطك.</p>
+    </div>
   </div>
+  <div class="h-16 md:hidden" aria-hidden="true"></div>
 </footer>
 
-<!-- Floating WhatsApp -->
-<a href="https://wa.me/213550000000?text=%D8%B3%D9%84%D8%A7%D9%85%D8%8C%20%D8%AD%D8%A7%D8%A8%20%D9%86%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%84%D9%89%20%D8%AD%D9%84%D9%88%D9%84%20Dolibarr" target="_blank" rel="noopener" aria-label="تواصل معانا في واتساب" class="fixed bottom-5 left-5 z-40 group flex items-center gap-3">
-  <span class="hidden sm:block rounded-xl px-4 py-2 text-[12px] font-bold shadow-card opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition text-white" style="background:#044444">عندك سؤال على النظام؟ احكي معانا 👋</span>
-  <span class="w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center shadow-[0_0_30px_rgba(37,211,102,.45)] hover:scale-105 transition">
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="#062b16"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 2a8 8 0 1 1-4.1 14.9l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 0 1 12 4Zm-3.2 4c-.2 0-.5 0-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.9 3 4.7 4.1 2.3.9 2.8.7 3.3.7.5-.1 1.6-.7 1.9-1.3.2-.6.2-1.1.2-1.3l-.4-.2-1.7-.8c-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a7.5 7.5 0 0 1-2.2-1.4 8.2 8.2 0 0 1-1.5-1.9c-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5L9.4 6.4c-.2-.4-.4-.4-.6-.4Z"/></svg>
+<!-- ================= M. زر واتساب عائم ================= -->
+<!-- [تكوين] رقم الواتساب: استبدل 213XXXXXXXXX برقم الواتساب الحقيقي -->
+<a href="https://wa.me/213XXXXXXXXX" target="_blank" rel="noopener" aria-label="تواصل معنا عبر واتساب" class="group fixed bottom-20 md:bottom-6 left-4 md:left-6 z-40 flex items-center gap-3">
+  <span class="hidden md:block rounded-xl px-4 py-2 text-[13px] font-bold text-white shadow-lg opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition" style="background:#1E293B">عندك سؤال على <span dir="ltr">Dolibarr</span>؟ اسألنا</span>
+  <span class="wa-pulse relative w-14 h-14 rounded-full flex items-center justify-center shadow-xl" style="background:#25D366" aria-hidden="true">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 2a8 8 0 1 1-4.1 14.9l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 0 1 12 4Zm-3.2 4c-.2 0-.5 0-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.9 3 4.7 4.1 2.3.9 2.8.7 3.3.7.5-.1 1.6-.7 1.9-1.3.2-.6.2-1.1.2-1.3l-.4-.2-1.7-.8c-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a7.5 7.5 0 0 1-2.2-1.4 8.2 8.2 0 0 1-1.5-1.9c-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5L9.4 6.4c-.2-.4-.4-.4-.6-.4Z"/></svg>
   </span>
 </a>
 
-<!-- REGISTRATION MODAL -->
-<div id="modal" class="fixed inset-0 z-[60] hidden items-center justify-center p-4 modal-bg" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-  <div class="bg-white rounded-3xl w-full max-w-lg max-h-[92vh] overflow-y-auto shadow-card relative">
-    <div class="p-6 sm:p-8" style="background:linear-gradient(135deg,#088F8F,#044444)">
-      <button id="modalClose" class="absolute top-4 left-4 w-9 h-9 rounded-full bg-white/15 text-white font-black hover:bg-white/30 transition" aria-label="إغلاق">✕</button>
-      <h3 id="modalTitle" class="text-white text-2xl font-black">📩 اطلب عرض خاص مجاني</h3>
-      <p class="text-white/80 text-sm mt-1 font-bold">عمّر معلوماتك وراح نتواصلو معاك لتحديد موعد عرض خاص لنظام Dolibarr على حساب نشاطك.</p>
+<!-- ================= N. CTA سفلي ثابت للموبايل ================= -->
+<div class="md:hidden fixed bottom-0 right-0 left-0 z-40 bg-white border-t border-slate-200 shadow-[0_-8px_30px_rgba(30,41,59,.12)]" role="complementary" aria-label="حجز سريع">
+  <div class="flex items-center justify-between gap-3 px-4 py-3">
+    <span class="font-bold text-sm" style="color:#1E293B">لقاء توضيحي مجاني</span>
+    <button data-open-booking class="btn-gold px-6 py-2.5 rounded-xl font-bold text-sm">احجز الآن</button>
+  </div>
+</div>
+
+<!-- ================= L. استمارة حجز اللقاء (Modal) ================= -->
+<div id="bookingModal" class="fixed inset-0 z-[60] hidden items-center justify-center p-4 modal-bg" role="dialog" aria-modal="true" aria-labelledby="bookingTitle">
+  <div class="bg-white rounded-3xl w-full max-w-lg max-h-[92vh] overflow-y-auto shadow-2xl">
+    <div class="p-6 sm:p-7 sticky top-0" style="background:#088F8F">
+      <button id="bookingClose" class="absolute top-4 left-4 w-9 h-9 rounded-full bg-white/20 text-white font-bold hover:bg-white/35 transition" aria-label="إغلاق استمارة الحجز">✕</button>
+      <h3 id="bookingTitle" class="text-white text-xl sm:text-2xl font-bold">احجز لقاءك التوضيحي المجاني</h3>
+      <p class="text-sm mt-1 text-white" style="opacity:.85">املأ المعلومات ونتواصلو معاك في ظرف 24 ساعة باش نحددو موعد اللقاء</p>
     </div>
-    <!-- Form view -->
-    <form id="regForm" class="p-6 sm:p-8 space-y-4" novalidate>
+    <form id="bookingForm" class="p-6 sm:p-7 space-y-4" novalidate>
       <div>
-        <label class="block text-sm font-black text-ink mb-1.5" for="f-name">الاسم الكامل *</label>
-        <input id="f-name" name="name" type="text" class="input-field px-4 py-3" placeholder="مثال: أمين بن علي" autocomplete="name" required>
-        <p class="err hidden" data-err="name">من فضلك دخل الاسم الكامل.</p>
+        <label class="block text-sm font-bold mb-1.5" for="f-name">الاسم الكامل / اسم الشركة <span class="required-star" aria-hidden="true">*</span></label>
+        <input id="f-name" name="name" type="text" class="input-field" autocomplete="name" required>
+        <p class="hidden text-[13px] font-bold mt-1" style="color:#D70040" data-err="name">من فضلك دخل الاسم.</p>
       </div>
-      <div class="grid sm:grid-cols-2 gap-4">
-        <div>
-          <label class="block text-sm font-black text-ink mb-1.5" for="f-phone">رقم الهاتف / واتساب *</label>
-          <input id="f-phone" name="phone" type="tel" dir="ltr" class="input-field px-4 py-3 text-left" placeholder="05 / 06 / 07 ..." autocomplete="tel" required>
-          <p class="err hidden" data-err="phone">دخل رقم هاتف جزائري صحيح (09/10 أرقام).</p>
-        </div>
-        <div>
-          <label class="block text-sm font-black text-ink mb-1.5" for="f-email">البريد الإلكتروني *</label>
-          <input id="f-email" name="email" type="email" dir="ltr" class="input-field px-4 py-3 text-left" placeholder="you@company.dz" autocomplete="email" required>
-          <p class="err hidden" data-err="email">دخل بريد إلكتروني صحيح.</p>
-        </div>
+      <div>
+        <label class="block text-sm font-bold mb-1.5" for="f-phone">رقم الهاتف <span class="required-star" aria-hidden="true">*</span></label>
+        <input id="f-phone" name="phone" type="tel" dir="ltr" class="input-field text-left" placeholder="05 / 06 / 07XXXXXXXX" autocomplete="tel" required>
+        <p class="hidden text-[13px] font-bold mt-1" style="color:#D70040" data-err="phone">دخل رقم هاتف جزائري صحيح.</p>
       </div>
-      <div class="grid sm:grid-cols-2 gap-4">
-        <div>
-          <label class="block text-sm font-black text-ink mb-1.5" for="f-company">المؤسسة / الشركة</label>
-          <input id="f-company" name="company" type="text" class="input-field px-4 py-3" placeholder="اسم مؤسستك (اختياري)" autocomplete="organization">
-        </div>
-        <div>
-          <label class="block text-sm font-black text-ink mb-1.5" for="f-dolibarr">نسخة Dolibarr المستعملة</label>
-          <select id="f-dolibarr" name="dolibarr_version" class="input-field px-4 py-3">
-            <option value="unknown">مانيش متأكد</option>
-            <option value="cloud">سحابية (Cloud)</option>
-            <option value="local">محلية (Local)</option>
-            <option value="23">23.x (حديثة)</option>
-            <option value="old">نسخة قديمة</option>
-          </select>
-        </div>
+      <div>
+        <label class="block text-sm font-bold mb-1.5" for="f-email">البريد الإلكتروني</label>
+        <input id="f-email" name="email" type="email" dir="ltr" class="input-field text-left" placeholder="you@company.dz" autocomplete="email">
+        <p class="hidden text-[13px] font-bold mt-1" style="color:#D70040" data-err="email">دخل بريد إلكتروني صحيح.</p>
       </div>
-      <!-- Program field: fixed to Dolibarr per brief -->
-      <input type="hidden" name="program" value="Dolibarr">
-      <input type="hidden" name="source" id="f-source" value="landing">
-      <input type="hidden" name="intent" id="f-intent" value="demo">
-      <p id="formStatus" class="hidden text-sm font-bold rounded-xl p-3"></p>
-      <button type="submit" id="submitBtn" class="cta-gold w-full inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-black text-lg">📩 أرسل الطلب</button>
-      <p class="text-[12px] text-slate-400 font-bold text-center">بالضغط على الزر أنت توافق على التواصل معك عبر واتساب/إيميل بخصوص العرض الخاص.</p>
+      <div>
+        <label class="block text-sm font-bold mb-1.5" for="f-activity">نوع النشاط <span class="required-star" aria-hidden="true">*</span></label>
+        <select id="f-activity" name="activity" class="input-field" required>
+          <option value="">اختار نوع النشاط…</option>
+          <option value="services">خدمات</option>
+          <option value="retail">تجارة تجزئة</option>
+          <option value="wholesale">تجارة جملة</option>
+          <option value="industry">صناعة</option>
+          <option value="contracting">مقاولات</option>
+          <option value="other">آخر</option>
+        </select>
+        <p class="hidden text-[13px] font-bold mt-1" style="color:#D70040" data-err="activity">اختار نوع النشاط.</p>
+      </div>
+      <div>
+        <label class="block text-sm font-bold mb-1.5" for="f-employees">عدد الموظفين تقريباً</label>
+        <select id="f-employees" name="employees" class="input-field">
+          <option value="1-5">1-5</option>
+          <option value="6-10">6-10</option>
+          <option value="11-20">11-20</option>
+          <option value="20+">أكثر من 20</option>
+        </select>
+      </div>
+      <fieldset>
+        <legend class="block text-sm font-bold mb-2">نوع اللقاء المفضل</legend>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+          <label class="flex items-center gap-2 rounded-xl border border-slate-200 px-4 py-3 cursor-pointer text-sm font-bold" style="background:#F8FAFC">
+            <input type="radio" name="meeting" value="online" checked class="accent-[#088F8F]"> أونلاين (<span dir="ltr">Google Meet</span>)
+          </label>
+          <label class="flex items-center gap-2 rounded-xl border border-slate-200 px-4 py-3 cursor-pointer text-sm font-bold" style="background:#F8FAFC">
+            <input type="radio" name="meeting" value="presential" class="accent-[#088F8F]"> حضوري (الجزائر العاصمة وضواحيها)
+          </label>
+        </div>
+      </fieldset>
+      <div>
+        <label class="block text-sm font-bold mb-1.5" for="f-note">ملاحظة أو سؤال</label>
+        <textarea id="f-note" name="note" rows="3" class="input-field" placeholder="اكتب ملاحظتك هنا (اختياري)…"></textarea>
+      </div>
+      <p id="formStatus" class="hidden text-sm font-bold rounded-xl p-3" role="alert"></p>
+      <button type="submit" id="bookingSubmit" class="btn-gold w-full inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-bold text-lg">أرسل طلب الحجز</button>
     </form>
-    <!-- Success view -->
-    <div id="successBox" class="hidden p-6 sm:p-8 text-center">
-      <div class="w-16 h-16 mx-auto rounded-full bg-brand/10 flex items-center justify-center text-3xl">✅</div>
-      <h3 class="text-brand text-2xl font-black mt-4">توصّلنا بطلبك! 🎉</h3>
-      <p class="text-ink/60 mt-2 text-[15px]">راح نتواصلو معاك قريباً لتحديد موعد العرض الخاص. وفي انتظار ذلك، شاهد لمحة عن النظام 👇</p>
-      <div class="mt-5 rounded-2xl overflow-hidden border border-slate-200 bg-brandDeep aspect-video flex items-center justify-center relative">
-        <span class="text-white/70 text-sm font-bold px-6">🎬 لمحة عن نظام Dolibarr<br><span class="text-gold">(ضع رابط الفيديو هنا — YouTube / Vimeo)</span></span>
-      </div>
-      <a id="waConfirm" href="https://wa.me/213550000000?text=%D8%B7%D9%84%D8%A8%D8%AA%20%D8%B9%D8%B1%D8%B6%D8%A7%20%D8%AE%D8%A7%D8%B5%D8%A7%20Dolibarr" target="_blank" rel="noopener" class="mt-4 w-full inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-6 py-3.5 rounded-2xl font-black">💬 كمّل عبر واتساب</a>
-      <button id="successClose" class="mt-3 text-sm font-bold text-slate-400 hover:text-brand transition">إغلاق</button>
+    <div id="bookingSuccess" class="hidden p-8 sm:p-10 text-center">
+      <p class="text-5xl" aria-hidden="true">🎉</p>
+      <p class="mt-4 text-lg font-bold leading-[2]">🎉 تم استلام طلبك بنجاح! فريق إمكان تكنولوجي راح يتواصل معاك في ظرف 24 ساعة باش تحددو موعد اللقاء. مرحباً بيك!</p>
+      <button id="bookingDone" class="mt-6 px-8 py-3 rounded-xl font-bold text-white" style="background:#088F8F">إغلاق</button>
     </div>
   </div>
 </div>
 
 <script>
-/* ============ Reveal on scroll ============ */
-const obs = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } }), { threshold: .12 });
-document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+/* [تكوين] API endpoint: ضع رابط Google Sheets/Airtable هنا */
+const API_ENDPOINT = 'VOTRE_URL_API_ICI';
+/* [تكوين] رقم الواتساب: const WHATSAPP_NUMBER = '213XXXXXXXXX' — مستعمل في روابط wa.me أعلاه */
 
-/* ============ Modal ============ */
-const modal = document.getElementById('modal');
-const regForm = document.getElementById('regForm');
-const successBox = document.getElementById('successBox');
-function openModal(source, intent) {
-  document.getElementById('f-source').value = source || 'landing';
-  document.getElementById('f-intent').value = intent || 'demo';
-  regForm.classList.remove('hidden'); successBox.classList.add('hidden');
-  modal.classList.remove('hidden'); modal.classList.add('flex');
-  document.body.style.overflow = 'hidden';
-}
-function closeModal() { modal.classList.add('hidden'); modal.classList.remove('flex'); document.body.style.overflow = ''; }
-document.querySelectorAll('[data-open-modal]').forEach(b => b.addEventListener('click', () => openModal(b.dataset.source, b.dataset.intent)));
-document.getElementById('modalClose').addEventListener('click', closeModal);
-document.getElementById('successClose').addEventListener('click', closeModal);
-modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
-document.addEventListener('keydown', e => { if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal(); });
-
-/* ============ Validation + fetch() to real API ============ */
-const API_URL = 'https://api.imkan-technology.dz/api/demo/request';
-function showErr(key, on) { const el = document.querySelector('[data-err="' + key + '"]'); if (el) el.classList.toggle('hidden', !on); }
-function setStatus(msg, ok) {
-  const s = document.getElementById('formStatus');
-  s.classList.remove('hidden');
-  s.textContent = msg;
-  s.style.background = ok ? '#ECFDF5' : '#FEF2F2';
-  s.style.color = ok ? '#065F46' : '#D70040';
-  s.style.border = ok ? '1px solid #A7F3D0' : '1px solid #FECDD3';
-}
-regForm.addEventListener('submit', async e => {
-  e.preventDefault();
-  const name = document.getElementById('f-name').value.trim();
-  const phone = document.getElementById('f-phone').value.replace(/[\s-]/g, '');
-  const email = document.getElementById('f-email').value.trim();
-  const company = document.getElementById('f-company').value.trim();
-  const dolibarr_version = document.getElementById('f-dolibarr').value;
-  const okName = name.length >= 3;
-  const okPhone = /^(0)(5|6|7)[0-9]{8}$/.test(phone) || /^[0-9]{9,10}$/.test(phone);
-  const okEmail = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email);
-  showErr('name', !okName); showErr('phone', !okPhone); showErr('email', !okEmail);
-  if (!okName || !okPhone || !okEmail) { setStatus('من فضلك صحّح الحقول المحددة بالأحمر.', false); return; }
-  const btn = document.getElementById('submitBtn');
-  btn.disabled = true; btn.textContent = '⏳ جاري إرسال الطلب…';
-  const payload = { name, phone, email, company, dolibarr_version, program: 'Dolibarr', source: document.getElementById('f-source').value, intent: document.getElementById('f-intent').value, created_at: new Date().toISOString() };
-  try {
-    const ctrl = new AbortController();
-    const to = setTimeout(() => ctrl.abort(), 8000);
-    const res = await fetch(API_URL, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(payload), signal: ctrl.signal });
-    clearTimeout(to);
-    if (!res.ok) throw new Error('HTTP ' + res.status);
-    try { await res.json(); } catch (e) {}
-  } catch (err) {
-    // Fallback: keep lead locally so nothing is lost if API is unreachable
-    try { const leads = JSON.parse(localStorage.getItem('imkan_leads') || '[]'); leads.push(payload); localStorage.setItem('imkan_leads', JSON.stringify(leads)); } catch (e) {}
+/* Fade-in on scroll */
+(function () {
+  var els = document.querySelectorAll('.fade-in');
+  if (!('IntersectionObserver' in window)) {
+    els.forEach(function (el) { el.classList.add('visible'); });
+    return;
   }
-  regForm.classList.add('hidden'); successBox.classList.remove('hidden');
-  document.getElementById('waConfirm').href = 'https://wa.me/213550000000?text=' + encodeURIComponent('طلبت عرض خاص لنظام Dolibarr — الاسم: ' + name);
-  btn.disabled = false; btn.textContent = '📩 أرسل الطلب';
-});
+  var obs = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+    });
+  }, { threshold: 0.12 });
+  els.forEach(function (el) { obs.observe(el); });
+})();
+
+/* Modal open/close */
+(function () {
+  var modal = document.getElementById('bookingModal');
+  var form = document.getElementById('bookingForm');
+  var success = document.getElementById('bookingSuccess');
+  function openModal() {
+    form.classList.remove('hidden');
+    success.classList.add('hidden');
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+    var first = document.getElementById('f-name');
+    if (first) { setTimeout(function () { first.focus(); }, 100); }
+  }
+  function closeModal() {
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+    document.body.style.overflow = '';
+  }
+  document.querySelectorAll('[data-open-booking]').forEach(function (b) {
+    b.addEventListener('click', openModal);
+  });
+  document.getElementById('bookingClose').addEventListener('click', closeModal);
+  document.getElementById('bookingDone').addEventListener('click', closeModal);
+  modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
+  });
+})();
+
+/* Form validation + real fetch() */
+(function () {
+  var form = document.getElementById('bookingForm');
+  var statusBox = document.getElementById('formStatus');
+  var submitBtn = document.getElementById('bookingSubmit');
+  var success = document.getElementById('bookingSuccess');
+  var DZ_PHONE = /^(0)(5|6|7)[0-9]{8}$/;
+
+  function showErr(key, on) {
+    var el = document.querySelector('[data-err="' + key + '"]');
+    if (el) el.classList.toggle('hidden', !on);
+  }
+  function setStatus(msg, isError) {
+    statusBox.classList.remove('hidden');
+    statusBox.textContent = msg;
+    statusBox.style.background = isError ? '#FEF2F2' : '#ECFDF5';
+    statusBox.style.color = isError ? '#D70040' : '#065F5F';
+    statusBox.style.border = isError ? '1px solid #FECDD3' : '1px solid #A7F3D0';
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var name = document.getElementById('f-name').value.trim();
+    var phone = document.getElementById('f-phone').value.replace(/[\s-]/g, '');
+    var email = document.getElementById('f-email').value.trim();
+    var activity = document.getElementById('f-activity').value;
+    var employees = document.getElementById('f-employees').value;
+    var meetingEl = form.querySelector('input[name="meeting"]:checked');
+    var meeting = meetingEl ? meetingEl.value : 'online';
+    var note = document.getElementById('f-note').value.trim();
+
+    var okName = name.length >= 2;
+    var okPhone = DZ_PHONE.test(phone);
+    var okEmail = email === '' || /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email);
+    var okActivity = activity !== '';
+    showErr('name', !okName);
+    showErr('phone', !okPhone);
+    showErr('email', !okEmail);
+    showErr('activity', !okActivity);
+    if (!okName || !okPhone || !okEmail || !okActivity) {
+      setStatus('من فضلك صحّح الحقول المحددة.', true);
+      return;
+    }
+
+    var payload = {
+      name: name,
+      phone: phone,
+      email: email,
+      activity: activity,
+      employees: employees,
+      meeting: meeting,
+      note: note,
+      created_at: new Date().toISOString()
+    };
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = '⏳ جاري إرسال الطلب…';
+
+    var controller = 'AbortController' in window ? new AbortController() : null;
+    var timer = null;
+    if (controller) { timer = setTimeout(function () { controller.abort(); }, 12000); }
+
+    fetch(API_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(payload),
+      signal: controller ? controller.signal : undefined
+    }).then(function (res) {
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      return res.text().then(function (t) { return t; });
+    }).then(function () {
+      form.classList.add('hidden');
+      success.classList.remove('hidden');
+    }).catch(function () {
+      setStatus('صرات مشكلة تقنية، عاود جرب ولاّ تواصل معانا على واتساب', true);
+    }).finally(function () {
+      if (timer) clearTimeout(timer);
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'أرسل طلب الحجز';
+    });
+  });
+})();
 </script>
 </body>
 </html>
