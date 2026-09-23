@@ -115,6 +115,8 @@ details.faq[open] .faq-icon { transform: rotate(45deg); background: linear-gradi
 .input-field { width: 100%; border: 1.5px solid #E2E8F0; border-radius: 12px; background: #F8FAFC; padding: .8rem 1rem; color: #1E293B; transition: .2s ease; }
 .input-field:focus { outline: none; border-color: #088F8F; background: #FFFFFF; box-shadow: 0 0 0 4px rgba(8,143,143,.14); }
 .modal-bg { background: rgba(30,41,59,.6); backdrop-filter: blur(5px); }
+.no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
 .required-star { color: #D70040; }
 .soc { background: #F8FAFC; color: #088F8F; border: 1px solid rgba(8,143,143,.2); }
 .soc:hover { background: rgba(8,143,143,.12); transform: translateY(-2px); }
@@ -136,7 +138,7 @@ details.faq[open] .faq-icon { transform: rotate(45deg); background: linear-gradi
         <img src="logo.svg" alt="شعار إمكان تكنولوجي" width="150" height="42" class="h-10 sm:h-11 w-auto object-contain shrink-0">
         <span class="leading-tight min-w-0">
           <img src="dolibarr_logo.png" alt="Dolibarr ERP/CRM" width="130" height="30" class="h-7 sm:h-8 w-auto object-contain">
-          <span class="hidden sm:block text-[12px] font-medium" style="color:#1E293B;opacity:.7">برنامج <span dir="ltr">ERP & CRM</span> مفتوح المصدر، مكيّف للسوق الجزائري</span>
+          <span class="hidden sm:block text-[12px] font-medium" style="color:#1E293B;opacity:.7">برنامج <span dir="ltr">ERP & CRM</span> مفتوح المصدر</span>
         </span>
       </a>
       <button data-open-booking class="btn-gold shrink-0 inline-flex items-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl font-bold text-sm sm:text-base" aria-label="احجز لقاء توضيحي - يفتح استمارة الحجز">📅 احجز لقاء توضيحي</button>
@@ -677,7 +679,7 @@ details.faq[open] .faq-icon { transform: rotate(45deg); background: linear-gradi
 
 <!-- ================= L. استمارة حجز اللقاء (Modal) ================= -->
 <div id="bookingModal" class="fixed inset-0 z-[60] hidden items-center justify-center p-4 modal-bg" role="dialog" aria-modal="true" aria-labelledby="bookingTitle">
-  <div class="bg-white rounded-3xl w-full max-w-lg max-h-[92vh] overflow-y-auto shadow-2xl">
+  <div class="bg-white rounded-3xl w-full max-w-lg max-h-[92vh] overflow-y-auto no-scrollbar shadow-2xl">
     <div class="p-6 sm:p-7 sticky top-0" style="background:#088F8F">
       <button id="bookingClose" class="absolute top-4 left-4 w-9 h-9 rounded-full bg-white/20 text-white font-bold hover:bg-white/35 transition" aria-label="إغلاق استمارة الحجز">✕</button>
       <h3 id="bookingTitle" class="text-white text-xl sm:text-2xl font-bold">احجز لقاءك التوضيحي المجاني</h3>
