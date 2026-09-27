@@ -83,20 +83,6 @@ h1, h2, h3 { font-family: 'Sakkal Majalla', 'Cairo', sans-serif; line-height: 1.
 #modules article:last-child:hover { border-color: #DAA520 !important; }
 #modules article:last-child > div:first-child { background: linear-gradient(135deg,#DAA520,#a87c14) !important; box-shadow: 0 8px 20px rgba(218,165,32,.4); }
 #modules article:last-child p span[dir="ltr"] { background: rgba(218,165,32,.18); color: #7a5c10; }
-/* Compare table */
-#compare thead tr { background: linear-gradient(135deg,#088F8F,#065F5F) !important; }
-#compare tbody tr { transition: background .2s ease; }
-#compare tbody tr:hover { background: rgba(8,143,143,.06); }
-#compare tbody td:last-child { background: rgba(8,143,143,.07); }
-#compare tbody tr:hover td:last-child { background: rgba(8,143,143,.12); }
-#compare tbody td:nth-child(2)::before { content: '✘ '; color: #D70040; font-weight: 900; }
-#compare tbody td:last-child::before { content: '✔ '; color: #088F8F; font-weight: 900; }
-/* Pricing */
-#pricing table tbody tr { transition: background .2s ease; }
-#pricing table tbody tr:hover { background: rgba(218,165,32,.08) !important; }
-#pricing table td:last-child { font-weight: 900; }
-#pricing table tbody td:first-child::before { content: '✔ '; color: #088F8F; font-weight: 900; }
-#pricing table tbody td:last-child { background: rgba(218,165,32,.12); }
 .fade-in { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
 .fade-in.visible { opacity: 1; transform: none; }
 .float-soft { animation: floatSoft 5s ease-in-out infinite; }
@@ -118,8 +104,9 @@ details.faq[open] .faq-icon { transform: rotate(45deg); background: linear-gradi
 .no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .required-star { color: #D70040; }
-.soc { background: #F8FAFC; color: #088F8F; border: 1px solid rgba(8,143,143,.2); }
-.soc:hover { background: rgba(8,143,143,.12); transform: translateY(-2px); }
+.soc { color: #FFFFFF; border: none; box-shadow: 0 6px 16px rgba(30,41,59,.18); }
+.soc:hover { transform: translateY(-2px); filter: brightness(1.08); }
+.soc svg { width: 20px; height: 20px; flex-shrink: 0; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .fade-in { opacity: 1; transform: none; transition: none; }
@@ -136,10 +123,7 @@ details.faq[open] .faq-icon { transform: rotate(45deg); background: linear-gradi
       <a href="#hero" class="flex items-center gap-3 min-w-0" aria-label="Dolibarr by إمكان تكنولوجي - الرئيسية">
         <!-- شعار إمكان تكنولوجي (logo.svg) -->
         <img src="logo.svg" alt="شعار إمكان تكنولوجي" width="150" height="42" class="h-10 sm:h-11 w-auto object-contain shrink-0">
-        <span class="leading-tight min-w-0">
-          <img src="dolibarr_logo.png" alt="Dolibarr ERP/CRM" width="130" height="30" class="h-7 sm:h-8 w-auto object-contain">
-          <span class="hidden sm:block text-[12px] font-medium" style="color:#1E293B;opacity:.7">برنامج <span dir="ltr">ERP & CRM</span> مفتوح المصدر</span>
-        </span>
+       
       </a>
       <button data-open-booking class="btn-gold shrink-0 inline-flex items-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl font-bold text-sm sm:text-base" aria-label="احجز لقاء توضيحي - يفتح استمارة الحجز">📅 احجز لقاء توضيحي</button>
     </div>
@@ -154,7 +138,7 @@ details.faq[open] .faq-icon { transform: rotate(45deg); background: linear-gradi
     <div class="grid lg:grid-cols-12 gap-10 lg:gap-8 items-center">
       <div class="fade-in lg:col-span-7">
         <h1 class="text-white text-[28px] sm:text-4xl lg:text-[44px] font-bold leading-[1.8]"><span dir="ltr">Dolibarr</span>… برنامج تسيير مفتوح المصدر، جرّبناه 5 سنين في خدمتنا، ودوكا جهّزناه ليك.</h1>
-        <h2 class="mt-5 text-white text-base sm:text-lg leading-[2]" style="opacity:.92">إذا كنت تاجر ولاّ تدير شركة خدمات ولاّ صناعة… وتحوس على نظام <span dir="ltr">ERP & CRM</span> احترافي يجمعلك:<br>✔ الفوترة (<span dir="ltr">Devis, Facture, Avoir</span>)<br>✔ العملاء والموردين (<span dir="ltr">Tiers</span>)<br>✔ المخزون والمستودعات (<span dir="ltr">Stock & Entrepôts</span>)<br>✔ المشاريع والمهام (<span dir="ltr">Projets & Tâches</span>)<br>✔ الموارد البشرية (<span dir="ltr">RH, Congés</span>)<br>✔ الاشتراكات والعقود (<span dir="ltr">Abonnements & Contrats</span>)<br><span dir="ltr">Dolibarr</span> اللي عدّلناه وطوّرناه في إمكان تكنولوجي هو الحل.<br>ماشي برنامج علبة سوداء — برنامج حيّ، مفتوح المصدر، نقدرو نزيدو فيه اللي تحب على قد نشاطك.</h2>
+        <h2 class="mt-5 text-white text-base sm:text-lg leading-[2]" style="opacity:.92">إذا كنت تاجر ولاّ تدير شركة خدمات ولاّ صناعة… وتحوس على نظام <span dir="ltr">ERP & CRM</span> احترافي يجمعلك:<br>✔ الفوترة (<span dir="ltr">Devis, Facture, Avoir</span>)<br>✔ العملاء والموردين (<span dir="ltr">Tiers</span>)<br>✔ المخزون والمستودعات (<span dir="ltr">Stock & Entrepôts</span>)<br>✔ المشاريع والمهام (<span dir="ltr">Projets & Tâches</span>)<br>✔ الموارد البشرية (<span dir="ltr">RH, Congés</span>)<br>✔ الاشتراكات والعقود (<span dir="ltr">Abonnements & Contrats</span>)<br><span dir="ltr">Dolibarr</span> اللي عدّلناه وطوّرناه في إمكان تكنولوجي هو الحل</h2>
         <div class="mt-7 flex flex-col sm:flex-row flex-wrap gap-3">
           <button data-open-booking class="btn-gold flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl font-bold text-sm sm:text-base">📅 احجز لقاء توضيحي مجاني (أونلاين ولاّ حضوري)</button>
           <!-- [تكوين] رقم الواتساب: استبدل 213XXXXXXXXX برقم الواتساب الحقيقي -->
@@ -162,8 +146,8 @@ details.faq[open] .faq-icon { transform: rotate(45deg); background: linear-gradi
         </div>
         <div class="mt-6 flex flex-wrap sm:flex-nowrap gap-2">
           <span class="inline-flex items-center gap-1.5 text-[12px] sm:text-[13px] font-bold text-white bg-white/10 border border-white/25 rounded-full px-3 sm:px-3.5 py-1.5 sm:whitespace-nowrap sm:shrink-0">🏅 5 سنوات خبرة بالبرنامج</span>
-          <span class="inline-flex items-center gap-1.5 text-[12px] sm:text-[13px] font-bold text-white bg-white/10 border border-white/25 rounded-full px-3 sm:px-3.5 py-1.5 sm:whitespace-nowrap sm:shrink-0">🔓 <span dir="ltr">Open Source</span> – بلا رسوم تراخيص خفية</span>
-          <span class="inline-flex items-center gap-1.5 text-[12px] sm:text-[13px] font-bold text-white bg-white/10 border border-white/25 rounded-full px-3 sm:px-3.5 py-1.5 sm:whitespace-nowrap sm:shrink-0">🇩🇿 مكيّف للسوق الجزائري</span>
+          <span class="inline-flex items-center gap-1.5 text-[12px] sm:text-[13px] font-bold text-white bg-white/10 border border-white/25 rounded-full px-3 sm:px-3.5 py-1.5 sm:whitespace-nowrap sm:shrink-0">🌐 متاح أونلاين من أي مكان</span>
+          <span class="inline-flex items-center gap-1.5 text-[12px] sm:text-[13px] font-bold text-white bg-white/10 border border-white/25 rounded-full px-3 sm:px-3.5 py-1.5 sm:whitespace-nowrap sm:shrink-0"><svg width="18" height="13" viewBox="0 0 18 14" aria-hidden="true" class="shrink-0 rounded-[3px]"><defs><clipPath id="dzClip1"><rect width="18" height="14" rx="2.5"/></clipPath></defs><g clip-path="url(#dzClip1)"><rect width="9" height="14" fill="#006233"/><rect x="9" width="9" height="14" fill="#FFFFFF"/><circle cx="9" cy="7" r="3.1" fill="#D21034"/><circle cx="9.8" cy="7" r="2.5" fill="#FFFFFF"/><path d="M9.9 5.9l.3.86.9.02-.72.55.26.88-.74-.53-.74.53.26-.88-.72-.55.9-.02z" fill="#D21034"/></g><rect width="18" height="14" rx="2.5" fill="none" stroke="rgba(0,0,0,.18)" stroke-width="1"/></svg> مكيّف للسوق الجزائري</span>
         </div>
       </div>
       <!-- Dashboard وهمي -->
@@ -215,9 +199,9 @@ details.faq[open] .faq-icon { transform: rotate(45deg); background: linear-gradi
     </div>
     <div class="fade-in mt-8 rounded-3xl border border-slate-100 p-7 sm:p-10 leading-[2.1] text-base sm:text-lg" style="background:#F8FAFC;color:#1E293B">
       <p><span dir="ltr">Dolibarr</span> هو برنامج <span dir="ltr">ERP & CRM</span> مفتوح المصدر (<span dir="ltr">Open Source</span>)، معروف عالمياً وتخدم بيه <span class="font-bold rounded-lg px-1.5 py-0.5" style="background:rgba(218,165,32,.2)">أكثر من 100 ألف مؤسسة في العالم</span>.</p>
-      <p class="mt-4">احنا في إمكان تكنولوجي خدمناه في تسيير مشاريعنا الداخلية وعملائنا <span class="font-bold rounded-lg px-1.5 py-0.5" style="background:rgba(218,165,32,.2)">مدة 5 سنوات كاملة</span>.</p>
-      <p class="mt-4">طوّرنا فيه وعدّلنا عليه باش يتماشى مع خصوصيات السوق الجزائري: <span class="font-bold rounded-lg px-1.5 py-0.5" style="background:rgba(8,143,143,.12);color:#088F8F"><span dir="ltr">TVA 19%</span></span>، الفوترة الرسمية، وطرق العمل المحلية.</p>
-      <p class="mt-4">واليوم، قررنا نطرحوه رسمياً للتجار وشركات الخدمات الصغيرة والمتوسطة اللي تحتاج نظام قوي، مفتوح، وقابل للتطوير.</p>
+      <p class="mt-4"> خدمنا به في تسيير الشركة 360 درجة،    <span class="font-bold rounded-lg px-1.5 py-0.5" style="background:rgba(218,165,32,.2)"> لأكثر من خمس سنوات</span>.</p>
+      <p class="mt-4">طوّرنا فيه وعدّلنا عليه باش يتماشى مع خصوصيات السوق الجزائري: ، وطرق العمل المحلية.</p>
+      <p class="mt-4">واليوم، قررنا نطرحوه رسمياً للتجار وشركات الخدمات الصغيرة والمتوسطة اللي تحتاج نظام قوي، شامل وبسيط.</p>
     </div>
     <div class="grid grid-cols-3 gap-3 sm:gap-5 mt-6">
       <div class="fade-in rounded-2xl border border-slate-100 bg-white p-4 sm:p-6 text-center card-hover" style="box-shadow:0 10px 30px rgba(8,143,143,.08)">
@@ -231,15 +215,12 @@ details.faq[open] .faq-icon { transform: rotate(45deg); background: linear-gradi
         <p class="mt-1 text-[12px] sm:text-sm font-bold" style="color:#1E293B;opacity:.6">مؤسسة تخدم بيه في العالم</p>
       </div>
       <div class="fade-in rounded-2xl border border-slate-100 bg-white p-4 sm:p-6 text-center card-hover" style="box-shadow:0 10px 30px rgba(8,143,143,.08)">
-        <p class="text-2xl sm:text-3xl" aria-hidden="true">🇩🇿</p>
-        <p class="mt-2 font-bold text-xl sm:text-3xl" style="color:#088F8F"><span dir="ltr">TVA 19%</span></p>
+        <p class="flex justify-center" aria-hidden="true"><svg width="34" height="25" viewBox="0 0 18 14" class="rounded-[4px]" style="box-shadow:0 2px 8px rgba(0,0,0,.18)"><defs><clipPath id="dzClip2"><rect width="18" height="14" rx="2"/></clipPath></defs><g clip-path="url(#dzClip2)"><rect width="9" height="14" fill="#006233"/><rect x="9" width="9" height="14" fill="#FFFFFF"/><circle cx="9" cy="7" r="3.1" fill="#D21034"/><circle cx="9.8" cy="7" r="2.5" fill="#FFFFFF"/><path d="M9.9 5.9l.3.86.9.02-.72.55.26.88-.74-.53-.74.53.26-.88-.72-.55.9-.02z" fill="#D21034"/></g></svg></p>
+        <p class="mt-2 font-bold text-xl sm:text-3xl" style="color:#088F8F"><span dir="ltr">DZ</span></p>
         <p class="mt-1 text-[12px] sm:text-sm font-bold" style="color:#1E293B;opacity:.6">مكيّف للسوق الجزائري</p>
       </div>
     </div>
-    <div class="fade-in mt-6 rounded-3xl border-2 p-7 sm:p-9 relative overflow-hidden" style="border-color:#DAA520;background:linear-gradient(135deg,rgba(218,165,32,.12),rgba(218,165,32,.03));box-shadow:0 16px 45px rgba(218,165,32,.15)">
-      <span class="absolute top-5 left-6 text-5xl font-bold select-none" style="color:rgba(218,165,32,.3)" aria-hidden="true">”</span>
-      <p class="text-base sm:text-lg leading-[2] font-bold" style="color:#1E293B"><span class="font-bold" style="color:#088F8F">شنو الفرق بين <span dir="ltr">Dolibarr</span> تاع إمكان و<span dir="ltr">Dolibarr</span> اللي تحمّلو وحدك من الأنترنت؟</span><br>احنا نوفرولك: التنصيب (<span dir="ltr">Installation</span>)، الإعداد (<span dir="ltr">Paramétrage</span>)، التكوين (<span dir="ltr">Formation</span>)، الدعم (<span dir="ltr">Support</span>)، وتطوير وحدات إضافية على قد نشاطك (<span dir="ltr">Modules sur mesure</span>). تريح راسك وتركز في خدمتك.</p>
-    </div>
+    
   </div>
 </section>
 
@@ -263,7 +244,7 @@ details.faq[open] .faq-icon { transform: rotate(45deg); background: linear-gradi
         <span class="absolute top-3 left-5 text-6xl font-bold select-none" style="color:rgba(215,0,64,.08)" dir="ltr" aria-hidden="true">02</span>
         <div class="absolute top-0 right-0 left-0 h-1.5" style="background:linear-gradient(90deg,#D70040,rgba(215,0,64,.15))" aria-hidden="true"></div>
         <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-3xl mb-4 text-white" style="background:linear-gradient(135deg,#D70040,#a30030);box-shadow:0 8px 20px rgba(215,0,64,.3)" aria-hidden="true">🧩</div>
-        <h3 class="text-xl font-bold" style="color:#1E293B">العملاء والموردين (<span dir="ltr">Tiers</span>) كابوس</h3>
+        <h3 class="text-xl font-bold" style="color:#1E293B"> إدارة العلاقة مع العملاء</h3>
         <p class="mt-3 leading-[1.9]" style="color:#1E293B;opacity:.7">مئات العملاء والموردين، أرصدتهم، <span dir="ltr">Créances</span> و<span dir="ltr">Dettes</span>، مستحقات قديمة… ماتعرفش شكون خلص وشكون لا.</p>
       </article>
       <article class="fade-in card-hover bg-white rounded-3xl p-7 border border-slate-100 relative overflow-hidden">
@@ -302,8 +283,8 @@ details.faq[open] .faq-icon { transform: rotate(45deg); background: linear-gradi
 <section id="modules" class="py-16 lg:py-24 bg-white" aria-label="وحدات Dolibarr">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
     <div class="text-center max-w-3xl mx-auto fade-in">
-      <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-[13px] font-bold border" style="color:#088F8F;border-color:rgba(8,143,143,.25);background:rgba(8,143,143,.08)">🧩 الحل — الوحدات</span>
-      <h2 class="mt-4 text-3xl sm:text-4xl lg:text-[42px] font-bold leading-[1.7]" style="color:#1E293B"><span dir="ltr">Dolibarr</span> + إمكان تكنولوجي = نظام تسيير كامل، حيّ وقابل للتوسيع</h2>
+      <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-[13px] font-bold border" style="color:#088F8F;border-color:rgba(8,143,143,.25);background:rgba(8,143,143,.08)">🧩 الحل — modules</span>
+      <h2 class="mt-4 text-3xl sm:text-4xl lg:text-[42px] font-bold leading-[1.7]" style="color:#1E293B"><span dir="ltr">Dolibarr</span> = نظام تسيير كامل، حيّ وقابل للتوسيع</h2>
     </div>
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
       <article class="fade-in card-hover rounded-3xl p-7 border border-slate-100" style="background:#F8FAFC">
@@ -313,7 +294,7 @@ details.faq[open] .faq-icon { transform: rotate(45deg); background: linear-gradi
       </article>
       <article class="fade-in card-hover rounded-3xl p-7 border border-slate-100" style="background:#F8FAFC">
         <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl text-white mb-4" style="background:#088F8F" aria-hidden="true">🤝</div>
-        <h3 class="text-lg font-bold">العملاء والموردين (<span dir="ltr">Tiers</span>)</h3>
+        <h3 class="text-lg font-bold">إدارة العلاقة مع العملاء</h3>
         <p class="mt-2 text-[15px] leading-[1.9]" style="color:#1E293B;opacity:.7"><span dir="ltr">Fiche complète</span> لكل عميل ومورّد: <span dir="ltr">historique achats/ventes, encours, relances, catégories, tags</span>.</p>
       </article>
       <article class="fade-in card-hover rounded-3xl p-7 border border-slate-100" style="background:#F8FAFC">
@@ -338,122 +319,9 @@ details.faq[open] .faq-icon { transform: rotate(45deg); background: linear-gradi
       </article>
       <article class="fade-in card-hover rounded-3xl p-7 border-2 bg-white sm:col-span-2 lg:col-span-1" style="border-color:#DAA520">
         <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl text-white mb-4" style="background:#088F8F" aria-hidden="true">⚙️</div>
-        <h3 class="text-lg font-bold">وحدات على قد نشاطك (<span dir="ltr">Sur mesure</span>)</h3>
-        <p class="mt-2 text-[15px] leading-[1.9]" style="color:#1E293B;opacity:.7">تحتاج <span dir="ltr">Module</span> خاص: <span dir="ltr">Livraison, SAV, Point de vente, Application mobile</span>؟ فريق إمكان تكنولوجي يطوّرهولك. هذا هو جمال المصدر المفتوح.</p>
+        <h3 class="text-lg font-bold">Des modules  على قد نشاطك</h3>
+        <p class="mt-2 text-[15px] leading-[1.9]" style="color:#1E293B;opacity:.7">تحتاج <span dir="ltr">Module</span> خاص ؟ فريق إمكان تكنولوجي يطوّرهولك.</p>
       </article>
-    </div>
-  </div>
-</section>
-
-<!-- ================= F. المقارنة ================= -->
-<section id="compare" class="py-16 lg:py-24" style="background:#F8FAFC" aria-label="مقارنة صريحة">
-  <div class="max-w-5xl mx-auto px-5 lg:px-8">
-    <div class="text-center max-w-3xl mx-auto fade-in">
-      <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-[13px] font-bold border bg-white" style="color:#088F8F;border-color:rgba(8,143,143,.25)">⚖️ لماذا نحن؟</span>
-      <h2 class="mt-4 text-3xl sm:text-4xl lg:text-[42px] font-bold leading-[1.7]" style="color:#1E293B">مقارنة صريحة: <span dir="ltr">Dolibarr</span> مع إمكان تكنولوجي ضد البرامج التجارية</h2>
-    </div>
-    <div class="fade-in mt-10 overflow-x-auto rounded-3xl border-2 bg-white" style="border-color:rgba(8,143,143,.2);box-shadow:0 20px 55px rgba(8,143,143,.12)">
-      <table class="w-full text-right min-w-[640px]">
-        <thead>
-          <tr style="background:#088F8F">
-            <th class="p-4 sm:p-5 text-white font-bold text-sm sm:text-base">المعيار</th>
-            <th class="p-4 sm:p-5 text-white font-bold text-sm sm:text-base">برامج <span dir="ltr">ERP</span> تجارية</th>
-            <th class="p-4 sm:p-5 text-white font-bold text-sm sm:text-base"><span dir="ltr">Dolibarr</span> مع إمكان تكنولوجي</th>
-          </tr>
-        </thead>
-        <tbody class="text-sm sm:text-[15px] leading-[1.9]">
-          <tr class="border-t border-slate-100">
-            <td class="p-4 sm:p-5 font-bold">السعر</td>
-            <td class="p-4 sm:p-5" style="color:#1E293B;opacity:.7">اشتراك شهري مرتفع + تكاليف خفية</td>
-            <td class="p-4 sm:p-5 font-bold" style="color:#088F8F">السنة الأولى: <span dir="ltr">64.000</span> دج شاملة كل شيء. من السنة الثانية: <span dir="ltr">30.000</span> دج/سنة أو <span dir="ltr">4.000</span> دج فقط</td>
-          </tr>
-          <tr class="border-t border-slate-100" style="background:#F8FAFC">
-            <td class="p-4 sm:p-5 font-bold">الانفتاح</td>
-            <td class="p-4 sm:p-5" style="color:#1E293B;opacity:.7">مغلق، ممنوع التعديل</td>
-            <td class="p-4 sm:p-5 font-bold"><span dir="ltr">Open Source</span> — نزيدو فيه اللي تحب</td>
-          </tr>
-          <tr class="border-t border-slate-100">
-            <td class="p-4 sm:p-5 font-bold">التخصيص</td>
-            <td class="p-4 sm:p-5" style="color:#1E293B;opacity:.7">محدود أو غالي بزاف</td>
-            <td class="p-4 sm:p-5 font-bold"><span dir="ltr">Sur mesure</span> على قد نشاطك</td>
-          </tr>
-          <tr class="border-t border-slate-100" style="background:#F8FAFC">
-            <td class="p-4 sm:p-5 font-bold">الدعم</td>
-            <td class="p-4 sm:p-5" style="color:#1E293B;opacity:.7"><span dir="ltr">Email</span> وتذاكر، بطيء</td>
-            <td class="p-4 sm:p-5 font-bold">دعم مباشر بالدارجة: واتساب، هاتف، وحتى حضوري</td>
-          </tr>
-          <tr class="border-t border-slate-100">
-            <td class="p-4 sm:p-5 font-bold">التجربة المحلية</td>
-            <td class="p-4 sm:p-5" style="color:#1E293B;opacity:.7">برنامج أجنبي مايفهمش السوق</td>
-            <td class="p-4 sm:p-5 font-bold">مكيّف للجزائر: <span dir="ltr">TVA 19%</span>، فوترة رسمية، طرق عمل محلية</td>
-          </tr>
-          <tr class="border-t border-slate-100" style="background:#F8FAFC">
-            <td class="p-4 sm:p-5 font-bold">التكوين</td>
-            <td class="p-4 sm:p-5" style="color:#1E293B;opacity:.7">ساعات محدودة ومكلفة</td>
-            <td class="p-4 sm:p-5 font-bold">حتى 6 ساعات تكوين مشمولة في عرض السنة الأولى</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
-
-<!-- ================= G. التسعير ================= -->
-<section id="pricing" class="py-16 lg:py-24 bg-white" aria-label="التسعير">
-  <div class="max-w-4xl mx-auto px-5 lg:px-8">
-    <div class="text-center fade-in max-w-2xl mx-auto">
-      <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-[13px] font-bold border" style="color:#088F8F;border-color:rgba(8,143,143,.25);background:rgba(8,143,143,.08)">💰 التسعير</span>
-      <h2 class="mt-4 text-3xl sm:text-4xl lg:text-[42px] font-bold" style="color:#1E293B">تسعير شفاف… بلا مفاجآت</h2>
-      <p class="mt-4 text-lg" style="color:#1E293B;opacity:.7">هذا هو نفس العرض اللي نقدموه لعملائنا الحقيقيين. بلا تكاليف خفية.</p>
-    </div>
-    <div class="fade-in relative mt-12 rounded-3xl border-2 bg-white" style="border-color:#DAA520;box-shadow:0 24px 70px rgba(218,165,32,.25)">
-      <span class="absolute -top-4 right-6 z-10 text-sm font-bold px-4 py-1.5 rounded-full" style="background:#DAA520;color:#1E293B;box-shadow:0 8px 20px rgba(218,165,32,.45)">عرض السنة الأولى</span>
-      <div class="relative px-7 pt-10 pb-8 sm:px-10 text-center overflow-hidden" style="background:linear-gradient(135deg,#088F8F,#065F5F);border-radius:1.35rem 1.35rem 0 0">
-        <div class="absolute inset-0 hero-grid pointer-events-none" aria-hidden="true"></div>
-        <h3 class="relative text-white text-2xl sm:text-3xl font-bold">الباقة <span dir="ltr">Standard</span> – السنة الأولى</h3>
-        <p class="relative mt-4 font-bold text-5xl sm:text-6xl text-white"><span dir="ltr">64.000</span> دج (<span dir="ltr">HT</span>)</p>
-        <p class="relative mt-4 inline-block text-sm font-bold rounded-full px-5 py-1.5" style="color:#1E293B;background:#DAA520">أي <span dir="ltr">76.160</span> دج <span dir="ltr">TTC</span> (<span dir="ltr">TVA 19%</span>)</p>
-      </div>
-      <div class="p-7 sm:p-10">
-      <div class="overflow-hidden rounded-2xl border border-slate-200">
-        <table class="w-full text-right text-sm sm:text-[15px]">
-          <tbody class="leading-[1.9]">
-            <tr class="border-b border-slate-100" style="background:#F8FAFC">
-              <td class="p-4 font-bold"><span dir="ltr">Installation & Hébergement</span> (السنة الأولى مشمولة)</td>
-              <td class="p-4 font-bold whitespace-nowrap" style="color:#088F8F"><span dir="ltr">8.000</span> دج</td>
-            </tr>
-            <tr class="border-b border-slate-100">
-              <td class="p-4 font-bold"><span dir="ltr">Paramétrage</span> وتخصيص الوحدات: <span dir="ltr">Tiers, Produits/Services, Stock, Commercial, Facturation, Trésorerie</span></td>
-              <td class="p-4 font-bold whitespace-nowrap" style="color:#088F8F"><span dir="ltr">20.000</span> دج</td>
-            </tr>
-            <tr class="border-b border-slate-100" style="background:#F8FAFC">
-              <td class="p-4 font-bold"><span dir="ltr">Formation</span>: حتى 6 ساعات على كل الوحدات، قابلة للتقسيم على حصص</td>
-              <td class="p-4 font-bold whitespace-nowrap" style="color:#088F8F"><span dir="ltr">10.000</span> دج</td>
-            </tr>
-            <tr>
-              <td class="p-4 font-bold"><span dir="ltr">Support technique</span> سنوي (<span dir="ltr">1-5</span> مستخدمين) + متابعة <span dir="ltr">Mises à jour</span></td>
-              <td class="p-4 font-bold whitespace-nowrap" style="color:#088F8F"><span dir="ltr">26.000</span> دج</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      </div>
-    </div>
-    <h3 class="fade-in text-center mt-10 text-xl font-bold">ابتداءً من السنة الثانية، عندك خياران:</h3>
-    <div class="grid sm:grid-cols-2 gap-5 mt-6">
-      <div class="fade-in card-hover rounded-3xl border-2 p-6 relative overflow-hidden" style="border-color:#088F8F;background:linear-gradient(135deg,rgba(8,143,143,.1),rgba(8,143,143,.02));box-shadow:0 16px 45px rgba(8,143,143,.16)">
-        <div class="absolute top-0 right-0 left-0 h-1.5" style="background:linear-gradient(90deg,#088F8F,rgba(8,143,143,.1))" aria-hidden="true"></div>
-        <p class="font-bold text-lg">🥇 مع <span dir="ltr">Support</span>: <span dir="ltr">30.000</span> دج/سنة</p>
-        <p class="mt-2 text-[15px] leading-[1.9]" style="color:#1E293B;opacity:.7"><span dir="ltr">Hébergement</span> + <span dir="ltr">Support technique</span> + <span dir="ltr">Mises à jour</span>. تتصل بينا وقتما تحتاج.</p>
-      </div>
-      <div class="fade-in card-hover rounded-3xl border border-slate-200 bg-white p-6">
-        <p class="font-bold text-lg">🥈 <span dir="ltr">Hébergement</span> فقط: <span dir="ltr">4.000</span> دج/سنة</p>
-        <p class="mt-2 text-[15px] leading-[1.9]" style="color:#1E293B;opacity:.7">بدون <span dir="ltr">Support</span>. إذا احتجت تدخّل، يُحسب حسب الوقت المستهلك في خدمتك.</p>
-      </div>
-    </div>
-    <p class="fade-in text-center mt-6 text-sm" style="color:#1E293B;opacity:.6">عندك أكثر من 5 مستخدمين ولاّ تحتاج <span dir="ltr">Modules</span> إضافية؟ نضبطولك عرضاً مخصصاً في اللقاء التوضيحي.</p>
-    <div class="fade-in text-center mt-6">
-      <button data-open-booking class="btn-gold inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-bold text-lg w-full sm:w-auto">📅 احجز لقاءك واحصل على عرض مخصص</button>
     </div>
   </div>
 </section>
@@ -510,7 +378,7 @@ details.faq[open] .faq-icon { transform: rotate(45deg); background: linear-gradi
             <p class="mt-1 inline-block text-[13px] font-bold rounded-full px-3 py-1" style="color:#088F8F;background:rgba(8,143,143,.1)">مسيّر <span dir="ltr">SARL IMKAN SPACE</span></p>
           </figcaption>
         </div>
-        <blockquote class="mt-6 text-lg sm:text-xl leading-[2] font-medium" style="color:#1E293B">“أنا أمين الزرقة، مسيّر شركة إمكان تكنولوجي.<br>من 5 سنين ونحن نسيّرو شركتنا بـ <span dir="ltr">Dolibarr</span>: الفوترة، العروض (<span dir="ltr">Devis</span>)، العملاء، المشاريع، وحتى الخزينة (<span dir="ltr">Trésorerie</span>).<br>ماشي برنامج جربناه شهر وقلنا مليح — برنامج عشنا بيه يومياً، عدّلنا فيه، وطوّرناه على قد السوق الجزائري.<br>واليوم كي نقترحوه عليك، راني نقترح عليك حاجة نأمن بيها ونخدم بيها بيدي.”</blockquote>
+        <blockquote class="mt-6 text-lg sm:text-xl leading-[2] font-medium" style="color:#1E293B">“أنا أمين الزرقة، مسيّر إمكان تكنولوجي.<br> 5 سنين ونحن نسيّرو الشركة بـ <span dir="ltr">Dolibarr</span>: الفوترة، العملاء ، المشاريع،  الموارد البشرية... كلش.<br>حتى حنا في وقت قلنا بالك كاين خير منو <span dir="ltr">Odoo</span> وخدمنا بيه عام كامل. وفي الأخير؟ رجعنا ل<span dir="ltr"> Dolibarr.</span>بكل بساطة لقيناه أخف، أوضح، وما يعقّدلكش حياتك.<br>برنامج جربناه، وجربنا منافسو، ورجعنالو بكل قناعة.”</blockquote>
         <p class="mt-4 font-bold" style="color:#088F8F">— أمين الزرقة ، مسيّر <span dir="ltr">SARL IMKAN SPACE</span></p>
       </div>
     </figure>
@@ -520,7 +388,7 @@ details.faq[open] .faq-icon { transform: rotate(45deg); background: linear-gradi
       <div class="absolute top-0 bottom-0 right-0 w-1.5" style="background:linear-gradient(#088F8F,#065F5F)" aria-hidden="true"></div>
       <div class="flex items-start gap-4">
         <span class="w-12 h-12 shrink-0 rounded-2xl flex items-center justify-center text-2xl text-white" style="background:linear-gradient(135deg,#088F8F,#065F5F);box-shadow:0 8px 20px rgba(8,143,143,.3)" aria-hidden="true">🏭</span>
-        <p class="leading-[2]" style="color:#1E293B">من أوائل عملائنا : شركة في مجال صناعة الألمنيوم بقسنطينة —<br>ركبنالهم <span dir="ltr">Dolibarr</span> وضبطناه على نشاطهم: <span dir="ltr">Tiers, Stock, Commercial, Facturation, Trésorerie</span><br>مع 6 ساعات تكوين و<span dir="ltr">Support</span> سنوي.</p>
+        <p class="leading-[2]" style="color:#1E293B">من أوائل عملائنا : شركة في مجال صناعة الألمنيوم بقسنطينة —<br>ركبنالهم <span dir="ltr">Dolibarr</span> وضبطناه على نشاطهم: <span dir="ltr">Tiers, Stock, Commercial, Facturation, Trésorerie</span><br></p>
       </div>
     </aside>
 
@@ -558,20 +426,12 @@ details.faq[open] .faq-icon { transform: rotate(45deg); background: linear-gradi
         <div class="px-5 pb-5 leading-[1.9]" style="color:#1E293B;opacity:.75"><span dir="ltr">Dolibarr</span> هو برنامج <span dir="ltr">ERP & CRM</span> مفتوح المصدر <span dir="ltr">(Open Source)</span> معروف عالمياً. يستعمل في الفوترة، إدارة العملاء، المخزون، المشاريع، الموارد البشرية وغيرها. احنا في إمكان تكنولوجي عدّلناه وطوّرناه باش يتماشى مع السوق الجزائري، ونوفرولك التنصيب، الإعداد، التكوين والدعم.</div>
       </details>
       <details class="faq fade-in bg-white border border-slate-200 rounded-2xl overflow-hidden">
-        <summary class="cursor-pointer p-5 font-bold">واش الفرق بين <span dir="ltr">Dolibarr</span> تاعكم و<span dir="ltr">Dolibarr</span> اللي نحمّلو وحدي من الأنترنت؟ <span class="faq-icon w-8 h-8 shrink-0 rounded-full flex items-center justify-center text-white text-xl" style="background:linear-gradient(135deg,#088F8F,#065F5F)" aria-hidden="true">+</span></summary>
-        <div class="px-5 pb-5 leading-[1.9]" style="color:#1E293B;opacity:.75"><span dir="ltr">Dolibarr</span> الأصلي خام ويحتاج <span dir="ltr">installation</span> و<span dir="ltr">paramétrage</span> معقدين. احنا نوفرولك: تنصيب محترف، إعداد على قد نشاطك، تكوين، دعم مستمر، وتطوير وحدات إضافية. تريح راسك وتركز في خدمتك.</div>
-      </details>
-      <details class="faq fade-in bg-white border border-slate-200 rounded-2xl overflow-hidden">
         <summary class="cursor-pointer p-5 font-bold">البرنامج بأي لغة؟ <span class="faq-icon w-8 h-8 shrink-0 rounded-full flex items-center justify-center text-white text-xl" style="background:linear-gradient(135deg,#088F8F,#065F5F)" aria-hidden="true">+</span></summary>
-        <div class="px-5 pb-5 leading-[1.9]" style="color:#1E293B;opacity:.75">الواجهة بالفرنسية، مثل أغلب البرامج المهنية في السوق الجزائري. المصطلحات تقنية لكن مفهومة <span dir="ltr">(Facture, Devis, Stock, Client…)</span>. والتكوين والدعم بالدارجة، يعني راح تفهم كل شيء مليح.</div>
+        <div class="px-5 pb-5 leading-[1.9]" style="color:#1E293B;opacity:.75">باللغة اللي تحبها انت! نضبطولك <span dir="ltr">Dolibarr</span> بالعربية، الفرنسية، الإنجليزية أو أي لغة أخرى. والتكوين والدعم ديما بالدارجة.</div>
       </details>
       <details class="faq fade-in bg-white border border-slate-200 rounded-2xl overflow-hidden">
         <summary class="cursor-pointer p-5 font-bold">هل نقدر نخصص البرنامج على قد نشاطي؟ <span class="faq-icon w-8 h-8 shrink-0 rounded-full flex items-center justify-center text-white text-xl" style="background:linear-gradient(135deg,#088F8F,#065F5F)" aria-hidden="true">+</span></summary>
-        <div class="px-5 pb-5 leading-[1.9]" style="color:#1E293B;opacity:.75">هذي أقوى ميزة. لأن <span dir="ltr">Dolibarr</span> مفتوح المصدر، نقدرو نضيفو فيه أي <span dir="ltr">Module</span> خاص بيك: <span dir="ltr">Gestion de parc, Point de vente, Application mobile, SAV</span>… فريق إمكان تكنولوجي يطوّرلك اللي تحتاجه.</div>
-      </details>
-      <details class="faq fade-in bg-white border border-slate-200 rounded-2xl overflow-hidden">
-        <summary class="cursor-pointer p-5 font-bold">قداش يكلف بالضبط؟ <span class="faq-icon w-8 h-8 shrink-0 rounded-full flex items-center justify-center text-white text-xl" style="background:linear-gradient(135deg,#088F8F,#065F5F)" aria-hidden="true">+</span></summary>
-        <div class="px-5 pb-5 leading-[1.9]" style="color:#1E293B;opacity:.75">السنة الأولى: <span dir="ltr">64.000</span> دج <span dir="ltr">(HT)</span> تشمل <span dir="ltr">Installation, Paramétrage, Formation</span> (حتى 6 ساعات) و<span dir="ltr">Support</span> سنوي. من السنة الثانية: <span dir="ltr">30.000</span> دج/سنة مع <span dir="ltr">Support</span>، ولاّ <span dir="ltr">4.000</span> دج فقط إذا تحب <span dir="ltr">Hébergement</span> وحدو (والتدخلات تُحسب حسب الوقت المستهلك).</div>
+        <div class="px-5 pb-5 leading-[1.9]" style="color:#1E293B;opacity:.75">هذي أقوى ميزة. نقدرو نضيفو فيه أي <span dir="ltr">Module</span> خاص بيك. فريق إمكان تكنولوجي يطوّرلك اللي تحتاجه.</div>
       </details>
       <details class="faq fade-in bg-white border border-slate-200 rounded-2xl overflow-hidden">
         <summary class="cursor-pointer p-5 font-bold">كم من وقت يلزم باش نبدا نخدم بالبرنامج؟ <span class="faq-icon w-8 h-8 shrink-0 rounded-full flex items-center justify-center text-white text-xl" style="background:linear-gradient(135deg,#088F8F,#065F5F)" aria-hidden="true">+</span></summary>
@@ -583,7 +443,7 @@ details.faq[open] .faq-icon { transform: rotate(45deg); background: linear-gradi
       </details>
       <details class="faq fade-in bg-white border border-slate-200 rounded-2xl overflow-hidden">
         <summary class="cursor-pointer p-5 font-bold">واش يصرا إذا احتجت مساعدة بعد التكوين؟ <span class="faq-icon w-8 h-8 shrink-0 rounded-full flex items-center justify-center text-white text-xl" style="background:linear-gradient(135deg,#088F8F,#065F5F)" aria-hidden="true">+</span></summary>
-        <div class="px-5 pb-5 leading-[1.9]" style="color:#1E293B;opacity:.75">إذا عندك اشتراك <span dir="ltr">Support</span> (<span dir="ltr">30.000</span> دج/سنة)، تتصل بينا على واتساب ولاّ الهاتف ونجاوبوك في وقت قصير. إذا عندك <span dir="ltr">Hébergement</span> فقط، كل تدخل يُحسب حسب الوقت اللي نستهلكوه في خدمتك.</div>
+        <div class="px-5 pb-5 leading-[1.9]" style="color:#1E293B;opacity:.75"> بكل بساطة، تتواصل معانا في الهاتف ولاّ الواتساب، وفريقنا يجاوبك ويرافقك في وقت قصير. حنا ديما موجودين.</div>
       </details>
       <details class="faq fade-in bg-white border border-slate-200 rounded-2xl overflow-hidden">
         <summary class="cursor-pointer p-5 font-bold">كيفاش نضمن سلامة بياناتي؟ <span class="faq-icon w-8 h-8 shrink-0 rounded-full flex items-center justify-center text-white text-xl" style="background:linear-gradient(135deg,#088F8F,#065F5F)" aria-hidden="true">+</span></summary>
@@ -591,11 +451,11 @@ details.faq[open] .faq-icon { transform: rotate(45deg); background: linear-gradi
       </details>
       <details class="faq fade-in bg-white border border-slate-200 rounded-2xl overflow-hidden">
         <summary class="cursor-pointer p-5 font-bold">هل كاين حد أقصى لعدد المستخدمين؟ <span class="faq-icon w-8 h-8 shrink-0 rounded-full flex items-center justify-center text-white text-xl" style="background:linear-gradient(135deg,#088F8F,#065F5F)" aria-hidden="true">+</span></summary>
-        <div class="px-5 pb-5 leading-[1.9]" style="color:#1E293B;opacity:.75">عرض السنة الأولى يغطي حتى 5 مستخدمين. عندك أكثر؟ نضبطو العرض على حساب عددهم. البرنامج في حد ذاتو ما عندوش حد أقصى.</div>
+        <div class="px-5 pb-5 leading-[1.9]" style="color:#1E293B;opacity:.75"> لا، ما كانش حد أقصى. العرض يبدا من 5 مستخدمين، وإذا حبيت تزيد، نزيدولك على حساب احتياجك. البرنامج يكبر معاك كيما تكبر شركتك.</div>
       </details>
       <details class="faq fade-in bg-white border border-slate-200 rounded-2xl overflow-hidden">
-        <summary class="cursor-pointer p-5 font-bold">نقدر نزيد وحدات جديدة من بعد؟ <span class="faq-icon w-8 h-8 shrink-0 rounded-full flex items-center justify-center text-white text-xl" style="background:linear-gradient(135deg,#088F8F,#065F5F)" aria-hidden="true">+</span></summary>
-        <div class="px-5 pb-5 leading-[1.9]" style="color:#1E293B;opacity:.75">طبعاً، وفي أي وقت. هذا جمال المصدر المفتوح: اليوم تبدا بالفوترة والمخزون، وغدوة تزيد <span dir="ltr">SAV</span> ولاّ <span dir="ltr">Point de vente</span> كي تحتاجهم.</div>
+        <summary class="cursor-pointer p-5 font-bold">نقدر نزيد <span dir="ltr">des modules</span> جديد من بعد؟ <span class="faq-icon w-8 h-8 shrink-0 rounded-full flex items-center justify-center text-white text-xl" style="background:linear-gradient(135deg,#088F8F,#065F5F)" aria-hidden="true">+</span></summary>
+        <div class="px-5 pb-5 leading-[1.9]" style="color:#1E293B;opacity:.75">طبعاً، وفي أي وقت. اليوم تبدا بالفوترة والمخزون، وغدوة تزيد <span dir="ltr">SAV</span> ولاّ <span dir="ltr">Point de vente</span> كي تحتاجهم.</div>
       </details>
     </div>
   </div>
@@ -609,55 +469,43 @@ details.faq[open] .faq-icon { transform: rotate(45deg); background: linear-gradi
   <div class="relative max-w-4xl mx-auto px-5 lg:px-8 text-center fade-in">
     <div class="rounded-[32px] border border-white/20 px-6 py-10 sm:p-12" style="background:rgba(255,255,255,.07);box-shadow:0 30px 80px rgba(0,0,0,.25)">
       <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-[13px] font-bold text-white border border-white/25" style="background:rgba(255,255,255,.1)">📅 لقاء توضيحي مجاني — بلا التزام</span>
-      <h2 class="mt-5 text-white text-3xl sm:text-4xl lg:text-5xl font-bold leading-[1.8]">برنامج جرّبناه 5 سنين قبل ما نقترحوه عليك…<br><span style="color:#DAA520">دوكا جاء دورك</span></h2>
-      <p class="mt-5 text-lg text-white leading-[2] max-w-2xl mx-auto" style="opacity:.9">احجز لقاءك التوضيحي المجاني (أونلاين ولاّ حضوري)، نعرضولك البرنامج مباشرة على بيانات حقيقية، ونجاوبو على كل أسئلتك. بلا التزام.</p>
+      <h2 class="mt-5 text-white text-3xl sm:text-4xl lg:text-5xl font-bold leading-[1.8]"><br><span style="color:#DAA520">دوكا جاء دورك</span></h2>
       <div class="mt-8 flex flex-col sm:flex-row justify-center items-center flex-wrap gap-3">
         <button data-open-booking class="btn-gold inline-flex items-center justify-center gap-2 px-10 py-4 rounded-2xl font-bold text-lg sm:text-xl w-full sm:w-auto">📅 احجز لقاءك التوضيحي المجاني الآن</button>
-        <!-- [تكوين] رقم الواتساب: استبدل 213XXXXXXXXX برقم الواتساب الحقيقي -->
-        <a href="https://wa.me/213XXXXXXXXX" target="_blank" rel="noopener" class="btn-wa inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-2xl font-bold w-full sm:w-auto" aria-label="حكي معانا مباشرة على واتساب"><span class="wa-ic" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 2a8 8 0 1 1-4.1 14.9l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 0 1 12 4Zm-3.2 4c-.2 0-.5 0-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.9 3 4.7 4.1 2.3.9 2.8.7 3.3.7.5-.1 1.6-.7 1.9-1.3.2-.6.2-1.1.2-1.3l-.4-.2-1.7-.8c-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a7.5 7.5 0 0 1-2.2-1.4 8.2 8.2 0 0 1-1.5-1.9c-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5L9.4 6.4c-.2-.4-.4-.4-.6-.4Z"/></svg></span>ولاّ حكي معانا مباشرة على واتساب</a>
       </div>
     </div>
   </div>
 </section>
 </main>
 
-<!-- ================= O. Footer ================= -->
-<footer class="bg-white border-t border-slate-200" style="color:#1E293B" role="contentinfo">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-12">
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- ===== Q. Footer ===== -->
+<footer class="bg-[#F8FAFC] text-[#1E293B] border-t border-slate-200 pt-14 pb-8" aria-label="تذييل الصفحة">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid md:grid-cols-2 gap-10">
       <div>
-        <img src="logo.svg" alt="شعار إمكان تكنولوجي" width="150" height="42" class="h-11 w-auto object-contain" loading="lazy">
-        <p class="font-bold text-xl mt-3"><span dir="ltr">Dolibarr</span> by إمكان تكنولوجي</p>
-        <p class="mt-2 text-sm leading-[1.9]" style="opacity:.85">برنامج <span dir="ltr">ERP & CRM</span> مفتوح المصدر، مكيّف للسوق الجزائري</p>
-        <p class="mt-3 text-sm font-bold" style="opacity:.9"><span dir="ltr">SARL IMKAN SPACE</span> – <span dir="ltr">Bureau de consulting informatique</span></p>
-        <p class="mt-1 text-sm" style="opacity:.85">شارع الشهيد رابح همداش، قسم 2 مجموعة 474، برج البحري، الجزائر</p>
+        <img src="logo.svg" alt="شعار إمكان تكنولوجي" class="h-14 w-auto">
+        <p class="mt-3 text-[#1E293B]/70 text-[14px] leading-[2]">برنامج <span dir="ltr">Dolibarr ERP & CRM</span> – مكيّف للسوق الجزائري</p>
       </div>
       <div>
-        <p class="font-bold">تواصل معانا</p>
-        <p class="mt-3 text-sm leading-[2]" style="opacity:.9"><span dir="ltr">📞 020 20 98 29</span> | <span dir="ltr">📧 contact@imkan.space</span> | <span dir="ltr">🌐 imkan.space</span></p>
-        <div class="mt-4 flex items-center gap-3" aria-label="تابعنا على شبكات التواصل">
-          <a href="#" class="soc w-10 h-10 rounded-full flex items-center justify-center font-bold transition" aria-label="فيسبوك">f</a>
-          <a href="#" class="soc w-10 h-10 rounded-full flex items-center justify-center font-bold transition" aria-label="لينكد إن"><span dir="ltr">in</span></a>
-          <a href="#" class="soc w-10 h-10 rounded-full flex items-center justify-center font-bold transition" aria-label="يوتيوب">▶</a>
-          <!-- [تكوين] رقم الواتساب: استبدل 213XXXXXXXXX برقم الواتساب الحقيقي -->
-          <a href="https://wa.me/213XXXXXXXXX" target="_blank" rel="noopener" class="soc w-10 h-10 rounded-full flex items-center justify-center font-bold transition" aria-label="واتساب">✆</a>
+        <div class="font-black mb-4">تابعنا</div>
+        <div class="flex gap-3">
+          <a href="https://www.facebook.com/share/1GoMh1EyyM/" aria-label="فيسبوك" class="w-10 h-10 rounded-full bg-[#088F8F]/10 hover:bg-[#088F8F]/20 text-[#088F8F] flex items-center justify-center transition">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/imkanspace/" aria-label="لينكد إن" class="w-10 h-10 rounded-full bg-[#088F8F]/10 hover:bg-[#088F8F]/20 text-[#088F8F] flex items-center justify-center transition">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+          </a>
+          <a href="https://imkan.tech/" aria-label="الموقع الرسمي" class="w-10 h-10 rounded-full bg-[#088F8F]/10 hover:bg-[#088F8F]/20 text-[#088F8F] flex items-center justify-center transition">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93C7.05 19.44 4 16.08 4 12c0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/imkan.technology?stkn=dTJsamY5dHZscnMz" aria-label="إنستغرام" class="w-10 h-10 rounded-full bg-[#088F8F]/10 hover:bg-[#088F8F]/20 text-[#088F8F] flex items-center justify-center transition">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
         </div>
       </div>
-      <div>
-        <p class="font-bold">روابط</p>
-        <nav class="mt-3 flex flex-col gap-2 text-sm font-bold" aria-label="روابط الفوتر">
-          <a href="#" class="hover:underline" style="opacity:.9">من نحن</a>
-          <a href="#" class="hover:underline" style="opacity:.9">سياسة الخصوصية</a>
-          <a href="#" class="hover:underline" style="opacity:.9">شروط الاستخدام</a>
-        </nav>
-      </div>
     </div>
-    <div class="mt-10 pt-6 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-3 text-center">
-      <p class="text-[13px]" style="opacity:.85">© <span dir="ltr">2026</span> إمكان تكنولوجي. جميع الحقوق محفوظة.</p>
-      <p class="text-[13px] font-bold" style="opacity:.9"><span dir="ltr">Dolibarr</span> – <span dir="ltr">Open Source</span>، مفتوح، وقابل للتطوير على قد نشاطك.</p>
-    </div>
+    <div class="mt-10 pt-6 border-t border-slate-200 text-center text-[13px] text-[#1E293B]/60">© <span dir="ltr">2026</span> إمكان تكنولوجي. جميع الحقوق محفوظة.</div>
   </div>
-  <div class="h-16 md:hidden" aria-hidden="true"></div>
 </footer>
 
 <!-- ================= M. زر واتساب عائم ================= -->
